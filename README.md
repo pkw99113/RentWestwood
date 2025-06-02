@@ -1,6 +1,6 @@
 # RentWestwood
 
-# 🏡 LA Rent Price Estimator (90024)
+# 🏡 LA Rent Price Estimator (90025)
 
 This project scrapes 2-bedroom, 2-bathroom rental listings in the 90024 ZIP code of Los Angeles from Zillow, cleans the data, analyzes trends, and uses a machine learning model to estimate rent prices based on apartment features.
 
