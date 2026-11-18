@@ -1,0 +1,5 @@
+# Large raw downloads: see data/README.md for where to get them
+data/raw/Zip_zori_*.csv
+data/raw/fy2026_safmrs*.xlsx
+.DS_Store
+__pycache__/

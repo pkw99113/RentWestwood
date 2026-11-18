@@ -15,8 +15,8 @@ This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired 
 | Step | Topic | Status |
 | --- | --- | --- |
 | 1 | Problem definition and metrics | Done |
-| 2 | Data collection and quality checks | In progress |
-| 3 | Cleaning + SQL | |
+| 2 | Data collection and quality checks | Done → [docs/02_data_collection.md](docs/02_data_collection.md) |
+| 3 | Cleaning + SQL | Next |
 | 4 | Neighborhood comparison | |
 | 5 | Rent trends | |
 | 6 | Price drivers (interpretable regression) | |
@@ -30,5 +30,6 @@ data/raw/    original downloads (unchanged)
 data/processed/  cleaned tables
 sql/         SQL queries
 notebooks/   analysis notebooks
+scripts/     data preparation scripts
 archive/v1/  retired first version (reference only)
 ```

@@ -1,0 +1,41 @@
+zip,area,distance_group,bedrooms,safmr
+90005,Koreatown (90005),far,0,2240
+90005,Koreatown (90005),far,1,2510
+90005,Koreatown (90005),far,2,3130
+90005,Koreatown (90005),far,3,3970
+90005,Koreatown (90005),far,4,4420
+90020,Koreatown (90020),far,0,2200
+90020,Koreatown (90020),far,1,2460
+90020,Koreatown (90020),far,2,3070
+90020,Koreatown (90020),far,3,3890
+90020,Koreatown (90020),far,4,4330
+90024,Westwood,adjacent,0,3080
+90024,Westwood,adjacent,1,3450
+90024,Westwood,adjacent,2,4300
+90024,Westwood,adjacent,3,5450
+90024,Westwood,adjacent,4,6070
+90025,West LA / Sawtelle,near,0,3070
+90025,West LA / Sawtelle,near,1,3440
+90025,West LA / Sawtelle,near,2,4290
+90025,West LA / Sawtelle,near,3,5440
+90025,West LA / Sawtelle,near,4,6060
+90034,Palms,far,0,2560
+90034,Palms,far,1,2870
+90034,Palms,far,2,3580
+90034,Palms,far,3,4540
+90034,Palms,far,4,5050
+90049,Brentwood,near,0,3120
+90049,Brentwood,near,1,3490
+90049,Brentwood,near,2,4350
+90049,Brentwood,near,3,5520
+90049,Brentwood,near,4,6140
+90064,Rancho Park,near,0,3120
+90064,Rancho Park,near,1,3490
+90064,Rancho Park,near,2,4350
+90064,Rancho Park,near,3,5520
+90064,Rancho Park,near,4,6140
+90066,Mar Vista,far,0,2540
+90066,Mar Vista,far,1,2840
+90066,Mar Vista,far,2,3540
+90066,Mar Vista,far,3,4490
+90066,Mar Vista,far,4,5000
