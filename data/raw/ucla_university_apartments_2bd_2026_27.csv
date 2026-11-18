@@ -1,0 +1,5 @@
+unit_type,bedrooms,occupants,bedroom_sharing,buildings,room_portion_usd,social_fee_usd,total_contract_usd,parking_usd,period,source_url,retrieved_at,verified
+2/3 shared bedroom,2,3,shared,"GR;GW;WP",13951.30,31.46,13982.76,1556.06,academic_year,https://housing.ucla.edu/2026-27-university-apartment-2-bedroom-3-4-occupants-rates,2026-11-18,no
+2/3S single bedroom,2,3,single,"GR;GW;WP",14558.72,31.46,14590.18,1556.06,academic_year,https://housing.ucla.edu/2026-27-university-apartment-2-bedroom-3-4-occupants-rates,2026-11-18,no
+2/4 apartment,2,4,shared,"GC;GR;GW;LA;LF;LV;PV;TN;WC;WP;WEY",12136.30,31.46,12167.76,1556.06,academic_year,https://housing.ucla.edu/2026-27-university-apartment-2-bedroom-3-4-occupants-rates,2026-11-18,no
+2/4 townhouse,2,4,shared,WEY,13022.02,31.46,13053.48,1556.06,academic_year,https://housing.ucla.edu/2026-27-university-apartment-2-bedroom-3-4-occupants-rates,2026-11-18,no
