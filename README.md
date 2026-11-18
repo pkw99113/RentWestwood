@@ -1,6 +1,6 @@
 # RentWestwood: Where Should a UCLA Student Live?
 
-**Question**: For a UCLA student choosing where to live, which option is the most reasonable once both rent and commute are counted: university housing, Westwood, or a neighborhood farther away?
+**Question**: For a UCLA student choosing where to live, which option costs less once rent, lease length, and commute are counted: UCLA University Apartments, Westwood (90024), or West LA / Sawtelle (90025)?
 
 This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired because its data could not be trusted. See [archive/v1](archive/v1/README.md) for what went wrong and why.
 
@@ -16,8 +16,8 @@ This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired 
 | --- | --- | --- |
 | 1 | Problem definition and metrics | Done |
 | 2 | Data collection and quality checks | Done → [docs/02_data_collection.md](docs/02_data_collection.md) |
-| 3 | Cleaning + SQL | Next |
-| 4 | Neighborhood comparison | |
+| 3 | Cleaning + SQL | Done → [docs/03_sql_per_person_cost.md](docs/03_sql_per_person_cost.md) |
+| 4 | Neighborhood comparison | Next |
 | 5 | Rent trends | |
 | 6 | Price drivers (interpretable regression) | |
 | 7 | Scenario analysis | |

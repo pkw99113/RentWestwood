@@ -17,7 +17,7 @@
 | 근거리 | West LA / Sawtelle (90025), Rancho Park (90064), Brentwood (90049) | 자전거·버스 통학 |
 | 원거리 | Palms (90034), Mar Vista (90066), Koreatown (90005, 90020) | 버스 통학, 렌트가 상대적으로 낮다고 알려진 지역 |
 
-최종 ZIP 목록은 2단계에서 데이터가 있는 곳 기준으로 확정한다.
+> **업데이트 (3단계)**: 분석 범위를 캠퍼스 인접 두 ZIP, Westwood (90024)와 West LA / Sawtelle (90025)로 좁혔다. 대학 주거 비교 기준은 University Apartments. 나머지 ZIP은 데이터 출처 교차 검증에만 사용한다.
 
 ## 3. 지표 정의
 

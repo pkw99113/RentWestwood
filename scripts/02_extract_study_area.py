@@ -17,9 +17,14 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data" / "raw"
 OUT = ROOT / "data" / "processed"
 
+# Analysis scope: the two ZIPs next to campus.
 STUDY_ZIPS = {
     "90024": ("Westwood", "adjacent"),
     "90025": ("West LA / Sawtelle", "near"),
+}
+# Wider set used only to check that ZORI and SAFMR agree (a correlation needs more than 2 points).
+VALIDATION_ZIPS = {
+    **STUDY_ZIPS,
     "90064": ("Rancho Park", "near"),
     "90049": ("Brentwood", "near"),
     "90034": ("Palms", "far"),
@@ -84,20 +89,22 @@ s_long[["zip", "area", "distance_group", "bedrooms", "safmr"]].to_csv(OUT / "saf
 log(f"- Missing SAFMR values: {s_long['safmr'].isna().sum()}")
 log("")
 
-# ---------- Cross-check: ZORI vs SAFMR ----------
-latest = z_long[z_long["month"] == z_long["month"].max()].set_index("zip")["zori"]
-fmr = s_long.pivot(index="zip", columns="bedrooms", values="safmr")
-log(f"## Cross-check: ZORI ({z_long['month'].max()}) vs SAFMR")
+# ---------- Cross-check: ZORI vs SAFMR (validation set) ----------
+last_month = month_cols[-1]
+latest = zori.set_index("RegionName").loc[list(VALIDATION_ZIPS), last_month]
+fmr = safmr.set_index("ZIP Code").loc[list(VALIDATION_ZIPS), ["SAFMR 1BR", "SAFMR 2BR"]]
+fmr.columns = [1, 2]
+log(f"## Cross-check: ZORI ({last_month[:7]}) vs SAFMR, validation set of {len(VALIDATION_ZIPS)} West/Central LA ZIPs")
 log("ZORI is a typical market rent across all unit sizes; SAFMR is HUD's 40th-percentile rent (rent + utilities) by bedroom count.")
 log("If ZORI sits between the 1BR and 2BR SAFMR, the two sources are telling a consistent story.")
 log("")
 log("| ZIP | Area | ZORI | SAFMR 1BR | SAFMR 2BR | ZORI / SAFMR 1BR |")
 log("| --- | --- | --- | --- | --- | --- |")
-for k in STUDY_ZIPS:
-    log(f"| {k} | {STUDY_ZIPS[k][0]} | ${latest[k]:,.0f} | ${fmr.loc[k, 1]:,.0f} | ${fmr.loc[k, 2]:,.0f} | {latest[k] / fmr.loc[k, 1]:.2f} |")
+for k in VALIDATION_ZIPS:
+    log(f"| {k} | {VALIDATION_ZIPS[k][0]} | ${latest[k]:,.0f} | ${fmr.loc[k, 1]:,.0f} | ${fmr.loc[k, 2]:,.0f} | {latest[k] / fmr.loc[k, 1]:.2f} |")
 log("")
 corr = pd.concat([latest, fmr[1]], axis=1).corr().iloc[0, 1]
-log(f"- Correlation between ZORI and SAFMR 1BR across the 8 ZIPs: {corr:.2f}")
+log(f"- Correlation between ZORI and SAFMR 1BR across the validation ZIPs: {corr:.2f}")
 
 (ROOT / "docs" / "02_data_quality_report.md").write_text(
     "# 2단계. 데이터 품질 점검 결과 (자동 생성)\n\n`scripts/02_extract_study_area.py` 실행 결과. 해석은 `docs/02_data_collection.md` 참고.\n\n"
