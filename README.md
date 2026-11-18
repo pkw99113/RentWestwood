@@ -4,6 +4,11 @@
 
 This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired because its data could not be trusted. See [archive/v1](archive/v1/README.md) for what went wrong and why.
 
+## Key findings so far
+- **The summer plan decides the answer.** A student who leaves LA for the summer pays less in UCLA University Apartments in 88% of scenarios (median gap about $3,400/year), because off-campus leases run 12 months.
+- **Group size matters next.** Two people sharing: UCLA is cheaper in almost every scenario. Four people in a 2-bedroom who sublet or stay in LA: West LA is cheaper in every scenario.
+- **Westwood is never the cheapest option.** It costs about 12% more than West LA (ZORI, Oct 2026); choosing it only makes sense if the shorter commute is worth more than about $15–24 per hour.
+
 ## Approach
 1. **Problem definition**: define the decision, the options, and one main metric: *effective monthly cost per person* (rent + utilities + commute cost + value of commute time). → [docs/01_problem_definition.md](docs/01_problem_definition.md)
 2. **Data collection**: public, citable sources only (Zillow Research ZORI, HUD Small Area Fair Market Rents, UCLA Housing rates). Every source and data quality check is logged.
@@ -17,8 +22,8 @@ This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired 
 | 1 | Problem definition and metrics | Done |
 | 2 | Data collection and quality checks | Done → [docs/02_data_collection.md](docs/02_data_collection.md) |
 | 3 | Cleaning + SQL | Done → [docs/03_sql_per_person_cost.md](docs/03_sql_per_person_cost.md) |
-| 4 | Neighborhood comparison | Next |
-| 5 | Rent trends | |
+| 4 | Sensitivity analysis + recommendation | Done → [docs/04_sensitivity_and_recommendation.md](docs/04_sensitivity_and_recommendation.md) |
+| 5 | Rent trends | Next |
 | 6 | Price drivers (interpretable regression) | |
 | 7 | Scenario analysis | |
 | 8 | Dashboard + report | |
