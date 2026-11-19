@@ -34,15 +34,17 @@ python scripts/06_tableau_export.py
 STUDY_ZIPS = {
     "90024": ("Westwood", "adjacent"),
     "90025": ("West LA / Sawtelle", "near"),
+    "90064": ("Rancho Park", "near"),
+    ...
+    "90005": ("Koreatown", "far"),
 }
 VALIDATION_ZIPS = {
     **STUDY_ZIPS,
-    "90064": ("Rancho Park", "near"),
-    ...
+    "90020": ("Koreatown (90020)", "far"),
 }
 ```
-- 딕셔너리 `{ZIP: (지역 이름, 거리 그룹)}`. 범위를 바꾸고 싶으면 **여기만 고치면** 아래 코드 전체에 반영된다. 3단계에서 8개 ZIP을 2개로 줄일 때도 이 부분만 바꿨다.
-- `**STUDY_ZIPS`는 딕셔너리 펼치기. 검증용 목록 = 분석용 2개 + 추가 6개.
+- 딕셔너리 `{ZIP: (지역 이름, 거리 그룹)}`. 범위를 바꾸고 싶으면 **여기만 고치면** 아래 코드 전체에 반영된다. 범위를 8개 → 2개 → 7개로 바꿀 때마다 이 부분만 고쳤다.
+- `**STUDY_ZIPS`는 딕셔너리 펼치기. 검증용 목록 = 분석용 7개 + ZORI 이상치인 90020.
 - ZIP을 **문자열** `"90024"`로 쓴 이유: 숫자로 쓰면 `02134` 같은 ZIP의 앞자리 0이 사라진다.
 
 ### 2-2. 로그를 화면과 문서에 동시에 남기기
@@ -147,7 +149,8 @@ corr = pd.concat([latest, fmr[1]], axis=1).corr().iloc[0, 1]
 
 ---
 
-## 3단계. SQL로 1인당 비용 만들기
+
+## 3단계. SQL로 1인당 비용과 통학 비용 만들기
 
 ### 3-0. SQL 실행기: `scripts/03_run_sql.py`
 
@@ -159,68 +162,60 @@ for sql_file in sorted((ROOT / "sql").glob("*.sql")):    # 01, 02, ... 순서대
         continue                                         # 테이블만 만드는 파일은 건너뜀
     df = result.df()
     df.to_csv(OUT / f"{sql_file.stem}.csv", index=False) # 결과를 CSV로 저장
+...
+con.execute("SELECT * FROM sensitivity ...").df().to_csv(OUT / "sensitivity_full.csv", index=False)
 ```
 - **DuckDB**: 설치만 하면 되는 분석용 DB. 서버가 필요 없고, CSV를 바로 읽으며, BigQuery와 문법이 많이 비슷하다(QUALIFY, 윈도우 함수 등).
-- 파일 이름에 번호를 붙여 `sorted`로 실행 순서를 보장한다. 앞 파일이 만든 테이블(예: `market_rent`)을 뒤 파일이 쓴다.
-- 각 파일의 마지막 `SELECT` 결과가 `data/processed/파일이름.csv`로 저장된다.
+- 파일 이름에 번호를 붙여 `sorted`로 실행 순서를 보장한다. 앞 파일이 만든 테이블(예: `market_rent`, `commute_cost`)을 뒤 파일이 쓴다.
+- 각 파일의 마지막 `SELECT` 결과가 `data/processed/파일이름.csv`로 저장된다. 시나리오 전체 표는 마지막에 따로 저장한다(차트·Tableau용).
 
 ### 3-1. `sql/01_load_tables.sql`: CSV를 테이블로
 
 ```sql
 CREATE OR REPLACE TABLE zori AS
-SELECT CAST(zip AS VARCHAR) AS zip, area, CAST(month || '-01' AS DATE) AS month, zori
+SELECT CAST(zip AS VARCHAR) AS zip, area, distance_group, CAST(month || '-01' AS DATE) AS month, zori
 FROM read_csv_auto('data/processed/zori_study_zips.csv', types = {'zip': 'VARCHAR'});
+...
+CREATE OR REPLACE TABLE commute_times AS
+SELECT CAST(zip AS VARCHAR) AS zip, area, transit_min, walk_min,
+       (drive_min_low + drive_min_high) / 2.0 AS drive_min_mid,
+       drive_miles
+FROM read_csv_auto('data/raw/commute_times_google_maps.csv', types = {'zip': 'VARCHAR'});
 ```
 - `CREATE OR REPLACE TABLE ... AS SELECT`: 조회 결과로 테이블을 만든다(있으면 덮어씀). 다시 실행해도 에러가 안 난다.
 - `read_csv_auto`: CSV를 읽고 타입을 자동 추론. 단, ZIP은 숫자로 추론되므로 `types`로 문자 지정.
-- `month || '-01'`: `||`는 문자열 이어 붙이기. `'2026-10'` → `'2026-10-01'` → `DATE`로 변환. 날짜 타입이어야 `YEAR()`, 날짜 비교, 정렬이 제대로 된다.
+- `month || '-01'`: `||`는 문자열 이어 붙이기. `'2026-10'` → `'2026-10-01'` → `DATE`. 날짜 타입이어야 `YEAR()`, 날짜 비교, 정렬이 제대로 된다.
+- `(low + high) / 2.0`: 구글맵의 "보통 35~80분"을 중간값 하나로 바꾼다. 적재 단계에서 파생 컬럼을 만들어 두면 뒤 쿼리가 단순해진다.
 
-### 3-2. `sql/02_zori_trend.sql`: 전년 대비 상승률과 피벗 ⭐
+### 3-2. `sql/02_zori_trend.sql`: 전년 대비, 그리고 "같은 달 Westwood 대비" ⭐
 
 ```sql
-WITH yoy AS (
-    SELECT zip, month, zori,
-           LAG(zori, 12) OVER (PARTITION BY zip ORDER BY month) AS zori_last_year
+WITH base AS (
+    SELECT zip, area, month, zori,
+           LAG(zori, 12) OVER (PARTITION BY zip ORDER BY month)                AS zori_last_year,
+           MAX(CASE WHEN zip = '90024' THEN zori END) OVER (PARTITION BY month) AS westwood_same_month
     FROM zori
-),
+)
+SELECT zip, area, month,
+       ROUND(100 * (zori / zori_last_year - 1), 1)      AS yoy_pct,
+       ROUND(100 * (zori / westwood_same_month - 1), 1) AS pct_vs_westwood
+FROM base
+WHERE month >= DATE '2018-01-01'
+ORDER BY zip, month;
 ```
 **윈도우 함수 읽는 법**: `함수 OVER (PARTITION BY 그룹 ORDER BY 순서)`
-- `PARTITION BY zip`: ZIP별로 따로 계산(그룹을 나누지만 GROUP BY처럼 행을 줄이지 않는다).
-- `ORDER BY month`: 그룹 안에서 월 순서로 정렬.
-- `LAG(zori, 12)`: 정렬된 순서에서 12행 앞의 값 = 작년 같은 달.
+- `LAG(zori, 12) OVER (PARTITION BY zip ORDER BY month)`: ZIP별로, 월 순서로 정렬했을 때 12행 앞의 값 = 작년 같은 달.
 
 | zip | month | zori | zori_last_year |
 | --- | --- | --- | --- |
 | 90024 | 2018-01 | 2,825 | 2,628 (2017-01 값) |
 | 90024 | 2018-02 | 2,808 | 2,617 (2017-02 값) |
 
-⚠️ LAG는 "12개월 전"이 아니라 "12행 전"이다. 중간에 빠진 달이 있으면 틀리므로, 2단계에서 결측이 없는지 먼저 확인했다.
+- `MAX(CASE WHEN zip = '90024' THEN zori END) OVER (PARTITION BY month)`: **같은 달의 모든 행**(7개 ZIP)에 그 달 Westwood 값을 붙인다. 행을 줄이지 않으니 각 동네가 Westwood보다 몇 % 싼지 바로 나눌 수 있다.
+- ⚠️ LAG는 "12개월 전"이 아니라 "12행 전"이다. 빠진 달이 있으면 틀리므로, 2단계에서 결측이 없는지 먼저 확인했다.
+- ⚠️ `WHERE`는 마지막 SELECT에 걸었다. CTE 안(LAG 계산 전)에서 2018년 이후로 자르면 2018년의 "작년 값"(2017년)이 사라진다. **필터를 거는 위치가 결과를 바꾼다.**
 
-```sql
-wide AS (
-    SELECT month,
-           MAX(CASE WHEN zip = '90024' THEN zori END) AS westwood,
-           MAX(CASE WHEN zip = '90025' THEN zori END) AS west_la,
-           ...
-    FROM yoy
-    GROUP BY month
-)
-```
-**피벗 (긴 형태 → 넓은 형태)**:
-- `GROUP BY month`로 한 달에 한 줄을 만든다. 그 달에는 원래 ZIP별 두 줄이 있다.
-- `CASE WHEN zip = '90024' THEN zori END`: 90024 행이면 값, 아니면 NULL.
-- `MAX(...)`: NULL을 무시하므로 90024의 값만 남는다. (값이 하나뿐이라 MIN, SUM을 써도 결과는 같지만, 관례적으로 MAX를 쓴다.)
-
-```sql
-SELECT month,
-       ROUND(100 * (westwood / westwood_ly - 1), 1) AS westwood_yoy_pct,
-       ROUND(100 * (westwood / west_la - 1), 1)     AS westwood_premium_pct
-FROM wide
-WHERE month >= DATE '2018-01-01'
-ORDER BY month;
-```
-- 같은 행에 값이 나란히 있으니 나눗셈 한 번으로 상승률과 프리미엄이 나온다.
-- `WHERE`는 마지막 SELECT에 걸었다. CTE 안(LAG 계산 전)에서 2018년 이후로 자르면, 2018년의 "작년 값"(2017년)이 사라져 NULL이 된다. **필터를 거는 위치가 결과를 바꾼다.**
+**설계 변경 이야기**: 지역이 두 곳일 때는 `MAX(CASE WHEN …) … GROUP BY month`로 피벗해 `westwood`, `west_la` 컬럼을 만들었다. 그런데 지역이 7곳이 되자 컬럼을 7개 써야 했다. 그래서 **긴 형태를 유지하고 기준값(Westwood)만 윈도우로 붙이는 방식**으로 바꿨다. 지역 수가 바뀌어도 쿼리를 고칠 필요가 없다.
 
 ### 3-3. `sql/03_market_rent_by_bedroom.sql`: 두 출처 결합 ⭐
 
@@ -230,11 +225,20 @@ WITH latest_zori AS (
     FROM zori
     QUALIFY ROW_NUMBER() OVER (PARTITION BY zip ORDER BY month DESC) = 1
 ),
+bedroom_ratio AS (
+    SELECT zip, area, distance_group, bedrooms, safmr,
+           safmr / MAX(CASE WHEN bedrooms = 1 THEN safmr END) OVER (PARTITION BY zip) AS ratio_to_1br
+    FROM safmr
+)
+SELECT b.zip, b.area, b.bedrooms, b.safmr, ROUND(z.zori * b.ratio_to_1br) AS est_market_rent
+FROM bedroom_ratio b
+JOIN latest_zori z USING (zip)
+WHERE b.bedrooms <= 3
 ```
 **그룹별 최신 1개** (쿼리 테스트 단골):
-- `ROW_NUMBER() OVER (PARTITION BY zip ORDER BY month DESC)`: ZIP마다 최신 월부터 1, 2, 3… 번호를 매긴다.
-- `QUALIFY ... = 1`: 윈도우 함수 결과로 거른다. SQL 실행 순서는 `FROM → WHERE → GROUP BY → HAVING → 윈도우 함수 → QUALIFY → SELECT → ORDER BY`라서 WHERE에서는 윈도우 결과를 쓸 수 없다.
-- QUALIFY가 없는 DB(MySQL, PostgreSQL 등)에서는:
+- `ROW_NUMBER() OVER (PARTITION BY zip ORDER BY month DESC)`: ZIP마다 최신 월부터 1, 2, 3… 번호.
+- `QUALIFY ... = 1`: 윈도우 함수 결과로 거른다. 실행 순서가 `FROM → WHERE → GROUP BY → HAVING → 윈도우 → QUALIFY → SELECT → ORDER BY`라서 WHERE에서는 윈도우 결과를 쓸 수 없다.
+- QUALIFY가 없는 DB에서는:
   ```sql
   SELECT zip, zori FROM (
       SELECT zip, zori, ROW_NUMBER() OVER (PARTITION BY zip ORDER BY month DESC) AS rn
@@ -243,52 +247,24 @@ WITH latest_zori AS (
   WHERE rn = 1;
   ```
 
-```sql
-bedroom_ratio AS (
-    SELECT zip, bedrooms, safmr,
-           safmr / MAX(CASE WHEN bedrooms = 1 THEN safmr END) OVER (PARTITION BY zip) AS ratio_to_1br
-    FROM safmr
-)
-```
-- `MAX(CASE WHEN bedrooms = 1 THEN safmr END) OVER (PARTITION BY zip)`: ZIP별 1BR 값을 구해 **그 ZIP의 모든 행 옆에** 붙인다. GROUP BY였다면 ZIP당 한 줄로 줄어들었을 것이다.
-- 그래서 각 침실 수의 SAFMR을 같은 ZIP의 1BR로 나눌 수 있다: 0BR 0.89, 2BR 1.25, 3BR 1.58.
+**집계 없는 윈도우**: `MAX(CASE WHEN bedrooms = 1 THEN safmr END) OVER (PARTITION BY zip)`는 ZIP별 1BR 값을 그 ZIP의 모든 행 옆에 붙인다. GROUP BY였다면 ZIP당 한 줄로 줄었을 것이다. 그래서 각 침실 수를 1BR로 나눌 수 있다(0BR 0.89, 2BR 1.25, 3BR 1.58).
 
-```sql
-SELECT b.zip, b.bedrooms, b.safmr,
-       ROUND(z.zori * b.ratio_to_1br) AS est_market_rent
-FROM bedroom_ratio b
-JOIN latest_zori z USING (zip)
-WHERE b.bedrooms <= 3
-```
-- `JOIN ... USING (zip)`: 양쪽 컬럼 이름이 같을 때 `ON b.zip = z.zip`의 줄임.
-- **추정 렌트 = ZORI(ZIP 수준) × SAFMR 비율(침실 구조)**. Westwood 2BR = $3,617 × 1.246 ≈ $4,508.
+`JOIN ... USING (zip)`은 컬럼 이름이 같을 때 `ON b.zip = z.zip`의 줄임. **추정 렌트 = ZORI(ZIP 수준) × SAFMR 비율(침실 구조)**. 예: Westwood 2BR = $3,617 × 1.246 ≈ $4,508.
 
-### 3-4. `sql/04_per_person_cost.sql`: UCLA vs 외부 ⭐
+### 3-4. `sql/04_per_person_cost.sql`: UCLA vs 외부 렌트 ⭐
 
 ```sql
 WITH params AS (
     SELECT 9 AS ucla_months, 12 AS lease_months, 3 AS summer_months, 0.7 AS sublet_recovery
 ),
-```
-- **가정값 테이블**: 한 줄짜리. 숫자를 쿼리 여기저기에 직접 쓰지 않고 이름을 붙여 한 곳에 모은다. 가정을 바꿀 때 여기만 고치면 된다.
-
-```sql
 ucla AS (
-    SELECT 'UCLA University Apartments' AS option,
-           u.unit_type, u.bedrooms, u.occupants, u.bedroom_sharing,
+    SELECT 'UCLA' AS option, NULL AS zip, u.unit_type, u.bedrooms, u.occupants,
            u.total_contract_usd / p.ucla_months AS school_year_monthly,
-           u.total_contract_usd                 AS annual_if_away_in_summer,
-           u.total_contract_usd                 AS annual_with_sublet
+           u.total_contract_usd                 AS annual_if_away_in_summer, ...
     FROM ucla_apartments u, params p
 ),
-```
-- `FROM 테이블A, 테이블B`: 조건 없이 콤마로 나열하면 모든 조합(CROSS JOIN)이다. params는 1행이라 행 수가 그대로고, 모든 행에 가정값이 붙는다.
-- `'UCLA University Apartments' AS option`: 상수 컬럼. 나중에 외부 선택지와 합칠 때 어느 쪽인지 구분하는 라벨.
-
-```sql
 off_campus AS (
-    SELECT CASE m.zip WHEN '90024' THEN 'Westwood (90024)' ELSE 'West LA (90025)' END AS option,
-           ...
+    SELECT m.area AS option, m.zip, u.unit_type, u.bedrooms, u.occupants,
            m.est_market_rent / u.occupants AS school_year_monthly,
            m.est_market_rent / u.occupants * p.lease_months AS annual_if_away_in_summer,
            m.est_market_rent / u.occupants * (p.lease_months - p.summer_months * p.sublet_recovery) AS annual_with_sublet
@@ -296,40 +272,54 @@ off_campus AS (
     JOIN market_rent m ON m.bedrooms = u.bedrooms
     CROSS JOIN params p
 )
-```
-- `JOIN market_rent m ON m.bedrooms = u.bedrooms`: UCLA 유형마다 **같은 침실 수**의 외부 렌트를 붙인다. market_rent에는 침실 수마다 ZIP이 2개 → UCLA 1행이 2행(Westwood, West LA)이 된다. **JOIN 결과 행 수 = 8 × 2 = 16을 미리 예상**하고 확인한다.
-- `/ u.occupants`: UCLA와 같은 인원으로 나눠야 공정한 비교.
-- 서브렛 공식: `12 - 3 × 0.7 = 9.9`개월치를 실제로 부담 = 여름 3개월 중 70%를 돌려받음.
-- `CASE m.zip WHEN '90024' THEN ... ELSE ... END`: 단순 CASE 문법. `CASE WHEN m.zip = '90024' THEN ...`과 같다.
-
-```sql
 SELECT * FROM ucla
 UNION ALL
 SELECT * FROM off_campus;
 ```
-- 컬럼 개수·순서·타입이 같은 두 결과를 **위아래로** 붙인다. JOIN은 옆으로, UNION은 아래로.
-- `UNION`(중복 제거)이 아니라 `UNION ALL`: 두 쪽은 겹칠 수 없고, 중복 제거는 비용도 들고 우연히 같은 행을 지울 위험도 있다.
+- **params CTE**: 가정값을 한 줄짜리 테이블에 모은다. `FROM 테이블, params`(콤마 = CROSS JOIN)로 붙여도 1행이라 행 수는 그대로.
+- `JOIN market_rent m ON m.bedrooms = u.bedrooms`: UCLA 유형마다 **같은 침실 수**의 외부 렌트를 붙인다. market_rent에는 침실 수마다 동네가 7개 → UCLA 1행이 7행이 된다. **JOIN 결과 행 수(8 × 7 = 56)를 미리 예상**하고 확인한다.
+- `NULL AS zip`: UNION ALL은 양쪽 컬럼 개수와 순서가 같아야 해서, UCLA 쪽에 없는 ZIP을 NULL로 채운다.
+- `/ u.occupants`: UCLA와 같은 인원으로 나눠야 공정한 비교. 서브렛 공식 `12 − 3 × 0.7 = 9.9`개월치 부담.
+- `UNION`(중복 제거) 대신 `UNION ALL`: 두 쪽은 겹칠 수 없고, 중복 제거는 비용도 들고 우연히 같은 행을 지울 위험도 있다.
+- 마지막 SELECT의 `RANK() OVER (PARTITION BY unit_type ORDER BY …)`: 같은 유형 안에서 싼 순서. `ROW_NUMBER`(1,2,3) vs `RANK`(1,1,3) vs `DENSE_RANK`(1,1,2).
+
+### 3-5. `sql/05_commute_cost.sql`: 통학 수단별 비용 ⭐
 
 ```sql
-RANK() OVER (PARTITION BY unit_type ORDER BY annual_if_away_in_summer) AS rank_annual_if_away
+WITH params AS (
+    SELECT
+        16 AS campus_days_per_month,
+        10 AS park_walk_min,
+        (SELECT value FROM cost_assumptions WHERE item = 'ucla_commuter_parking_permit') * 3 / 9.0
+            AS parking_per_school_month,
+        (SELECT SUM(value) FROM cost_assumptions
+          WHERE item IN ('car_fuel_cost', 'car_maintenance_repair_tires')) AS car_cost_per_mile,
+        ...
+),
+modes AS (
+    SELECT zip, 'walk' AS mode, walk_min AS one_way_min, 0.0 AS cash_per_school_month, 0.0 AS fixed_per_month
+    FROM commute_times WHERE walk_min IS NOT NULL
+    UNION ALL
+    SELECT zip, 'transit', transit_min, 0.0, 0.0
+    FROM commute_times WHERE transit_min IS NOT NULL
+    UNION ALL
+    SELECT c.zip, 'car_owned', c.drive_min_mid + p.park_walk_min,
+           p.parking_per_school_month + c.drive_miles * 2 * p.campus_days_per_month * p.car_cost_per_mile,
+           0.0
+    FROM commute_times c, params p WHERE c.drive_miles IS NOT NULL
+    UNION ALL
+    SELECT ... 'car_bought' ... p.car_fixed_per_month ...
+)
+SELECT m.zip, t.area, m.mode, m.one_way_min,
+       ROUND(m.one_way_min * 2 * p.campus_days_per_month / 60.0, 1) AS hours_per_school_month, ...
 ```
-- 같은 유형 안에서 비용이 싼 순서로 순위. 동점이면 같은 순위.
-- `ROW_NUMBER`(1,2,3 무조건) vs `RANK`(1,1,3) vs `DENSE_RANK`(1,1,2) 차이를 기억하자.
-
-### 3-5. `sql/05_commute_breakeven.sql`: 손익분기
-
-```sql
-SELECT unit_type, occupants,
-       ROUND(westwood - west_la) AS monthly_savings_west_la,
-       ROUND(p.extra_minutes_one_way * 2 * p.campus_days_per_month / 60.0, 1) AS extra_hours_per_month,
-       ROUND((westwood - west_la) / (p.extra_minutes_one_way * 2 * p.campus_days_per_month / 60.0), 2) AS breakeven_usd_per_hour
-FROM pivoted, params p
-```
-- 04 결과를 피벗(3-2와 같은 `MAX(CASE WHEN)` 패턴)해서 두 지역을 한 행에 놓고 계산한다.
-- `/ 60.0`: **정수 나눗셈 함정** 대비. DuckDB와 BigQuery는 `/`가 항상 소수 나눗셈이지만, PostgreSQL이나 SQL Server에서는 정수끼리 나누면 소수점이 잘린다(`470 / 60` = 7). `60.0`으로 쓰면 어느 DB에서든 소수 계산이 된다. 쿼리 테스트에서 비율을 계산할 때 자주 틀리는 부분이다.
+- **스칼라 서브쿼리** `(SELECT value FROM … WHERE item = …)`: 값 하나를 돌려주는 서브쿼리는 숫자처럼 쓸 수 있다. 가정값을 CSV에 출처와 함께 두고, 쿼리는 이름으로 읽어 온다. 주차비가 바뀌면 CSV만 고치면 된다.
+- **수단을 UNION ALL로 쌓기**: 수단마다 계산식이 달라서, 수단별 SELECT를 따로 쓰고 위아래로 붙였다. 결과는 "동네 × 수단" 긴 형태라 뒤 쿼리에서 원하는 수단만 고르기 쉽다.
+- `WHERE walk_min IS NOT NULL`: 도보는 Westwood에만 값이 있다. NULL 처리로 "가능한 수단만" 행을 만든다.
+- `/ 60.0`, `/ 9.0`: **정수 나눗셈 함정** 대비. DuckDB·BigQuery는 `/`가 소수 나눗셈이지만 PostgreSQL·SQL Server는 정수끼리 나누면 소수점이 잘린다(`470 / 60` = 7). 쿼리 테스트에서 비율 계산할 때 자주 틀린다.
 
 ### 직접 해 보기
-1. `04`의 params에서 `sublet_recovery`를 0.5로 바꾸고 다시 실행해 보자. 2/4 apartment의 순위가 바뀌나?
+1. `05`의 params에서 `park_walk_min`을 0으로 바꾸면 Koreatown의 운전이 대중교통보다 빨라지나?
 2. `03`의 `latest_zori`를 QUALIFY 없이 서브쿼리 방식으로 다시 써 보자.
 3. `02`에서 `PARTITION BY zip`을 지우면 어떤 행의 값이 틀어지는지 확인해 보자.
 
@@ -337,169 +327,210 @@ FROM pivoted, params p
 
 ## 4단계. 민감도 분석
 
-### 4-1. `sql/06_sensitivity.sql`: 시나리오 조합 만들기 ⭐
+### 4-1. `sql/06_sensitivity.sql`: 1,080개 시나리오 ⭐
 
+**① 시나리오 목록을 VALUES로 만들기**
 ```sql
-WITH rent_method(rent_method) AS (
-    VALUES ('zori_adjusted'), ('safmr'), ('safmr_110')
-),
+WITH rent_method(rent_method) AS (VALUES ('zori_adjusted'), ('safmr'), ('safmr_110')),
 summer_plan(summer_plan, sublet_recovery, ucla_needs_summer_housing) AS (
-    VALUES ('away', 0.0, FALSE), ('sublet_50', 0.5, FALSE), ('sublet_70', 0.7, FALSE),
-           ('sublet_90', 0.9, FALSE), ('stay_in_la', 0.0, TRUE)
+    VALUES ('away', 0.0, FALSE), ('sublet_50', 0.5, FALSE), ..., ('stay_in_la', 0.0, TRUE)
 ),
+car_profile(car_profile) AS (VALUES ('transit'), ('drives_owned'), ('drives_bought')),
+time_value(time_value)   AS (VALUES (0.0), (20.0), (35.0)),
 ```
-- `VALUES (...), (...)`: 테이블 없이 쿼리 안에서 작은 표를 직접 만든다. `이름(컬럼1, 컬럼2)`로 컬럼 이름을 붙인다.
-- 시나리오 목록을 데이터처럼 다루면, 시나리오를 추가할 때 한 줄만 넣으면 된다.
+- `VALUES`로 쿼리 안에서 작은 표를 만든다. 시나리오를 데이터처럼 다루면, 추가할 때 한 줄만 넣으면 된다.
 
+**② CROSS JOIN으로 모든 조합**
 ```sql
 rent AS (
-    SELECT m.zip, m.bedrooms, r.rent_method,
-           CASE r.rent_method
-               WHEN 'zori_adjusted' THEN m.est_market_rent
-               WHEN 'safmr'         THEN m.safmr
-               WHEN 'safmr_110'     THEN m.safmr * 1.10
-           END AS unit_rent
-    FROM market_rent m
-    CROSS JOIN rent_method r
+    SELECT m.zip, m.area, m.bedrooms, r.rent_method,
+           CASE r.rent_method WHEN 'zori_adjusted' THEN m.est_market_rent
+                              WHEN 'safmr' THEN m.safmr
+                              WHEN 'safmr_110' THEN m.safmr * 1.10 END AS unit_rent
+    FROM market_rent m CROSS JOIN rent_method r
+),
+commute_annual AS (
+    SELECT c.zip, c.mode, t.time_value,
+           9 * (c.cash_per_school_month + c.hours_per_school_month * t.time_value) + 12 * c.fixed_per_month
+             AS annual_commute_cost
+    FROM commute_cost c CROSS JOIN time_value t
 ),
 ```
-- `CROSS JOIN`: 모든 조합. market_rent 8행 × 방법 3개 = 24행. **민감도 분석의 핵심 도구**다.
-- CASE로 방법마다 다른 렌트 값을 고른다.
+- `CROSS JOIN` = 모든 조합. 렌트 28행 × 방법 3 = 84행, 통학 19행 × 시간 가치 3 = 57행.
+- 통학은 학기 중 9개월만, 차량 보유비는 12개월 내내 든다.
 
+**③ 프로필별로 쓸 수 있는 수단만 고르기**
 ```sql
-scenarios AS (
-    SELECT ... 'Westwood' or 'West LA' AS option,
-           p.pp_monthly * (12 - 3 * s.sublet_recovery) AS annual_cost
-    FROM pp p CROSS JOIN summer_plan s
-    UNION ALL
-    SELECT ... 'UCLA' AS option,
-           p.total_contract_usd + CASE WHEN s.ucla_needs_summer_housing THEN 3 * p.pp_monthly ELSE 0 END AS annual_cost
-    FROM pp p CROSS JOIN summer_plan s
-    WHERE p.zip = '90025'
-)
+best_commute AS (
+    SELECT a.zip, p.car_profile, a.time_value, MIN(a.annual_commute_cost) AS annual_commute_cost
+    FROM commute_annual a
+    CROSS JOIN car_profile p
+    WHERE a.mode = 'walk'
+       OR (p.car_profile = 'transit'       AND a.mode = 'transit')
+       OR (p.car_profile = 'drives_owned'  AND a.mode = 'car_owned')
+       OR (p.car_profile = 'drives_bought' AND a.mode = 'car_bought')
+    GROUP BY a.zip, p.car_profile, a.time_value
+),
 ```
-- 외부: 1인당 월세 × (12 − 서브렛으로 돌려받는 개월 수).
-- UCLA: 계약 총액 + (LA에 남으면 여름 3개월 숙소비).
-- ⚠️ `WHERE p.zip = '90025'`: pp 테이블은 유형마다 ZIP 2개라 UCLA 행이 두 번 생긴다. **JOIN 팽창**을 막으려고 하나만 남겼다(UCLA 요금은 ZIP과 무관). 이 줄이 없으면 UCLA가 같은 시나리오에 두 번 나와 순위가 꼬인다.
+- `WHERE ... OR (...)`: "도보가 가능하면 도보, 아니면 그 프로필의 수단"이라는 규칙을 조건 하나로 쓴다. Westwood는 도보와 프로필 수단이 둘 다 남을 수 있어서 `MIN`으로 싼 쪽을 고른다.
+- ⚠️ `AND`와 `OR`가 섞이면 괄호가 필수다. `AND`가 먼저 계산되기 때문이다.
+
+**④ UCLA 행이 중복되지 않게**
+```sql
+SELECT p.unit_type, p.rent_method, s.summer_plan, uc.car_profile, uc.time_value,
+       'UCLA' AS option,
+       MIN(p.total_contract_usd)
+         + CASE WHEN s.ucla_needs_summer_housing THEN 3 * MIN(p.pp_monthly) ELSE 0 END AS annual_rent, ...
+FROM pp p CROSS JOIN summer_plan s CROSS JOIN ucla_commute uc
+GROUP BY p.unit_type, p.rent_method, s.summer_plan, s.ucla_needs_summer_housing, uc.car_profile, uc.time_value
+```
+- `pp`에는 유형마다 동네 7행이 있어서, 그대로 쓰면 UCLA가 같은 시나리오에 7번 나온다(**JOIN 팽창**).
+- GROUP BY로 시나리오당 한 줄로 접는다. UCLA 요금은 동네와 무관하니 `MIN`(어느 행이든 같은 값)으로 꺼낸다. LA에 남는 경우의 여름 숙소비는 `MIN(p.pp_monthly)` = 가장 싼 동네 렌트.
+- 처음 두 지역 버전에서는 `WHERE p.zip = '90025'`로 한 행만 남겼는데, 지역이 바뀌어도 깨지지 않도록 GROUP BY 방식으로 바꿨다.
+
+**⑤ 순위**
+```sql
+RANK() OVER (PARTITION BY unit_type, rent_method, summer_plan, car_profile, time_value
+             ORDER BY annual_rent + annual_commute_cost) AS cost_rank
+```
+- PARTITION BY에 시나리오를 구성하는 다섯 차원을 모두 넣어야 "같은 시나리오 안에서의 순위"가 된다. 하나라도 빠지면 다른 시나리오끼리 순위를 매기게 된다.
 
 ### 4-2. `sql/07_win_share.sql`: 승률과 차이 크기
 
 ```sql
 WITH ranked AS (
-    SELECT *,
-           LEAD(annual_cost) OVER (PARTITION BY unit_type, rent_method, summer_plan ORDER BY annual_cost) AS runner_up_cost
+    SELECT *, LEAD(annual_cost) OVER (PARTITION BY unit_type, rent_method, summer_plan, car_profile, time_value
+                                      ORDER BY annual_cost) AS runner_up_cost
     FROM sensitivity
 )
-SELECT summer_plan, option AS winner,
+SELECT car_profile, summer_plan, option AS winner,
        COUNT(*) AS scenarios_won,
-       ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY summer_plan), 0) AS share_pct,
+       ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY car_profile, summer_plan), 0) AS share_pct,
        ROUND(MEDIAN(runner_up_cost - annual_cost)) AS median_margin_usd
-FROM ranked
-WHERE cost_rank = 1
-GROUP BY summer_plan, option
+FROM ranked WHERE cost_rank = 1
+GROUP BY car_profile, summer_plan, option
 ```
-- `LEAD`: LAG의 반대로, 다음 행의 값. 비용순으로 정렬했으니 1등 행의 LEAD = 2등의 비용 → `차이 = 2등 − 1등`.
-- `SUM(COUNT(*)) OVER (PARTITION BY summer_plan)`: **집계 위에 윈도우 함수**. GROUP BY가 먼저 실행돼 `COUNT(*)`(선택지별 승리 수)가 나오고, 그 결과 위에서 여름 계획별 합계(24)를 구한다. 비율 = 승리 수 ÷ 합계. GA4 프로젝트 7단계에서 쓴 패턴과 같다.
-- `MEDIAN`: 중앙값. 평균보다 극단값에 덜 흔들린다.
+- `LEAD`: 다음 행 값. 비용순 정렬에서 1등 행의 LEAD = 2등 비용 → 차이 = 2등 − 1등.
+- `SUM(COUNT(*)) OVER (...)`: **집계 위에 윈도우**. GROUP BY가 먼저 실행돼 선택지별 승리 수가 나오고, 그 위에서 그룹 합계를 구해 비율을 낸다. GA4 프로젝트 7단계와 같은 패턴.
+- `MEDIAN`: 평균보다 극단값에 덜 흔들린다.
 
 ### 4-3. `sql/08_recommendation.sql`: 결론이 견고한가
 
 ```sql
-SELECT unit_type, summer_plan,
-       COUNT(DISTINCT option) AS n_distinct_winners,
-       MODE(option)           AS most_common_winner,
+SELECT car_profile, time_value, summer_plan,
+       CASE WHEN COUNT(DISTINCT option) = 1 THEN MODE(option) || ' (robust)'
+            ELSE MODE(option) || ' (depends on rent estimate)' END AS recommendation,
        STRING_AGG(rent_method || '=' || option, ', ' ORDER BY rent_method) AS detail
 FROM winners
-GROUP BY unit_type, summer_plan
+GROUP BY car_profile, time_value, summer_plan
+ORDER BY CASE car_profile WHEN 'transit' THEN 1 WHEN 'drives_owned' THEN 2 ELSE 3 END, ...
 ```
-- `COUNT(DISTINCT option) = 1`이면 세 렌트 추정 방식에서 모두 같은 선택이 이겼다는 뜻 → "robust".
-- `MODE()`: 가장 자주 나온 값(최빈값).
-- `STRING_AGG(값, 구분자)`: 그룹 안의 값들을 문자열 하나로 이어 붙인다. BigQuery에도 같은 이름, MySQL은 `GROUP_CONCAT`.
+- `COUNT(DISTINCT option) = 1`: 세 렌트 추정 방식에서 모두 같은 선택이 이겼다 → robust.
+- `MODE()`: 최빈값. `STRING_AGG`: 그룹 안의 값을 문자열 하나로 (MySQL은 `GROUP_CONCAT`).
+- `ORDER BY CASE …`: 알파벳순이 아닌 원하는 순서로 정렬.
+
+### 4-4. `sql/11_time_value_breakeven.sql`: 손익분기 시간 가치
 
 ```sql
-ORDER BY unit_type,
-         CASE summer_plan WHEN 'away' THEN 1 WHEN 'sublet_50' THEN 2 ... ELSE 5 END;
+-- 동네가 더 싸려면: cash_nb + 9·hours_nb·v < cash_ucla + 9·hours_ucla·v
+--                ⇔ v < (cash_ucla − cash_nb) / (9 · (hours_nb − hours_ucla))
+SELECT c.car_profile, c.summer_plan, c.option AS neighborhood,
+       ROUND(u.ucla_cash - c.cash_cost) AS cash_savings_vs_ucla,
+       CASE WHEN u.ucla_cash - c.cash_cost <= 0 THEN NULL
+            ELSE ROUND((u.ucla_cash - c.cash_cost) / (9 * (h.hours_per_school_month - u.ucla_hours)), 1)
+       END AS breakeven_usd_per_hour
+FROM cash c
+JOIN ucla u USING (summer_plan, car_profile)
+JOIN hours h ON h.option = c.option AND h.car_profile = c.car_profile
 ```
-- **사용자 정의 정렬**: 알파벳순이 아니라 원하는 순서로 정렬할 때 CASE로 번호를 매긴다.
+- `time_value = 0`인 시나리오 행이 곧 "현금 비용만"이다. 이미 만든 테이블을 재활용했다.
+- 부등식을 v에 대해 풀어 SQL 식 하나로 썼다. 분석에서 "정답 없는 값(시간 가치)"을 **기준선**으로 바꾸는 방법이다.
+- `CASE … THEN NULL`: 현금으로도 더 비싸면 어떤 시간 가치에서도 이길 수 없으므로 NULL. 0으로 나누기나 음수 손익분기 같은 의미 없는 값을 막는다.
+- `JOIN ... USING (summer_plan, car_profile)`: 여러 컬럼으로 JOIN할 때도 USING을 쓸 수 있다.
 
 ### 직접 해 보기
-1. `06`의 summer_plan에 `('sublet_30', 0.3, FALSE)`를 추가해 보자. 07, 08 결과가 어떻게 바뀌나?
-2. `06`에서 `WHERE p.zip = '90025'`를 지우고 실행한 뒤, UCLA 행이 몇 개가 되는지 세어 보자.
+1. `06`의 time_value에 `(10.0)`을 추가하고 07 결과에서 Koreatown 승률이 어떻게 바뀌는지 보자.
+2. `06`의 ④에서 GROUP BY를 지우고 `pp`를 그대로 쓰면 UCLA 행이 몇 개가 되는지 세어 보자.
 
 ---
 
 ## 5단계. 추이, 차트, 내보내기
 
-### 5-1. `sql/09_trend_summary.sql`: 연도별 요약
+### 5-1. `sql/09_trend_summary.sql`: 동네별 연도 요약
 
 ```sql
-yearly AS (
-    SELECT zip, YEAR(month) AS year, AVG(zori) AS avg_rent, COUNT(*) AS months
-    FROM zori WHERE month >= DATE '2018-01-01'
-    GROUP BY zip, YEAR(month)
-)
-...
-ROUND(100 * (westwood / LAG(westwood) OVER (ORDER BY year) - 1), 1)   AS westwood_growth_pct,
-ROUND(100 * westwood / FIRST_VALUE(westwood) OVER (ORDER BY year), 1) AS westwood_index_2018
+SELECT zip, area, year, months, ROUND(avg_rent) AS avg_rent,
+       ROUND(100 * (avg_rent / LAG(avg_rent) OVER (PARTITION BY zip ORDER BY year) - 1), 1) AS growth_pct,
+       ROUND(100 * avg_rent / FIRST_VALUE(avg_rent) OVER (PARTITION BY zip ORDER BY year), 1) AS index_2018,
+       ROUND(100 * (MAX(CASE WHEN zip = '90024' THEN avg_rent END) OVER (PARTITION BY year) / avg_rent - 1), 1)
+         AS westwood_premium_pct
+FROM yearly
 ```
-- `COUNT(*) AS months`: 2026년은 10개월뿐이라 불완전한 해임을 표시. 연평균을 비교할 때 이런 표시가 없으면 오해가 생긴다.
-- 연도당 한 줄이라 `LAG(...)`(오프셋 생략 = 1)가 곧 전년 값.
-- `FIRST_VALUE`: 정렬 순서의 첫 값 = 2018년. 매년 값을 2018년으로 나누면 **지수(2018 = 100)**가 된다. 출발점이 다른 두 지역의 상승 속도를 비교할 때 쓴다.
+- `COUNT(*) AS months`(yearly CTE): 2026년은 10개월뿐이라 불완전한 해임을 표시.
+- 한 쿼리에 **PARTITION 기준이 다른 윈도우 세 개**: ZIP별 전년 값(`PARTITION BY zip`), ZIP별 첫해 값(지수), 연도별 Westwood 값(`PARTITION BY year`).
+- `FIRST_VALUE`: 정렬 순서의 첫 값 = 2018년. 매년 값을 2018년으로 나누면 **지수(2018 = 100)**. 출발점이 다른 동네의 상승 속도를 비교할 때 쓴다.
 
 ### 5-2. `sql/10_premium_seasonality.sql`: 추세를 빼고 계절성만 보기
 
 ```sql
-deviation AS (
+WITH monthly AS (
     SELECT month,
-           premium_pct - AVG(premium_pct) OVER (PARTITION BY YEAR(month)) AS gap_vs_year_avg
+           100 * (MAX(CASE WHEN zip = '90024' THEN zori END)
+                / AVG(CASE WHEN zip <> '90024' THEN zori END) - 1) AS premium_pct
+    FROM zori WHERE month >= DATE '2018-01-01'
+    GROUP BY month
+),
+deviation AS (
+    SELECT month, premium_pct - AVG(premium_pct) OVER (PARTITION BY YEAR(month)) AS gap_vs_year_avg
     FROM monthly
 )
-SELECT MONTH(month) AS calendar_month,
-       ROUND(AVG(gap_vs_year_avg), 2) AS avg_gap_pctpt,
+SELECT MONTH(month) AS calendar_month, ROUND(AVG(gap_vs_year_avg), 2) AS avg_gap_pctpt,
        SUM(CASE WHEN gap_vs_year_avg > 0 THEN 1 ELSE 0 END) AS years_above_avg
-FROM deviation
-GROUP BY MONTH(month)
+FROM deviation GROUP BY MONTH(month)
 ```
-- 프리미엄이 해마다 오르고 있어서, 월별 값을 그냥 평균 내면 추세가 섞인다.
-- `AVG(...) OVER (PARTITION BY YEAR(month))`: 각 달 옆에 그해 평균을 붙이고 빼서 "그해 평균보다 얼마나 높은가"만 남긴다.
-- 그다음 같은 달(1월끼리, 5월끼리)로 묶어 평균 낸다. `years_above_avg`는 "9년 중 몇 해나 평균보다 높았나"로, 평균 하나보다 패턴이 일관적인지를 보여준다.
+- **조건부 집계 두 개를 나눈다**: `MAX(CASE WHEN zip = '90024' …)`(Westwood)를 `AVG(CASE WHEN zip <> '90024' …)`(나머지 6곳 평균)로 나눠 월별 프리미엄을 만든다. 피벗과 같은 원리다.
+- `AVG(...) OVER (PARTITION BY YEAR(month))`: 각 달 옆에 그해 평균을 붙여 빼면 장기 추세가 빠지고 "그해 평균보다 얼마나 높은가"만 남는다.
+- `years_above_avg`: "9년 중 몇 해나 평균보다 높았나". 평균 하나보다 패턴이 일관적인지를 보여준다.
 
 ### 5-3. `scripts/05_make_charts.py`: 차트
 
 ```python
-COLOR = {"Westwood": "#2a78d6", "West LA": "#eb6834", "UCLA": "#1baf7a"}
+COLOR = {"Westwood": "#2a78d6", "West LA / Sawtelle": "#eb6834", "UCLA": "#1baf7a", ...}
 ```
-- **선택지별 색을 고정**해서 모든 차트에서 같은 대상은 같은 색이다.
+- **선택지별 색을 고정**해서 모든 차트에서 같은 대상은 같은 색.
 
 ```python
-fig, (a1, a2) = plt.subplots(2, 1, figsize=(9, 6.2), sharex=True,
-                             gridspec_kw={"height_ratios": [2.2, 1], "hspace": 0.12})
+ys, min_gap = [], 70
+for _, r in last.iterrows():                     # 최신 렌트가 낮은 동네부터
+    y = r["rent"] if not ys else max(r["rent"], ys[-1] + min_gap)
+    ys.append(y)
+    ax.annotate(f"{r['area']}  ${r['rent']:,.0f}", (r["month"], y), xytext=(8, 0), textcoords="offset points")
 ```
-- 차트 두 개를 위아래로 만들고 x축(날짜)을 공유한다. 렌트($)와 프리미엄(%)은 단위가 달라서 **한 차트에 축 두 개를 쓰지 않고** 나눴다.
+- 선 끝에 이름과 값을 직접 단다(direct label). 7개 선의 끝 값이 가까우면 글자가 겹치므로, 아래부터 올라가며 최소 간격($70)만큼 밀어 올린다.
 
 ```python
-a1.annotate(f"{name}  ${last[col]:,.0f}", (last["month"], last[col]), xytext=(6, 0),
-            textcoords="offset points", va="center")
+ax.barh(y, m["annual_rent"], label="Rent")
+ax.barh(y, m["annual_commute_cost"], left=m["annual_rent"], label="Commute time ($20/hr)")
 ```
-- 범례 대신 선 끝에 이름과 최신 값을 직접 단다(direct label). 읽는 사람이 색과 범례를 오가지 않아도 된다.
+- **누적 가로 막대**: `left=`에 앞 막대의 끝을 넣으면 그 뒤에 이어 그린다. 렌트와 통학 비용이 각각 얼마인지, 합계가 얼마인지 한 번에 보인다.
 
 ```python
-xs = [j + (i - 1) * (w + gap) for j in range(len(plans))]
-ax.bar(xs, vals, width=w, color=COLOR[o], label=o)
+share = (w[w["car_profile"] == prof].groupby("time_value")["option"]
+         .value_counts(normalize=True).mul(100).unstack(fill_value=0))
 ```
-- 묶음 막대: 여름 계획(j)마다 선택지(i = 0, 1, 2)를 왼쪽·가운데·오른쪽으로 조금씩 밀어서 그린다.
+- `value_counts(normalize=True)`: 비율. `unstack`: 긴 형태 → 넓은 형태(시간 가치 × 선택지 표). 100% 누적 막대를 그리기 좋은 모양이다.
+- 단위가 다른 값을 한 차트에 축 두 개로 겹치지 않고, 통학 방식별로 패널을 나눴다(small multiples).
 
 ### 5-4. `scripts/06_tableau_export.py`: 대시보드용 데이터
 
 ```python
-trend = z.melt(id_vars=["month", "westwood_premium_pct"], value_vars=["westwood_rent", "west_la_rent"],
-               var_name="area", value_name="rent")
 s = s.merge(occ, on="unit_type", how="left")
+s["time_value_label"] = s["time_value"].map(lambda v: f"${v:.0f}/hr")
 s["is_cheapest"] = (s["cost_rank"] == 1).astype(int)
 ```
-- Tableau도 긴 형태를 좋아한다: `area`를 색상에 넣으면 선이 자동으로 나뉜다. 그래서 피벗했던 결과를 다시 `melt`로 길게 만든다.
 - `merge(..., how="left")`: SQL의 LEFT JOIN. 시나리오 표에 인원 수를 붙인다.
-- `is_cheapest`를 0/1 플래그로 만들면 Tableau에서 `SUM`은 승리 횟수, `AVG`는 승률이 된다. GA4 프로젝트의 0/1 플래그와 같은 아이디어다.
+- 숫자 코드(`time_value = 20.0`)를 사람이 읽는 라벨(`$20/hr`)로 바꿔 두면 Tableau 필터가 바로 읽힌다.
+- `is_cheapest` 0/1 플래그: Tableau에서 `SUM`은 승리 횟수, `AVG`는 승률. GA4 프로젝트의 0/1 플래그와 같은 아이디어.
 
 ---
 
@@ -507,15 +538,20 @@ s["is_cheapest"] = (s["cost_rank"] == 1).astype(int)
 
 | 패턴 | 쓴 곳 | 한 줄 요약 |
 | --- | --- | --- |
-| `LAG / LEAD` | 02, 07, 09 | 앞·뒤 행 값 가져오기 (전년 대비, 1등과 2등 차이) |
-| `MAX(CASE WHEN …)` 피벗 | 02, 05, 06, 09, 10 | 긴 형태 → 넓은 형태 |
+| `LAG / LEAD` | 02, 07, 09 | 앞·뒤 행 값 (전년 대비, 1등과 2등 차이) |
+| 기준값을 윈도우로 붙이기 `MAX(CASE…) OVER (PARTITION BY month)` | 02, 09 | 지역 수와 무관하게 "기준 대비 %" 계산 |
+| `MAX(CASE WHEN …)` 조건부 집계 / 피벗 | 03, 10 | 조건에 맞는 값만 집계 |
 | `ROW_NUMBER` + `QUALIFY` | 03 | 그룹별 최신·최고 1개 |
-| 집계 없는 윈도우 (`MAX(...) OVER`) | 03, 10 | 그룹 값을 모든 행 옆에 붙이기 |
+| 집계 없는 윈도우 | 03, 10 | 그룹 값을 모든 행 옆에 붙이기 |
+| 스칼라 서브쿼리 | 05 | 가정값 테이블에서 값 하나 읽기 |
+| `UNION ALL`로 경우 쌓기 | 04, 05, 06 | 계산식이 다른 경우들을 긴 형태로 합치기 |
 | `CROSS JOIN` + `VALUES` | 06 | 시나리오 조합 만들기 |
+| `WHERE … OR (… AND …)` | 06 | 조건별 허용 규칙 (괄호 필수) |
+| GROUP BY로 JOIN 팽창 접기 | 06 | 중복 행 방지 |
 | 파라미터 CTE | 04, 05 | 가정값을 한 곳에 모으기 |
-| `UNION ALL` | 04, 06 | 구조가 같은 결과를 아래로 합치기 |
-| `RANK` | 04, 06 | 동점 허용 순위 |
-| `SUM(COUNT(*)) OVER` | 07 | 집계 결과 위에서 비율 계산 |
-| `COUNT(DISTINCT) = 1` | 08 | 모든 조건에서 결과가 같은지 확인 |
+| `RANK` (다차원 PARTITION) | 04, 06 | 같은 시나리오 안의 순위 |
+| `SUM(COUNT(*)) OVER` | 07 | 집계 결과 위에서 비율 |
+| `COUNT(DISTINCT) = 1` | 08 | 모든 조건에서 결과가 같은지 |
+| 부등식을 풀어 손익분기 계산 | 11 | 정답 없는 값을 기준선으로 |
 | `FIRST_VALUE` | 09 | 기준 시점 대비 지수 |
 | `CASE` 정렬 | 08 | 원하는 순서로 정렬 |
