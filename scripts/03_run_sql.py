@@ -14,3 +14,7 @@ for sql_file in sorted((ROOT / "sql").glob("*.sql")):
     df.to_csv(OUT / f"{sql_file.stem}.csv", index=False)
     print(f"\n=== {sql_file.name} ({len(df)} rows)")
     print(df.to_string(index=False) if len(df) <= 40 else df.tail(14).to_string(index=False))
+
+# Full scenario table (the SQL file's last SELECT only shows a summary)
+con.execute("SELECT * FROM sensitivity ORDER BY unit_type, rent_method, summer_plan, cost_rank").df() \
+   .to_csv(OUT / "sensitivity_full.csv", index=False)

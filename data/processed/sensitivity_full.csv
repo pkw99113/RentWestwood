@@ -1,0 +1,361 @@
+unit_type,rent_method,summer_plan,option,annual_cost,cost_rank
+1/2 unit,safmr,away,UCLA,15200.02,1
+1/2 unit,safmr,away,West LA,20640.0,2
+1/2 unit,safmr,away,Westwood,20700.0,3
+1/2 unit,safmr,stay_in_la,UCLA,20360.02,1
+1/2 unit,safmr,stay_in_la,West LA,20640.0,2
+1/2 unit,safmr,stay_in_la,Westwood,20700.0,3
+1/2 unit,safmr,sublet_50,UCLA,15200.02,1
+1/2 unit,safmr,sublet_50,West LA,18060.0,2
+1/2 unit,safmr,sublet_50,Westwood,18112.5,3
+1/2 unit,safmr,sublet_70,UCLA,15200.02,1
+1/2 unit,safmr,sublet_70,West LA,17028.0,2
+1/2 unit,safmr,sublet_70,Westwood,17077.5,3
+1/2 unit,safmr,sublet_90,UCLA,15200.02,1
+1/2 unit,safmr,sublet_90,West LA,15996.000000000002,2
+1/2 unit,safmr,sublet_90,Westwood,16042.500000000002,3
+1/2 unit,safmr_110,away,UCLA,15200.02,1
+1/2 unit,safmr_110,away,West LA,22704.0,2
+1/2 unit,safmr_110,away,Westwood,22770.0,3
+1/2 unit,safmr_110,stay_in_la,UCLA,20876.02,1
+1/2 unit,safmr_110,stay_in_la,West LA,22704.0,2
+1/2 unit,safmr_110,stay_in_la,Westwood,22770.0,3
+1/2 unit,safmr_110,sublet_50,UCLA,15200.02,1
+1/2 unit,safmr_110,sublet_50,West LA,19866.0,2
+1/2 unit,safmr_110,sublet_50,Westwood,19923.75,3
+1/2 unit,safmr_110,sublet_70,UCLA,15200.02,1
+1/2 unit,safmr_110,sublet_70,West LA,18730.8,2
+1/2 unit,safmr_110,sublet_70,Westwood,18785.25,3
+1/2 unit,safmr_110,sublet_90,UCLA,15200.02,1
+1/2 unit,safmr_110,sublet_90,West LA,17595.600000000002,2
+1/2 unit,safmr_110,sublet_90,Westwood,17646.75,3
+1/2 unit,zori_adjusted,away,UCLA,15200.02,1
+1/2 unit,zori_adjusted,away,West LA,19374.0,2
+1/2 unit,zori_adjusted,away,Westwood,21702.0,3
+1/2 unit,zori_adjusted,stay_in_la,West LA,19374.0,1
+1/2 unit,zori_adjusted,stay_in_la,UCLA,20043.52,2
+1/2 unit,zori_adjusted,stay_in_la,Westwood,21702.0,3
+1/2 unit,zori_adjusted,sublet_50,UCLA,15200.02,1
+1/2 unit,zori_adjusted,sublet_50,West LA,16952.25,2
+1/2 unit,zori_adjusted,sublet_50,Westwood,18989.25,3
+1/2 unit,zori_adjusted,sublet_70,UCLA,15200.02,1
+1/2 unit,zori_adjusted,sublet_70,West LA,15983.550000000001,2
+1/2 unit,zori_adjusted,sublet_70,Westwood,17904.15,3
+1/2 unit,zori_adjusted,sublet_90,West LA,15014.85,1
+1/2 unit,zori_adjusted,sublet_90,UCLA,15200.02,2
+1/2 unit,zori_adjusted,sublet_90,Westwood,16819.050000000003,3
+1/3 unit,safmr,away,UCLA,10347.92,1
+1/3 unit,safmr,away,West LA,13760.0,2
+1/3 unit,safmr,away,Westwood,13800.0,3
+1/3 unit,safmr,stay_in_la,West LA,13760.0,1
+1/3 unit,safmr,stay_in_la,UCLA,13787.92,2
+1/3 unit,safmr,stay_in_la,Westwood,13800.0,3
+1/3 unit,safmr,sublet_50,UCLA,10347.92,1
+1/3 unit,safmr,sublet_50,West LA,12040.0,2
+1/3 unit,safmr,sublet_50,Westwood,12075.0,3
+1/3 unit,safmr,sublet_70,UCLA,10347.92,1
+1/3 unit,safmr,sublet_70,West LA,11352.000000000002,2
+1/3 unit,safmr,sublet_70,Westwood,11385.0,3
+1/3 unit,safmr,sublet_90,UCLA,10347.92,1
+1/3 unit,safmr,sublet_90,West LA,10664.000000000002,2
+1/3 unit,safmr,sublet_90,Westwood,10695.0,3
+1/3 unit,safmr_110,away,UCLA,10347.92,1
+1/3 unit,safmr_110,away,West LA,15136.0,2
+1/3 unit,safmr_110,away,Westwood,15180.0,3
+1/3 unit,safmr_110,stay_in_la,UCLA,14131.92,1
+1/3 unit,safmr_110,stay_in_la,West LA,15136.0,2
+1/3 unit,safmr_110,stay_in_la,Westwood,15180.0,3
+1/3 unit,safmr_110,sublet_50,UCLA,10347.92,1
+1/3 unit,safmr_110,sublet_50,West LA,13244.0,2
+1/3 unit,safmr_110,sublet_50,Westwood,13282.5,3
+1/3 unit,safmr_110,sublet_70,UCLA,10347.92,1
+1/3 unit,safmr_110,sublet_70,West LA,12487.199999999999,2
+1/3 unit,safmr_110,sublet_70,Westwood,12523.5,3
+1/3 unit,safmr_110,sublet_90,UCLA,10347.92,1
+1/3 unit,safmr_110,sublet_90,West LA,11730.4,2
+1/3 unit,safmr_110,sublet_90,Westwood,11764.5,3
+1/3 unit,zori_adjusted,away,UCLA,10347.92,1
+1/3 unit,zori_adjusted,away,West LA,12916.0,2
+1/3 unit,zori_adjusted,away,Westwood,14468.0,3
+1/3 unit,zori_adjusted,stay_in_la,West LA,12916.0,1
+1/3 unit,zori_adjusted,stay_in_la,UCLA,13576.92,2
+1/3 unit,zori_adjusted,stay_in_la,Westwood,14468.0,3
+1/3 unit,zori_adjusted,sublet_50,UCLA,10347.92,1
+1/3 unit,zori_adjusted,sublet_50,West LA,11301.5,2
+1/3 unit,zori_adjusted,sublet_50,Westwood,12659.5,3
+1/3 unit,zori_adjusted,sublet_70,UCLA,10347.92,1
+1/3 unit,zori_adjusted,sublet_70,West LA,10655.699999999999,2
+1/3 unit,zori_adjusted,sublet_70,Westwood,11936.1,3
+1/3 unit,zori_adjusted,sublet_90,West LA,10009.9,1
+1/3 unit,zori_adjusted,sublet_90,UCLA,10347.92,2
+1/3 unit,zori_adjusted,sublet_90,Westwood,11212.7,3
+1/3 unit (GH),safmr,away,UCLA,11102.96,1
+1/3 unit (GH),safmr,away,West LA,13760.0,2
+1/3 unit (GH),safmr,away,Westwood,13800.0,3
+1/3 unit (GH),safmr,stay_in_la,West LA,13760.0,1
+1/3 unit (GH),safmr,stay_in_la,Westwood,13800.0,2
+1/3 unit (GH),safmr,stay_in_la,UCLA,14542.96,3
+1/3 unit (GH),safmr,sublet_50,UCLA,11102.96,1
+1/3 unit (GH),safmr,sublet_50,West LA,12040.0,2
+1/3 unit (GH),safmr,sublet_50,Westwood,12075.0,3
+1/3 unit (GH),safmr,sublet_70,UCLA,11102.96,1
+1/3 unit (GH),safmr,sublet_70,West LA,11352.000000000002,2
+1/3 unit (GH),safmr,sublet_70,Westwood,11385.0,3
+1/3 unit (GH),safmr,sublet_90,West LA,10664.000000000002,1
+1/3 unit (GH),safmr,sublet_90,Westwood,10695.0,2
+1/3 unit (GH),safmr,sublet_90,UCLA,11102.96,3
+1/3 unit (GH),safmr_110,away,UCLA,11102.96,1
+1/3 unit (GH),safmr_110,away,West LA,15136.0,2
+1/3 unit (GH),safmr_110,away,Westwood,15180.0,3
+1/3 unit (GH),safmr_110,stay_in_la,UCLA,14886.96,1
+1/3 unit (GH),safmr_110,stay_in_la,West LA,15136.0,2
+1/3 unit (GH),safmr_110,stay_in_la,Westwood,15180.0,3
+1/3 unit (GH),safmr_110,sublet_50,UCLA,11102.96,1
+1/3 unit (GH),safmr_110,sublet_50,West LA,13244.0,2
+1/3 unit (GH),safmr_110,sublet_50,Westwood,13282.5,3
+1/3 unit (GH),safmr_110,sublet_70,UCLA,11102.96,1
+1/3 unit (GH),safmr_110,sublet_70,West LA,12487.199999999999,2
+1/3 unit (GH),safmr_110,sublet_70,Westwood,12523.5,3
+1/3 unit (GH),safmr_110,sublet_90,UCLA,11102.96,1
+1/3 unit (GH),safmr_110,sublet_90,West LA,11730.4,2
+1/3 unit (GH),safmr_110,sublet_90,Westwood,11764.5,3
+1/3 unit (GH),zori_adjusted,away,UCLA,11102.96,1
+1/3 unit (GH),zori_adjusted,away,West LA,12916.0,2
+1/3 unit (GH),zori_adjusted,away,Westwood,14468.0,3
+1/3 unit (GH),zori_adjusted,stay_in_la,West LA,12916.0,1
+1/3 unit (GH),zori_adjusted,stay_in_la,UCLA,14331.96,2
+1/3 unit (GH),zori_adjusted,stay_in_la,Westwood,14468.0,3
+1/3 unit (GH),zori_adjusted,sublet_50,UCLA,11102.96,1
+1/3 unit (GH),zori_adjusted,sublet_50,West LA,11301.5,2
+1/3 unit (GH),zori_adjusted,sublet_50,Westwood,12659.5,3
+1/3 unit (GH),zori_adjusted,sublet_70,West LA,10655.699999999999,1
+1/3 unit (GH),zori_adjusted,sublet_70,UCLA,11102.96,2
+1/3 unit (GH),zori_adjusted,sublet_70,Westwood,11936.1,3
+1/3 unit (GH),zori_adjusted,sublet_90,West LA,10009.9,1
+1/3 unit (GH),zori_adjusted,sublet_90,UCLA,11102.96,2
+1/3 unit (GH),zori_adjusted,sublet_90,Westwood,11212.7,3
+2/3 shared bedroom,safmr,away,UCLA,13982.76,1
+2/3 shared bedroom,safmr,away,West LA,17160.0,2
+2/3 shared bedroom,safmr,away,Westwood,17200.0,3
+2/3 shared bedroom,safmr,stay_in_la,West LA,17160.0,1
+2/3 shared bedroom,safmr,stay_in_la,Westwood,17200.0,2
+2/3 shared bedroom,safmr,stay_in_la,UCLA,18272.760000000002,3
+2/3 shared bedroom,safmr,sublet_50,UCLA,13982.76,1
+2/3 shared bedroom,safmr,sublet_50,West LA,15015.0,2
+2/3 shared bedroom,safmr,sublet_50,Westwood,15050.0,3
+2/3 shared bedroom,safmr,sublet_70,UCLA,13982.76,1
+2/3 shared bedroom,safmr,sublet_70,West LA,14157.0,2
+2/3 shared bedroom,safmr,sublet_70,Westwood,14190.0,3
+2/3 shared bedroom,safmr,sublet_90,West LA,13299.000000000002,1
+2/3 shared bedroom,safmr,sublet_90,Westwood,13330.0,2
+2/3 shared bedroom,safmr,sublet_90,UCLA,13982.76,3
+2/3 shared bedroom,safmr_110,away,UCLA,13982.76,1
+2/3 shared bedroom,safmr_110,away,West LA,18876.0,2
+2/3 shared bedroom,safmr_110,away,Westwood,18920.0,3
+2/3 shared bedroom,safmr_110,stay_in_la,UCLA,18701.760000000002,1
+2/3 shared bedroom,safmr_110,stay_in_la,West LA,18876.0,2
+2/3 shared bedroom,safmr_110,stay_in_la,Westwood,18920.0,3
+2/3 shared bedroom,safmr_110,sublet_50,UCLA,13982.76,1
+2/3 shared bedroom,safmr_110,sublet_50,West LA,16516.5,2
+2/3 shared bedroom,safmr_110,sublet_50,Westwood,16555.0,3
+2/3 shared bedroom,safmr_110,sublet_70,UCLA,13982.76,1
+2/3 shared bedroom,safmr_110,sublet_70,West LA,15572.7,2
+2/3 shared bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,3
+2/3 shared bedroom,safmr_110,sublet_90,UCLA,13982.76,1
+2/3 shared bedroom,safmr_110,sublet_90,West LA,14628.900000000001,2
+2/3 shared bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,3
+2/3 shared bedroom,zori_adjusted,away,UCLA,13982.76,1
+2/3 shared bedroom,zori_adjusted,away,West LA,16108.0,2
+2/3 shared bedroom,zori_adjusted,away,Westwood,18032.0,3
+2/3 shared bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1
+2/3 shared bedroom,zori_adjusted,stay_in_la,UCLA,18009.760000000002,2
+2/3 shared bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,3
+2/3 shared bedroom,zori_adjusted,sublet_50,UCLA,13982.76,1
+2/3 shared bedroom,zori_adjusted,sublet_50,West LA,14094.5,2
+2/3 shared bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3
+2/3 shared bedroom,zori_adjusted,sublet_70,West LA,13289.1,1
+2/3 shared bedroom,zori_adjusted,sublet_70,UCLA,13982.76,2
+2/3 shared bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,3
+2/3 shared bedroom,zori_adjusted,sublet_90,West LA,12483.7,1
+2/3 shared bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,2
+2/3 shared bedroom,zori_adjusted,sublet_90,UCLA,13982.76,3
+2/3S single bedroom,safmr,away,UCLA,14590.18,1
+2/3S single bedroom,safmr,away,West LA,17160.0,2
+2/3S single bedroom,safmr,away,Westwood,17200.0,3
+2/3S single bedroom,safmr,stay_in_la,West LA,17160.0,1
+2/3S single bedroom,safmr,stay_in_la,Westwood,17200.0,2
+2/3S single bedroom,safmr,stay_in_la,UCLA,18880.18,3
+2/3S single bedroom,safmr,sublet_50,UCLA,14590.18,1
+2/3S single bedroom,safmr,sublet_50,West LA,15015.0,2
+2/3S single bedroom,safmr,sublet_50,Westwood,15050.0,3
+2/3S single bedroom,safmr,sublet_70,West LA,14157.0,1
+2/3S single bedroom,safmr,sublet_70,Westwood,14190.0,2
+2/3S single bedroom,safmr,sublet_70,UCLA,14590.18,3
+2/3S single bedroom,safmr,sublet_90,West LA,13299.000000000002,1
+2/3S single bedroom,safmr,sublet_90,Westwood,13330.0,2
+2/3S single bedroom,safmr,sublet_90,UCLA,14590.18,3
+2/3S single bedroom,safmr_110,away,UCLA,14590.18,1
+2/3S single bedroom,safmr_110,away,West LA,18876.0,2
+2/3S single bedroom,safmr_110,away,Westwood,18920.0,3
+2/3S single bedroom,safmr_110,stay_in_la,West LA,18876.0,1
+2/3S single bedroom,safmr_110,stay_in_la,Westwood,18920.0,2
+2/3S single bedroom,safmr_110,stay_in_la,UCLA,19309.18,3
+2/3S single bedroom,safmr_110,sublet_50,UCLA,14590.18,1
+2/3S single bedroom,safmr_110,sublet_50,West LA,16516.5,2
+2/3S single bedroom,safmr_110,sublet_50,Westwood,16555.0,3
+2/3S single bedroom,safmr_110,sublet_70,UCLA,14590.18,1
+2/3S single bedroom,safmr_110,sublet_70,West LA,15572.7,2
+2/3S single bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,3
+2/3S single bedroom,safmr_110,sublet_90,UCLA,14590.18,1
+2/3S single bedroom,safmr_110,sublet_90,West LA,14628.900000000001,2
+2/3S single bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,3
+2/3S single bedroom,zori_adjusted,away,UCLA,14590.18,1
+2/3S single bedroom,zori_adjusted,away,West LA,16108.0,2
+2/3S single bedroom,zori_adjusted,away,Westwood,18032.0,3
+2/3S single bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1
+2/3S single bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,2
+2/3S single bedroom,zori_adjusted,stay_in_la,UCLA,18617.18,3
+2/3S single bedroom,zori_adjusted,sublet_50,West LA,14094.5,1
+2/3S single bedroom,zori_adjusted,sublet_50,UCLA,14590.18,2
+2/3S single bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3
+2/3S single bedroom,zori_adjusted,sublet_70,West LA,13289.1,1
+2/3S single bedroom,zori_adjusted,sublet_70,UCLA,14590.18,2
+2/3S single bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,3
+2/3S single bedroom,zori_adjusted,sublet_90,West LA,12483.7,1
+2/3S single bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,2
+2/3S single bedroom,zori_adjusted,sublet_90,UCLA,14590.18,3
+2/4 apartment,safmr,away,UCLA,12167.76,1
+2/4 apartment,safmr,away,West LA,12870.0,2
+2/4 apartment,safmr,away,Westwood,12900.0,3
+2/4 apartment,safmr,stay_in_la,West LA,12870.0,1
+2/4 apartment,safmr,stay_in_la,Westwood,12900.0,2
+2/4 apartment,safmr,stay_in_la,UCLA,15385.26,3
+2/4 apartment,safmr,sublet_50,West LA,11261.25,1
+2/4 apartment,safmr,sublet_50,Westwood,11287.5,2
+2/4 apartment,safmr,sublet_50,UCLA,12167.76,3
+2/4 apartment,safmr,sublet_70,West LA,10617.75,1
+2/4 apartment,safmr,sublet_70,Westwood,10642.5,2
+2/4 apartment,safmr,sublet_70,UCLA,12167.76,3
+2/4 apartment,safmr,sublet_90,West LA,9974.25,1
+2/4 apartment,safmr,sublet_90,Westwood,9997.5,2
+2/4 apartment,safmr,sublet_90,UCLA,12167.76,3
+2/4 apartment,safmr_110,away,UCLA,12167.76,1
+2/4 apartment,safmr_110,away,West LA,14157.0,2
+2/4 apartment,safmr_110,away,Westwood,14190.0,3
+2/4 apartment,safmr_110,stay_in_la,West LA,14157.0,1
+2/4 apartment,safmr_110,stay_in_la,Westwood,14190.0,2
+2/4 apartment,safmr_110,stay_in_la,UCLA,15707.01,3
+2/4 apartment,safmr_110,sublet_50,UCLA,12167.76,1
+2/4 apartment,safmr_110,sublet_50,West LA,12387.375,2
+2/4 apartment,safmr_110,sublet_50,Westwood,12416.25,3
+2/4 apartment,safmr_110,sublet_70,West LA,11679.525,1
+2/4 apartment,safmr_110,sublet_70,Westwood,11706.75,2
+2/4 apartment,safmr_110,sublet_70,UCLA,12167.76,3
+2/4 apartment,safmr_110,sublet_90,West LA,10971.675000000001,1
+2/4 apartment,safmr_110,sublet_90,Westwood,10997.25,2
+2/4 apartment,safmr_110,sublet_90,UCLA,12167.76,3
+2/4 apartment,zori_adjusted,away,West LA,12081.0,1
+2/4 apartment,zori_adjusted,away,UCLA,12167.76,2
+2/4 apartment,zori_adjusted,away,Westwood,13524.0,3
+2/4 apartment,zori_adjusted,stay_in_la,West LA,12081.0,1
+2/4 apartment,zori_adjusted,stay_in_la,Westwood,13524.0,2
+2/4 apartment,zori_adjusted,stay_in_la,UCLA,15188.01,3
+2/4 apartment,zori_adjusted,sublet_50,West LA,10570.875,1
+2/4 apartment,zori_adjusted,sublet_50,Westwood,11833.5,2
+2/4 apartment,zori_adjusted,sublet_50,UCLA,12167.76,3
+2/4 apartment,zori_adjusted,sublet_70,West LA,9966.825,1
+2/4 apartment,zori_adjusted,sublet_70,Westwood,11157.300000000001,2
+2/4 apartment,zori_adjusted,sublet_70,UCLA,12167.76,3
+2/4 apartment,zori_adjusted,sublet_90,West LA,9362.775000000001,1
+2/4 apartment,zori_adjusted,sublet_90,Westwood,10481.1,2
+2/4 apartment,zori_adjusted,sublet_90,UCLA,12167.76,3
+2/4 townhouse,safmr,away,West LA,12870.0,1
+2/4 townhouse,safmr,away,Westwood,12900.0,2
+2/4 townhouse,safmr,away,UCLA,13053.48,3
+2/4 townhouse,safmr,stay_in_la,West LA,12870.0,1
+2/4 townhouse,safmr,stay_in_la,Westwood,12900.0,2
+2/4 townhouse,safmr,stay_in_la,UCLA,16270.98,3
+2/4 townhouse,safmr,sublet_50,West LA,11261.25,1
+2/4 townhouse,safmr,sublet_50,Westwood,11287.5,2
+2/4 townhouse,safmr,sublet_50,UCLA,13053.48,3
+2/4 townhouse,safmr,sublet_70,West LA,10617.75,1
+2/4 townhouse,safmr,sublet_70,Westwood,10642.5,2
+2/4 townhouse,safmr,sublet_70,UCLA,13053.48,3
+2/4 townhouse,safmr,sublet_90,West LA,9974.25,1
+2/4 townhouse,safmr,sublet_90,Westwood,9997.5,2
+2/4 townhouse,safmr,sublet_90,UCLA,13053.48,3
+2/4 townhouse,safmr_110,away,UCLA,13053.48,1
+2/4 townhouse,safmr_110,away,West LA,14157.0,2
+2/4 townhouse,safmr_110,away,Westwood,14190.0,3
+2/4 townhouse,safmr_110,stay_in_la,West LA,14157.0,1
+2/4 townhouse,safmr_110,stay_in_la,Westwood,14190.0,2
+2/4 townhouse,safmr_110,stay_in_la,UCLA,16592.73,3
+2/4 townhouse,safmr_110,sublet_50,West LA,12387.375,1
+2/4 townhouse,safmr_110,sublet_50,Westwood,12416.25,2
+2/4 townhouse,safmr_110,sublet_50,UCLA,13053.48,3
+2/4 townhouse,safmr_110,sublet_70,West LA,11679.525,1
+2/4 townhouse,safmr_110,sublet_70,Westwood,11706.75,2
+2/4 townhouse,safmr_110,sublet_70,UCLA,13053.48,3
+2/4 townhouse,safmr_110,sublet_90,West LA,10971.675000000001,1
+2/4 townhouse,safmr_110,sublet_90,Westwood,10997.25,2
+2/4 townhouse,safmr_110,sublet_90,UCLA,13053.48,3
+2/4 townhouse,zori_adjusted,away,West LA,12081.0,1
+2/4 townhouse,zori_adjusted,away,UCLA,13053.48,2
+2/4 townhouse,zori_adjusted,away,Westwood,13524.0,3
+2/4 townhouse,zori_adjusted,stay_in_la,West LA,12081.0,1
+2/4 townhouse,zori_adjusted,stay_in_la,Westwood,13524.0,2
+2/4 townhouse,zori_adjusted,stay_in_la,UCLA,16073.73,3
+2/4 townhouse,zori_adjusted,sublet_50,West LA,10570.875,1
+2/4 townhouse,zori_adjusted,sublet_50,Westwood,11833.5,2
+2/4 townhouse,zori_adjusted,sublet_50,UCLA,13053.48,3
+2/4 townhouse,zori_adjusted,sublet_70,West LA,9966.825,1
+2/4 townhouse,zori_adjusted,sublet_70,Westwood,11157.300000000001,2
+2/4 townhouse,zori_adjusted,sublet_70,UCLA,13053.48,3
+2/4 townhouse,zori_adjusted,sublet_90,West LA,9362.775000000001,1
+2/4 townhouse,zori_adjusted,sublet_90,Westwood,10481.1,2
+2/4 townhouse,zori_adjusted,sublet_90,UCLA,13053.48,3
+studio 2 person,safmr,away,UCLA,11255.42,1
+studio 2 person,safmr,away,West LA,18420.0,2
+studio 2 person,safmr,away,Westwood,18480.0,3
+studio 2 person,safmr,stay_in_la,UCLA,15860.42,1
+studio 2 person,safmr,stay_in_la,West LA,18420.0,2
+studio 2 person,safmr,stay_in_la,Westwood,18480.0,3
+studio 2 person,safmr,sublet_50,UCLA,11255.42,1
+studio 2 person,safmr,sublet_50,West LA,16117.5,2
+studio 2 person,safmr,sublet_50,Westwood,16170.0,3
+studio 2 person,safmr,sublet_70,UCLA,11255.42,1
+studio 2 person,safmr,sublet_70,West LA,15196.5,2
+studio 2 person,safmr,sublet_70,Westwood,15246.0,3
+studio 2 person,safmr,sublet_90,UCLA,11255.42,1
+studio 2 person,safmr,sublet_90,West LA,14275.500000000002,2
+studio 2 person,safmr,sublet_90,Westwood,14322.000000000002,3
+studio 2 person,safmr_110,away,UCLA,11255.42,1
+studio 2 person,safmr_110,away,West LA,20262.0,2
+studio 2 person,safmr_110,away,Westwood,20328.0,3
+studio 2 person,safmr_110,stay_in_la,UCLA,16320.92,1
+studio 2 person,safmr_110,stay_in_la,West LA,20262.0,2
+studio 2 person,safmr_110,stay_in_la,Westwood,20328.0,3
+studio 2 person,safmr_110,sublet_50,UCLA,11255.42,1
+studio 2 person,safmr_110,sublet_50,West LA,17729.25,2
+studio 2 person,safmr_110,sublet_50,Westwood,17787.0,3
+studio 2 person,safmr_110,sublet_70,UCLA,11255.42,1
+studio 2 person,safmr_110,sublet_70,West LA,16716.15,2
+studio 2 person,safmr_110,sublet_70,Westwood,16770.600000000002,3
+studio 2 person,safmr_110,sublet_90,UCLA,11255.42,1
+studio 2 person,safmr_110,sublet_90,West LA,15703.050000000001,2
+studio 2 person,safmr_110,sublet_90,Westwood,15754.2,3
+studio 2 person,zori_adjusted,away,UCLA,11255.42,1
+studio 2 person,zori_adjusted,away,West LA,17292.0,2
+studio 2 person,zori_adjusted,away,Westwood,19374.0,3
+studio 2 person,zori_adjusted,stay_in_la,UCLA,15578.42,1
+studio 2 person,zori_adjusted,stay_in_la,West LA,17292.0,2
+studio 2 person,zori_adjusted,stay_in_la,Westwood,19374.0,3
+studio 2 person,zori_adjusted,sublet_50,UCLA,11255.42,1
+studio 2 person,zori_adjusted,sublet_50,West LA,15130.5,2
+studio 2 person,zori_adjusted,sublet_50,Westwood,16952.25,3
+studio 2 person,zori_adjusted,sublet_70,UCLA,11255.42,1
+studio 2 person,zori_adjusted,sublet_70,West LA,14265.9,2
+studio 2 person,zori_adjusted,sublet_70,Westwood,15983.550000000001,3
+studio 2 person,zori_adjusted,sublet_90,UCLA,11255.42,1
+studio 2 person,zori_adjusted,sublet_90,West LA,13401.300000000001,2
+studio 2 person,zori_adjusted,sublet_90,Westwood,15014.85,3
