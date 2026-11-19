@@ -32,5 +32,8 @@ s.to_csv(OUT / "scenario_costs.csv", index=False)
 
 # 3. Commute cost by neighborhood and mode, and the time-value break-even table
 pd.read_csv(P / "05_commute_cost.csv").to_csv(OUT / "commute_cost.csv", index=False)
-pd.read_csv(P / "11_time_value_breakeven.csv").to_csv(OUT / "time_value_breakeven.csv", index=False)
+b = pd.read_csv(P / "11_time_value_breakeven.csv")
+b["car_profile_label"] = b["car_profile"].map(PROFILE)
+b["summer_plan_label"] = b["summer_plan"].map(SUMMER)
+b.to_csv(OUT / "time_value_breakeven.csv", index=False)
 print(sorted(p.name for p in OUT.glob("*.csv")), len(s), "scenario rows")
