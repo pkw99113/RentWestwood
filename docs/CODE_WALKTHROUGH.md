@@ -7,15 +7,15 @@
 ```
 [원본 데이터]                     [2단계: Python]                 [3~5단계: SQL]                 [5단계: Python]
 Zillow ZORI CSV  ──┐
-HUD SAFMR XLSX   ──┼─▶ 02_extract_study_area.py ─▶ data/processed/*.csv ─▶ sql/01~10 (03_run_sql.py) ─▶ 05_make_charts.py  → images/
-UCLA 요금 (수기) ──┘     (필터, 형태 변환, 품질 점검)     (분석용 테이블)        (DuckDB)                   06_tableau_export.py → data/tableau/
+HUD SAFMR XLSX   ──┼─▶ 02_extract_study_area.py ─▶ data/processed/*.csv ─▶ sql/01~11 (03_run_sql.py) ─▶ 05_make_charts.py  → images/
+UCLA 요금·구글맵 통학·비용 가정 (수기) ──┘     (필터, 형태 변환, 품질 점검)     (분석용 테이블)        (DuckDB)                   06_tableau_export.py → data/tableau/
 ```
 
 **실행 순서** (레포 폴더에서):
 ```bash
 pip install pandas openpyxl duckdb matplotlib
 python scripts/02_extract_study_area.py   # 원본 두 파일을 data/raw/에 넣은 뒤
-python scripts/03_run_sql.py              # sql/ 폴더의 01~10을 순서대로 실행
+python scripts/03_run_sql.py              # sql/ 폴더의 01~11을 순서대로 실행
 python scripts/05_make_charts.py
 python scripts/06_tableau_export.py
 ```
