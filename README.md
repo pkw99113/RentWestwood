@@ -1,23 +1,22 @@
 # RentWestwood: Where Should a UCLA Student Live?
 
-**Question**: For a UCLA student choosing where to live, which option costs less once rent, lease length, and commute are counted: UCLA University Apartments, Westwood (90024), or West LA / Sawtelle (90025)?
-
-> **🚧 In progress (2026-11-19):** scope is being expanded from 2 ZIPs to 7 neighborhoods around campus (Westwood, West LA/Sawtelle, Rancho Park, Brentwood, Palms, Mar Vista, Koreatown). The SQL in `sql/` already uses the 7 ZIPs; REPORT.md, charts, and findings below still describe the 2-ZIP version and will be updated.
+**Question**: For a UCLA student choosing where to live, which option costs less once rent, lease length, and commute (time, parking, car costs) are counted: UCLA University Apartments or one of seven nearby neighborhoods (Westwood, West LA/Sawtelle, Rancho Park, Brentwood, Palms, Mar Vista, Koreatown)?
 
 📄 **Full report (Korean): [REPORT.md](REPORT.md)**
 
 This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired because its data could not be trusted. See [archive/v1](archive/v1/README.md) for what went wrong and why.
 
-## Key findings so far
-- **The summer plan decides the answer.** A student who leaves LA for the summer pays less in UCLA University Apartments in 88% of scenarios (median gap about $3,400/year), because off-campus leases run 12 months.
-- **Group size matters next.** Two people sharing: UCLA is cheaper in almost every scenario. Four people in a 2-bedroom who sublet or stay in LA: West LA is cheaper in every scenario.
-- **Westwood is never the cheapest option, and the gap is widening.** Its premium over West LA grew from 8% (2018 average) to 13% (2026). It costs about 12% more than West LA (ZORI, Oct 2026); choosing it only makes sense if the shorter commute is worth more than about $15–24 per hour.
+## Key findings
+- **Koreatown has the lowest rent, but commute time erases the savings.** With commute time valued at $0, Koreatown is cheapest in 92% of transit scenarios; valued at $20/hour, it is never the cheapest. It only beats UCLA housing if a student values commute time below about $13–19/hour.
+- **A car does not fix a far neighborhood.** On Google Maps, driving from Koreatown is no faster than transit (typically 35–80 min vs 59 min) and adds about $200/month in parking and running costs. Buying a car in order to live farther away loses in every scenario, even when time is free.
+- **Palms is the best value for transit riders.** For four people sharing a 2-bedroom who sublet in summer: $11.4K/year per person including commute time, vs $12.0K in Westwood and $13.0K in UCLA housing.
+- **The summer plan still decides UCLA housing vs off campus.** Off-campus leases run 12 months, so students who leave LA in summer are usually better off in UCLA housing.
 
 ## Approach
-1. **Problem definition**: define the decision, the options, and one main metric: *effective monthly cost per person* (rent + utilities + commute cost + value of commute time). → [docs/01_problem_definition.md](docs/01_problem_definition.md)
-2. **Data collection**: public, citable sources only (Zillow Research ZORI, HUD Small Area Fair Market Rents, UCLA Housing rates). Every source and data quality check is logged.
+1. **Problem definition**: define the decision, the options, and one main metric: *effective annual cost per person* (rent + commute cash cost + value of commute time). → [docs/01_problem_definition.md](docs/01_problem_definition.md)
+2. **Data collection**: public, citable sources only (Zillow Research ZORI, HUD Small Area Fair Market Rents, UCLA Housing and Transportation rates, AAA driving costs, Google Maps commute times). Every source and data quality check is logged.
 3. **Cleaning + SQL**: load into a database and build per-person cost tables with SQL.
-4. **Analysis**: compare neighborhoods, track rent trends, and run scenarios (number of roommates, commute mode, value of time).
+4. **Analysis**: 1,080 scenarios (rent estimate × summer plan × commute mode × value of time × unit layout), time-value break-even, rent trends.
 5. **Dashboard + report**: a recommendation table a student can actually use.
 
 ## Status
