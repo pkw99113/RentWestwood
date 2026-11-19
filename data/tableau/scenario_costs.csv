@@ -1,0 +1,361 @@
+unit_type,rent_method,summer_plan,option,annual_cost,cost_rank,bedrooms,occupants,group_size,summer_plan_label,rent_method_label,is_cheapest
+1/2 unit,safmr,away,UCLA,15200.0,1,1,2,2 people,1. Leave LA,Conservative (HUD SAFMR),1
+1/2 unit,safmr,away,West LA,20640.0,2,1,2,2 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/2 unit,safmr,away,Westwood,20700.0,3,1,2,2 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/2 unit,safmr,stay_in_la,UCLA,20360.0,1,1,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),1
+1/2 unit,safmr,stay_in_la,West LA,20640.0,2,1,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/2 unit,safmr,stay_in_la,Westwood,20700.0,3,1,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_50,UCLA,15200.0,1,1,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+1/2 unit,safmr,sublet_50,West LA,18060.0,2,1,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_50,Westwood,18112.0,3,1,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_70,UCLA,15200.0,1,1,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+1/2 unit,safmr,sublet_70,West LA,17028.0,2,1,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_70,Westwood,17078.0,3,1,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_90,UCLA,15200.0,1,1,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+1/2 unit,safmr,sublet_90,West LA,15996.0,2,1,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/2 unit,safmr,sublet_90,Westwood,16043.0,3,1,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/2 unit,safmr_110,away,UCLA,15200.0,1,1,2,2 people,1. Leave LA,High (SAFMR x 1.1),1
+1/2 unit,safmr_110,away,West LA,22704.0,2,1,2,2 people,1. Leave LA,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,away,Westwood,22770.0,3,1,2,2 people,1. Leave LA,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,stay_in_la,UCLA,20876.0,1,1,2,2 people,5. Stay in LA,High (SAFMR x 1.1),1
+1/2 unit,safmr_110,stay_in_la,West LA,22704.0,2,1,2,2 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,stay_in_la,Westwood,22770.0,3,1,2,2 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_50,UCLA,15200.0,1,1,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),1
+1/2 unit,safmr_110,sublet_50,West LA,19866.0,2,1,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_50,Westwood,19924.0,3,1,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_70,UCLA,15200.0,1,1,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),1
+1/2 unit,safmr_110,sublet_70,West LA,18731.0,2,1,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_70,Westwood,18785.0,3,1,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_90,UCLA,15200.0,1,1,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),1
+1/2 unit,safmr_110,sublet_90,West LA,17596.0,2,1,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/2 unit,safmr_110,sublet_90,Westwood,17647.0,3,1,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/2 unit,zori_adjusted,away,UCLA,15200.0,1,1,2,2 people,1. Leave LA,Main (ZORI-adjusted),1
+1/2 unit,zori_adjusted,away,West LA,19374.0,2,1,2,2 people,1. Leave LA,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,away,Westwood,21702.0,3,1,2,2 people,1. Leave LA,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,stay_in_la,West LA,19374.0,1,1,2,2 people,5. Stay in LA,Main (ZORI-adjusted),1
+1/2 unit,zori_adjusted,stay_in_la,UCLA,20044.0,2,1,2,2 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,stay_in_la,Westwood,21702.0,3,1,2,2 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_50,UCLA,15200.0,1,1,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),1
+1/2 unit,zori_adjusted,sublet_50,West LA,16952.0,2,1,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_50,Westwood,18989.0,3,1,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_70,UCLA,15200.0,1,1,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),1
+1/2 unit,zori_adjusted,sublet_70,West LA,15984.0,2,1,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_70,Westwood,17904.0,3,1,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_90,West LA,15015.0,1,1,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),1
+1/2 unit,zori_adjusted,sublet_90,UCLA,15200.0,2,1,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),0
+1/2 unit,zori_adjusted,sublet_90,Westwood,16819.0,3,1,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),0
+1/3 unit,safmr,away,UCLA,10348.0,1,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),1
+1/3 unit,safmr,away,West LA,13760.0,2,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/3 unit,safmr,away,Westwood,13800.0,3,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/3 unit,safmr,stay_in_la,West LA,13760.0,1,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),1
+1/3 unit,safmr,stay_in_la,UCLA,13788.0,2,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/3 unit,safmr,stay_in_la,Westwood,13800.0,3,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_50,UCLA,10348.0,1,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+1/3 unit,safmr,sublet_50,West LA,12040.0,2,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_50,Westwood,12075.0,3,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_70,UCLA,10348.0,1,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+1/3 unit,safmr,sublet_70,West LA,11352.0,2,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_70,Westwood,11385.0,3,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_90,UCLA,10348.0,1,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+1/3 unit,safmr,sublet_90,West LA,10664.0,2,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/3 unit,safmr,sublet_90,Westwood,10695.0,3,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/3 unit,safmr_110,away,UCLA,10348.0,1,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),1
+1/3 unit,safmr_110,away,West LA,15136.0,2,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,away,Westwood,15180.0,3,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,stay_in_la,UCLA,14132.0,1,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),1
+1/3 unit,safmr_110,stay_in_la,West LA,15136.0,2,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,stay_in_la,Westwood,15180.0,3,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_50,UCLA,10348.0,1,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),1
+1/3 unit,safmr_110,sublet_50,West LA,13244.0,2,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_50,Westwood,13282.0,3,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_70,UCLA,10348.0,1,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),1
+1/3 unit,safmr_110,sublet_70,West LA,12487.0,2,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_70,Westwood,12524.0,3,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_90,UCLA,10348.0,1,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),1
+1/3 unit,safmr_110,sublet_90,West LA,11730.0,2,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/3 unit,safmr_110,sublet_90,Westwood,11764.0,3,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/3 unit,zori_adjusted,away,UCLA,10348.0,1,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),1
+1/3 unit,zori_adjusted,away,West LA,12916.0,2,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,away,Westwood,14468.0,3,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,stay_in_la,West LA,12916.0,1,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),1
+1/3 unit,zori_adjusted,stay_in_la,UCLA,13577.0,2,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,stay_in_la,Westwood,14468.0,3,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_50,UCLA,10348.0,1,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),1
+1/3 unit,zori_adjusted,sublet_50,West LA,11302.0,2,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_50,Westwood,12660.0,3,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_70,UCLA,10348.0,1,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),1
+1/3 unit,zori_adjusted,sublet_70,West LA,10656.0,2,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_70,Westwood,11936.0,3,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_90,West LA,10010.0,1,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),1
+1/3 unit,zori_adjusted,sublet_90,UCLA,10348.0,2,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+1/3 unit,zori_adjusted,sublet_90,Westwood,11213.0,3,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+1/3 unit (GH),safmr,away,UCLA,11103.0,1,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),1
+1/3 unit (GH),safmr,away,West LA,13760.0,2,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,away,Westwood,13800.0,3,1,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,stay_in_la,West LA,13760.0,1,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),1
+1/3 unit (GH),safmr,stay_in_la,Westwood,13800.0,2,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,stay_in_la,UCLA,14543.0,3,1,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_50,UCLA,11103.0,1,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+1/3 unit (GH),safmr,sublet_50,West LA,12040.0,2,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_50,Westwood,12075.0,3,1,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_70,UCLA,11103.0,1,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+1/3 unit (GH),safmr,sublet_70,West LA,11352.0,2,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_70,Westwood,11385.0,3,1,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_90,West LA,10664.0,1,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+1/3 unit (GH),safmr,sublet_90,Westwood,10695.0,2,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr,sublet_90,UCLA,11103.0,3,1,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+1/3 unit (GH),safmr_110,away,UCLA,11103.0,1,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),1
+1/3 unit (GH),safmr_110,away,West LA,15136.0,2,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,away,Westwood,15180.0,3,1,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,stay_in_la,UCLA,14887.0,1,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),1
+1/3 unit (GH),safmr_110,stay_in_la,West LA,15136.0,2,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,stay_in_la,Westwood,15180.0,3,1,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_50,UCLA,11103.0,1,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),1
+1/3 unit (GH),safmr_110,sublet_50,West LA,13244.0,2,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_50,Westwood,13282.0,3,1,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_70,UCLA,11103.0,1,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),1
+1/3 unit (GH),safmr_110,sublet_70,West LA,12487.0,2,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_70,Westwood,12524.0,3,1,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_90,UCLA,11103.0,1,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),1
+1/3 unit (GH),safmr_110,sublet_90,West LA,11730.0,2,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/3 unit (GH),safmr_110,sublet_90,Westwood,11764.0,3,1,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+1/3 unit (GH),zori_adjusted,away,UCLA,11103.0,1,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),1
+1/3 unit (GH),zori_adjusted,away,West LA,12916.0,2,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,away,Westwood,14468.0,3,1,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,stay_in_la,West LA,12916.0,1,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),1
+1/3 unit (GH),zori_adjusted,stay_in_la,UCLA,14332.0,2,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,stay_in_la,Westwood,14468.0,3,1,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_50,UCLA,11103.0,1,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),1
+1/3 unit (GH),zori_adjusted,sublet_50,West LA,11302.0,2,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_50,Westwood,12660.0,3,1,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_70,West LA,10656.0,1,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),1
+1/3 unit (GH),zori_adjusted,sublet_70,UCLA,11103.0,2,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_70,Westwood,11936.0,3,1,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_90,West LA,10010.0,1,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),1
+1/3 unit (GH),zori_adjusted,sublet_90,UCLA,11103.0,2,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+1/3 unit (GH),zori_adjusted,sublet_90,Westwood,11213.0,3,1,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/3 shared bedroom,safmr,away,UCLA,13983.0,1,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),1
+2/3 shared bedroom,safmr,away,West LA,17160.0,2,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,away,Westwood,17200.0,3,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,stay_in_la,West LA,17160.0,1,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),1
+2/3 shared bedroom,safmr,stay_in_la,Westwood,17200.0,2,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,stay_in_la,UCLA,18273.0,3,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_50,UCLA,13983.0,1,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+2/3 shared bedroom,safmr,sublet_50,West LA,15015.0,2,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_50,Westwood,15050.0,3,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_70,UCLA,13983.0,1,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+2/3 shared bedroom,safmr,sublet_70,West LA,14157.0,2,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_70,Westwood,14190.0,3,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_90,West LA,13299.0,1,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+2/3 shared bedroom,safmr,sublet_90,Westwood,13330.0,2,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr,sublet_90,UCLA,13983.0,3,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/3 shared bedroom,safmr_110,away,UCLA,13983.0,1,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),1
+2/3 shared bedroom,safmr_110,away,West LA,18876.0,2,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,away,Westwood,18920.0,3,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,stay_in_la,UCLA,18702.0,1,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),1
+2/3 shared bedroom,safmr_110,stay_in_la,West LA,18876.0,2,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,stay_in_la,Westwood,18920.0,3,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_50,UCLA,13983.0,1,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),1
+2/3 shared bedroom,safmr_110,sublet_50,West LA,16516.0,2,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_50,Westwood,16555.0,3,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_70,UCLA,13983.0,1,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),1
+2/3 shared bedroom,safmr_110,sublet_70,West LA,15573.0,2,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_70,Westwood,15609.0,3,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_90,UCLA,13983.0,1,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),1
+2/3 shared bedroom,safmr_110,sublet_90,West LA,14629.0,2,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/3 shared bedroom,safmr_110,sublet_90,Westwood,14663.0,3,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/3 shared bedroom,zori_adjusted,away,UCLA,13983.0,1,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),1
+2/3 shared bedroom,zori_adjusted,away,West LA,16108.0,2,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,away,Westwood,18032.0,3,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),1
+2/3 shared bedroom,zori_adjusted,stay_in_la,UCLA,18010.0,2,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,3,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_50,UCLA,13983.0,1,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),1
+2/3 shared bedroom,zori_adjusted,sublet_50,West LA,14094.0,2,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_70,West LA,13289.0,1,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),1
+2/3 shared bedroom,zori_adjusted,sublet_70,UCLA,13983.0,2,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_70,Westwood,14876.0,3,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_90,West LA,12484.0,1,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),1
+2/3 shared bedroom,zori_adjusted,sublet_90,Westwood,13975.0,2,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/3 shared bedroom,zori_adjusted,sublet_90,UCLA,13983.0,3,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/3S single bedroom,safmr,away,UCLA,14590.0,1,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),1
+2/3S single bedroom,safmr,away,West LA,17160.0,2,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,away,Westwood,17200.0,3,2,3,3 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,stay_in_la,West LA,17160.0,1,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),1
+2/3S single bedroom,safmr,stay_in_la,Westwood,17200.0,2,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,stay_in_la,UCLA,18880.0,3,2,3,3 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_50,UCLA,14590.0,1,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+2/3S single bedroom,safmr,sublet_50,West LA,15015.0,2,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_50,Westwood,15050.0,3,2,3,3 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_70,West LA,14157.0,1,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+2/3S single bedroom,safmr,sublet_70,Westwood,14190.0,2,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_70,UCLA,14590.0,3,2,3,3 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_90,West LA,13299.0,1,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+2/3S single bedroom,safmr,sublet_90,Westwood,13330.0,2,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr,sublet_90,UCLA,14590.0,3,2,3,3 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/3S single bedroom,safmr_110,away,UCLA,14590.0,1,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),1
+2/3S single bedroom,safmr_110,away,West LA,18876.0,2,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,away,Westwood,18920.0,3,2,3,3 people,1. Leave LA,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,stay_in_la,West LA,18876.0,1,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),1
+2/3S single bedroom,safmr_110,stay_in_la,Westwood,18920.0,2,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,stay_in_la,UCLA,19309.0,3,2,3,3 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_50,UCLA,14590.0,1,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),1
+2/3S single bedroom,safmr_110,sublet_50,West LA,16516.0,2,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_50,Westwood,16555.0,3,2,3,3 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_70,UCLA,14590.0,1,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),1
+2/3S single bedroom,safmr_110,sublet_70,West LA,15573.0,2,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_70,Westwood,15609.0,3,2,3,3 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_90,UCLA,14590.0,1,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),1
+2/3S single bedroom,safmr_110,sublet_90,West LA,14629.0,2,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/3S single bedroom,safmr_110,sublet_90,Westwood,14663.0,3,2,3,3 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/3S single bedroom,zori_adjusted,away,UCLA,14590.0,1,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),1
+2/3S single bedroom,zori_adjusted,away,West LA,16108.0,2,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,away,Westwood,18032.0,3,2,3,3 people,1. Leave LA,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),1
+2/3S single bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,2,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,stay_in_la,UCLA,18617.0,3,2,3,3 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_50,West LA,14094.0,1,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),1
+2/3S single bedroom,zori_adjusted,sublet_50,UCLA,14590.0,2,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3,2,3,3 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_70,West LA,13289.0,1,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),1
+2/3S single bedroom,zori_adjusted,sublet_70,UCLA,14590.0,2,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_70,Westwood,14876.0,3,2,3,3 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_90,West LA,12484.0,1,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),1
+2/3S single bedroom,zori_adjusted,sublet_90,Westwood,13975.0,2,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/3S single bedroom,zori_adjusted,sublet_90,UCLA,14590.0,3,2,3,3 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/4 apartment,safmr,away,UCLA,12168.0,1,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),1
+2/4 apartment,safmr,away,West LA,12870.0,2,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,away,Westwood,12900.0,3,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,stay_in_la,West LA,12870.0,1,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),1
+2/4 apartment,safmr,stay_in_la,Westwood,12900.0,2,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,stay_in_la,UCLA,15385.0,3,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_50,West LA,11261.0,1,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+2/4 apartment,safmr,sublet_50,Westwood,11288.0,2,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_50,UCLA,12168.0,3,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_70,West LA,10618.0,1,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+2/4 apartment,safmr,sublet_70,Westwood,10642.0,2,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_70,UCLA,12168.0,3,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_90,West LA,9974.0,1,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+2/4 apartment,safmr,sublet_90,Westwood,9998.0,2,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr,sublet_90,UCLA,12168.0,3,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/4 apartment,safmr_110,away,UCLA,12168.0,1,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),1
+2/4 apartment,safmr_110,away,West LA,14157.0,2,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,away,Westwood,14190.0,3,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,stay_in_la,West LA,14157.0,1,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),1
+2/4 apartment,safmr_110,stay_in_la,Westwood,14190.0,2,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,stay_in_la,UCLA,15707.0,3,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_50,UCLA,12168.0,1,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),1
+2/4 apartment,safmr_110,sublet_50,West LA,12387.0,2,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_50,Westwood,12416.0,3,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_70,West LA,11680.0,1,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),1
+2/4 apartment,safmr_110,sublet_70,Westwood,11707.0,2,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_70,UCLA,12168.0,3,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_90,West LA,10972.0,1,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),1
+2/4 apartment,safmr_110,sublet_90,Westwood,10997.0,2,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/4 apartment,safmr_110,sublet_90,UCLA,12168.0,3,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/4 apartment,zori_adjusted,away,West LA,12081.0,1,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),1
+2/4 apartment,zori_adjusted,away,UCLA,12168.0,2,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,away,Westwood,13524.0,3,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,stay_in_la,West LA,12081.0,1,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),1
+2/4 apartment,zori_adjusted,stay_in_la,Westwood,13524.0,2,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,stay_in_la,UCLA,15188.0,3,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_50,West LA,10571.0,1,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),1
+2/4 apartment,zori_adjusted,sublet_50,Westwood,11834.0,2,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_50,UCLA,12168.0,3,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_70,West LA,9967.0,1,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),1
+2/4 apartment,zori_adjusted,sublet_70,Westwood,11157.0,2,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_70,UCLA,12168.0,3,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_90,West LA,9363.0,1,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),1
+2/4 apartment,zori_adjusted,sublet_90,Westwood,10481.0,2,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/4 apartment,zori_adjusted,sublet_90,UCLA,12168.0,3,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/4 townhouse,safmr,away,West LA,12870.0,1,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),1
+2/4 townhouse,safmr,away,Westwood,12900.0,2,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,away,UCLA,13053.0,3,2,4,4 people,1. Leave LA,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,stay_in_la,West LA,12870.0,1,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),1
+2/4 townhouse,safmr,stay_in_la,Westwood,12900.0,2,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,stay_in_la,UCLA,16271.0,3,2,4,4 people,5. Stay in LA,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_50,West LA,11261.0,1,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+2/4 townhouse,safmr,sublet_50,Westwood,11288.0,2,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_50,UCLA,13053.0,3,2,4,4 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_70,West LA,10618.0,1,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+2/4 townhouse,safmr,sublet_70,Westwood,10642.0,2,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_70,UCLA,13053.0,3,2,4,4 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_90,West LA,9974.0,1,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+2/4 townhouse,safmr,sublet_90,Westwood,9998.0,2,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr,sublet_90,UCLA,13053.0,3,2,4,4 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+2/4 townhouse,safmr_110,away,UCLA,13053.0,1,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),1
+2/4 townhouse,safmr_110,away,West LA,14157.0,2,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,away,Westwood,14190.0,3,2,4,4 people,1. Leave LA,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,stay_in_la,West LA,14157.0,1,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),1
+2/4 townhouse,safmr_110,stay_in_la,Westwood,14190.0,2,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,stay_in_la,UCLA,16593.0,3,2,4,4 people,5. Stay in LA,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_50,West LA,12387.0,1,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),1
+2/4 townhouse,safmr_110,sublet_50,Westwood,12416.0,2,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_50,UCLA,13053.0,3,2,4,4 people,2. Sublet 50%,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_70,West LA,11680.0,1,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),1
+2/4 townhouse,safmr_110,sublet_70,Westwood,11707.0,2,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_70,UCLA,13053.0,3,2,4,4 people,3. Sublet 70%,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_90,West LA,10972.0,1,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),1
+2/4 townhouse,safmr_110,sublet_90,Westwood,10997.0,2,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/4 townhouse,safmr_110,sublet_90,UCLA,13053.0,3,2,4,4 people,4. Sublet 90%,High (SAFMR x 1.1),0
+2/4 townhouse,zori_adjusted,away,West LA,12081.0,1,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),1
+2/4 townhouse,zori_adjusted,away,UCLA,13053.0,2,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,away,Westwood,13524.0,3,2,4,4 people,1. Leave LA,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,stay_in_la,West LA,12081.0,1,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),1
+2/4 townhouse,zori_adjusted,stay_in_la,Westwood,13524.0,2,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,stay_in_la,UCLA,16074.0,3,2,4,4 people,5. Stay in LA,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_50,West LA,10571.0,1,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),1
+2/4 townhouse,zori_adjusted,sublet_50,Westwood,11834.0,2,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_50,UCLA,13053.0,3,2,4,4 people,2. Sublet 50%,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_70,West LA,9967.0,1,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),1
+2/4 townhouse,zori_adjusted,sublet_70,Westwood,11157.0,2,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_70,UCLA,13053.0,3,2,4,4 people,3. Sublet 70%,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_90,West LA,9363.0,1,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),1
+2/4 townhouse,zori_adjusted,sublet_90,Westwood,10481.0,2,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),0
+2/4 townhouse,zori_adjusted,sublet_90,UCLA,13053.0,3,2,4,4 people,4. Sublet 90%,Main (ZORI-adjusted),0
+studio 2 person,safmr,away,UCLA,11255.0,1,0,2,2 people,1. Leave LA,Conservative (HUD SAFMR),1
+studio 2 person,safmr,away,West LA,18420.0,2,0,2,2 people,1. Leave LA,Conservative (HUD SAFMR),0
+studio 2 person,safmr,away,Westwood,18480.0,3,0,2,2 people,1. Leave LA,Conservative (HUD SAFMR),0
+studio 2 person,safmr,stay_in_la,UCLA,15860.0,1,0,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),1
+studio 2 person,safmr,stay_in_la,West LA,18420.0,2,0,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),0
+studio 2 person,safmr,stay_in_la,Westwood,18480.0,3,0,2,2 people,5. Stay in LA,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_50,UCLA,11255.0,1,0,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),1
+studio 2 person,safmr,sublet_50,West LA,16118.0,2,0,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_50,Westwood,16170.0,3,0,2,2 people,2. Sublet 50%,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_70,UCLA,11255.0,1,0,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),1
+studio 2 person,safmr,sublet_70,West LA,15196.0,2,0,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_70,Westwood,15246.0,3,0,2,2 people,3. Sublet 70%,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_90,UCLA,11255.0,1,0,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),1
+studio 2 person,safmr,sublet_90,West LA,14276.0,2,0,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+studio 2 person,safmr,sublet_90,Westwood,14322.0,3,0,2,2 people,4. Sublet 90%,Conservative (HUD SAFMR),0
+studio 2 person,safmr_110,away,UCLA,11255.0,1,0,2,2 people,1. Leave LA,High (SAFMR x 1.1),1
+studio 2 person,safmr_110,away,West LA,20262.0,2,0,2,2 people,1. Leave LA,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,away,Westwood,20328.0,3,0,2,2 people,1. Leave LA,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,stay_in_la,UCLA,16321.0,1,0,2,2 people,5. Stay in LA,High (SAFMR x 1.1),1
+studio 2 person,safmr_110,stay_in_la,West LA,20262.0,2,0,2,2 people,5. Stay in LA,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,stay_in_la,Westwood,20328.0,3,0,2,2 people,5. Stay in LA,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_50,UCLA,11255.0,1,0,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),1
+studio 2 person,safmr_110,sublet_50,West LA,17729.0,2,0,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_50,Westwood,17787.0,3,0,2,2 people,2. Sublet 50%,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_70,UCLA,11255.0,1,0,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),1
+studio 2 person,safmr_110,sublet_70,West LA,16716.0,2,0,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_70,Westwood,16771.0,3,0,2,2 people,3. Sublet 70%,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_90,UCLA,11255.0,1,0,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),1
+studio 2 person,safmr_110,sublet_90,West LA,15703.0,2,0,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),0
+studio 2 person,safmr_110,sublet_90,Westwood,15754.0,3,0,2,2 people,4. Sublet 90%,High (SAFMR x 1.1),0
+studio 2 person,zori_adjusted,away,UCLA,11255.0,1,0,2,2 people,1. Leave LA,Main (ZORI-adjusted),1
+studio 2 person,zori_adjusted,away,West LA,17292.0,2,0,2,2 people,1. Leave LA,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,away,Westwood,19374.0,3,0,2,2 people,1. Leave LA,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,stay_in_la,UCLA,15578.0,1,0,2,2 people,5. Stay in LA,Main (ZORI-adjusted),1
+studio 2 person,zori_adjusted,stay_in_la,West LA,17292.0,2,0,2,2 people,5. Stay in LA,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,stay_in_la,Westwood,19374.0,3,0,2,2 people,5. Stay in LA,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_50,UCLA,11255.0,1,0,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),1
+studio 2 person,zori_adjusted,sublet_50,West LA,15130.0,2,0,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_50,Westwood,16952.0,3,0,2,2 people,2. Sublet 50%,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_70,UCLA,11255.0,1,0,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),1
+studio 2 person,zori_adjusted,sublet_70,West LA,14266.0,2,0,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_70,Westwood,15984.0,3,0,2,2 people,3. Sublet 70%,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_90,UCLA,11255.0,1,0,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),1
+studio 2 person,zori_adjusted,sublet_90,West LA,13401.0,2,0,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),0
+studio 2 person,zori_adjusted,sublet_90,Westwood,15015.0,3,0,2,2 people,4. Sublet 90%,Main (ZORI-adjusted),0

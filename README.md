@@ -26,7 +26,7 @@ This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired 
 | 3 | Cleaning + SQL | Done → [docs/03_sql_per_person_cost.md](docs/03_sql_per_person_cost.md) |
 | 4 | Sensitivity analysis + recommendation | Done → [docs/04_sensitivity_and_recommendation.md](docs/04_sensitivity_and_recommendation.md) |
 | 5 | Rent trends + charts | Done → [docs/05_rent_trend.md](docs/05_rent_trend.md) |
-| 6 | Report + dashboard | Next |
+| 6 | Report + dashboard | Report done → [REPORT.md](REPORT.md) · Dashboard data ready → [docs/06_tableau_guide.md](docs/06_tableau_guide.md) |
 
 ## Repository structure
 ```
