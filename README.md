@@ -28,6 +28,9 @@ This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired 
 | 5 | Rent trends + charts | Done → [docs/05_rent_trend.md](docs/05_rent_trend.md) |
 | 6 | Report + dashboard | Report done → [REPORT.md](REPORT.md) · Dashboard data ready → [docs/06_tableau_guide.md](docs/06_tableau_guide.md) |
 
+## Understanding the code
+Step-by-step code walkthrough (Korean): [docs/CODE_WALKTHROUGH.md](docs/CODE_WALKTHROUGH.md)
+
 ## Repository structure
 ```
 docs/        step-by-step notes (problem definition, data log, findings)
