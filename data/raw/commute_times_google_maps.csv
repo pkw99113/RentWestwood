@@ -1,0 +1,8 @@
+zip,area,origin,transit_min,walk_min,drive_min_low,drive_min_high,drive_miles,retrieved_at,method
+90024,Westwood,Gayley Ave & Strathmore Dr,,9,,,,2026-11-19,"Google Maps walking to Bruin Plaza (0.4 mi)"
+90025,West LA / Sawtelle,Sawtelle Blvd & Olympic Blvd,35,,9,18,3.0,2026-11-19,"Google Maps; transit to Bruin Plaza and driving to UCLA Parking Structure 8; arrive by 9:00 AM Tue 2026-12-01; recommended route; driving = 'typically' range of first route"
+90064,Rancho Park,Pico Blvd & Overland Ave,23,,12,20,3.5,2026-11-19,same as above
+90049,Brentwood,San Vicente Blvd & Barrington Ave,30,,7,18,3.0,2026-11-19,same as above
+90034,Palms,Palms Blvd & Motor Ave,31,,14,28,5.3,2026-11-19,same as above
+90066,Mar Vista,Venice Blvd & Inglewood Blvd,42,,14,30,6.0,2026-11-19,same as above
+90005,Koreatown,Wilshire Blvd & Western Ave,59,,35,80,9.4,2026-11-19,same as above

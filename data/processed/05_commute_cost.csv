@@ -1,0 +1,20 @@
+zip,area,mode,one_way_min,hours_per_school_month,cash_per_school_month,fixed_per_month
+90005,Koreatown,car_bought,67.5,36.0,200.79,408.46
+90005,Koreatown,car_owned,67.5,36.0,200.79,0.0
+90005,Koreatown,transit,59.0,31.5,0.0,0.0
+90024,Westwood,walk,9.0,4.8,0.0,0.0
+90025,West LA / Sawtelle,car_bought,23.5,12.5,141.3,408.46
+90025,West LA / Sawtelle,car_owned,23.5,12.5,141.3,0.0
+90025,West LA / Sawtelle,transit,35.0,18.7,0.0,0.0
+90034,Palms,car_bought,31.0,16.5,162.68,408.46
+90034,Palms,car_owned,31.0,16.5,162.68,0.0
+90034,Palms,transit,31.0,16.5,0.0,0.0
+90049,Brentwood,car_bought,22.5,12.0,141.3,408.46
+90049,Brentwood,car_owned,22.5,12.0,141.3,0.0
+90049,Brentwood,transit,30.0,16.0,0.0,0.0
+90064,Rancho Park,car_bought,26.0,13.9,145.95,408.46
+90064,Rancho Park,car_owned,26.0,13.9,145.95,0.0
+90064,Rancho Park,transit,23.0,12.3,0.0,0.0
+90066,Mar Vista,car_bought,32.0,17.1,169.19,408.46
+90066,Mar Vista,car_owned,32.0,17.1,169.19,0.0
+90066,Mar Vista,transit,42.0,22.4,0.0,0.0

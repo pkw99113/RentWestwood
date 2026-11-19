@@ -1,0 +1,91 @@
+car_profile,summer_plan,neighborhood,cash_savings_vs_ucla,extra_commute_hours_per_year,breakeven_usd_per_hour
+drives_bought,away,Palms,-4476.0,105.0,
+drives_bought,away,Koreatown,-3691.0,281.0,
+drives_bought,away,Mar Vista,-5659.0,111.0,
+drives_bought,away,West LA / Sawtelle,-6086.0,69.0,
+drives_bought,away,Brentwood,-8582.0,65.0,
+drives_bought,away,Rancho Park,-7364.0,82.0,
+drives_bought,stay_in_la,Koreatown,-1403.0,281.0,
+drives_bought,stay_in_la,Mar Vista,-3372.0,111.0,
+drives_bought,stay_in_la,Brentwood,-6295.0,65.0,
+drives_bought,stay_in_la,West LA / Sawtelle,-3799.0,69.0,
+drives_bought,stay_in_la,Palms,-2188.0,105.0,
+drives_bought,stay_in_la,Rancho Park,-5077.0,82.0,
+drives_bought,sublet_50,Brentwood,-6760.0,65.0,
+drives_bought,sublet_50,Mar Vista,-4234.0,111.0,
+drives_bought,sublet_50,Palms,-3191.0,105.0,
+drives_bought,sublet_50,West LA / Sawtelle,-4576.0,69.0,
+drives_bought,sublet_50,Koreatown,-2547.0,281.0,
+drives_bought,sublet_50,Rancho Park,-5700.0,82.0,
+drives_bought,sublet_70,Mar Vista,-3664.0,111.0,
+drives_bought,sublet_70,Koreatown,-2090.0,281.0,
+drives_bought,sublet_70,West LA / Sawtelle,-3972.0,69.0,
+drives_bought,sublet_70,Brentwood,-6031.0,65.0,
+drives_bought,sublet_70,Rancho Park,-5034.0,82.0,
+drives_bought,sublet_70,Palms,-2677.0,105.0,
+drives_bought,sublet_90,Palms,-2163.0,105.0,
+drives_bought,sublet_90,Brentwood,-5303.0,65.0,
+drives_bought,sublet_90,Mar Vista,-3094.0,111.0,
+drives_bought,sublet_90,Rancho Park,-4368.0,82.0,
+drives_bought,sublet_90,Koreatown,-1632.0,281.0,
+drives_bought,sublet_90,West LA / Sawtelle,-3368.0,69.0,
+drives_owned,away,Koreatown,1211.0,281.0,4.3
+drives_owned,away,Palms,426.0,105.0,4.0
+drives_owned,away,Rancho Park,-2463.0,82.0,
+drives_owned,away,West LA / Sawtelle,-1185.0,69.0,
+drives_owned,away,Mar Vista,-758.0,111.0,
+drives_owned,away,Brentwood,-3681.0,65.0,
+drives_owned,stay_in_la,Palms,2713.0,105.0,25.8
+drives_owned,stay_in_la,West LA / Sawtelle,1103.0,69.0,15.9
+drives_owned,stay_in_la,Mar Vista,1530.0,111.0,13.8
+drives_owned,stay_in_la,Koreatown,3498.0,281.0,12.5
+drives_owned,stay_in_la,Brentwood,-1393.0,65.0,
+drives_owned,stay_in_la,Rancho Park,-175.0,82.0,
+drives_owned,sublet_50,Palms,1710.0,105.0,16.2
+drives_owned,sublet_50,Koreatown,2354.0,281.0,8.4
+drives_owned,sublet_50,Mar Vista,667.0,111.0,6.0
+drives_owned,sublet_50,West LA / Sawtelle,325.0,69.0,4.7
+drives_owned,sublet_50,Brentwood,-1859.0,65.0,
+drives_owned,sublet_50,Rancho Park,-798.0,82.0,
+drives_owned,sublet_70,Palms,2224.0,105.0,21.1
+drives_owned,sublet_70,West LA / Sawtelle,929.0,69.0,13.4
+drives_owned,sublet_70,Mar Vista,1238.0,111.0,11.2
+drives_owned,sublet_70,Koreatown,2812.0,281.0,10.0
+drives_owned,sublet_70,Brentwood,-1130.0,65.0,
+drives_owned,sublet_70,Rancho Park,-132.0,82.0,
+drives_owned,sublet_90,Palms,2738.0,105.0,26.0
+drives_owned,sublet_90,West LA / Sawtelle,1533.0,69.0,22.1
+drives_owned,sublet_90,Mar Vista,1808.0,111.0,16.3
+drives_owned,sublet_90,Koreatown,3269.0,281.0,11.6
+drives_owned,sublet_90,Rancho Park,534.0,82.0,6.5
+drives_owned,sublet_90,Brentwood,-401.0,65.0,
+transit,away,Palms,1890.0,105.0,17.9
+transit,away,Koreatown,3018.0,240.0,12.6
+transit,away,Mar Vista,765.0,158.0,4.8
+transit,away,West LA / Sawtelle,87.0,125.0,0.7
+transit,away,Brentwood,-2409.0,101.0,
+transit,away,Rancho Park,-1149.0,68.0,
+transit,stay_in_la,Palms,4177.0,105.0,39.7
+transit,stay_in_la,Koreatown,5305.0,240.0,22.1
+transit,stay_in_la,Mar Vista,3052.0,158.0,19.3
+transit,stay_in_la,West LA / Sawtelle,2374.0,125.0,19.0
+transit,stay_in_la,Rancho Park,1138.0,68.0,16.9
+transit,stay_in_la,Brentwood,-122.0,101.0,
+transit,sublet_50,Palms,3175.0,105.0,30.1
+transit,sublet_50,Koreatown,4162.0,240.0,17.3
+transit,sublet_50,Mar Vista,2190.0,158.0,13.8
+transit,sublet_50,West LA / Sawtelle,1597.0,125.0,12.8
+transit,sublet_50,Rancho Park,515.0,68.0,7.6
+transit,sublet_50,Brentwood,-587.0,101.0,
+transit,sublet_70,Palms,3688.0,105.0,35.0
+transit,sublet_70,Koreatown,4619.0,240.0,19.2
+transit,sublet_70,West LA / Sawtelle,2201.0,125.0,17.6
+transit,sublet_70,Rancho Park,1181.0,68.0,17.5
+transit,sublet_70,Mar Vista,2760.0,158.0,17.4
+transit,sublet_70,Brentwood,142.0,101.0,1.4
+transit,sublet_90,Palms,4202.0,105.0,39.9
+transit,sublet_90,Rancho Park,1847.0,68.0,27.4
+transit,sublet_90,West LA / Sawtelle,2805.0,125.0,22.4
+transit,sublet_90,Koreatown,5077.0,240.0,21.1
+transit,sublet_90,Mar Vista,3330.0,158.0,21.0
+transit,sublet_90,Brentwood,871.0,101.0,8.6

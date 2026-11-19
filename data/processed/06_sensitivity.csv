@@ -1,6 +1,25 @@
-summer_plan,winner_zori_adjusted,winner_safmr,winner_safmr_110
-away,Koreatown,Koreatown,Koreatown
-stay_in_la,Koreatown,Koreatown,Koreatown
-sublet_50,Koreatown,Koreatown,Koreatown
-sublet_70,Koreatown,Koreatown,Koreatown
-sublet_90,Koreatown,Koreatown,Koreatown
+car_profile,option,annual_rent,annual_commute,annual_total,cost_rank
+drives_bought,Westwood,11157.0,864.0,12021.0,1
+drives_bought,UCLA,12168.0,864.0,13032.0,2
+drives_bought,Palms,8479.0,9336.0,17815.0,3
+drives_bought,West LA / Sawtelle,9967.0,8423.0,18390.0,4
+drives_bought,Mar Vista,9407.0,9502.0,18910.0,5
+drives_bought,Rancho Park,10987.0,8717.0,19704.0,6
+drives_bought,Brentwood,12026.0,8333.0,20359.0,7
+drives_bought,Koreatown,7549.0,13189.0,20737.0,8
+drives_owned,Westwood,11157.0,864.0,12021.0,1
+drives_owned,Palms,8479.0,4434.0,12913.0,2
+drives_owned,UCLA,12168.0,864.0,13032.0,3
+drives_owned,West LA / Sawtelle,9967.0,3522.0,13489.0,4
+drives_owned,Mar Vista,9407.0,4601.0,14008.0,5
+drives_owned,Rancho Park,10987.0,3816.0,14802.0,6
+drives_owned,Brentwood,12026.0,3432.0,15458.0,7
+drives_owned,Koreatown,7549.0,8287.0,15836.0,8
+transit,Palms,8479.0,2970.0,11449.0,1
+transit,Westwood,11157.0,864.0,12021.0,2
+transit,UCLA,12168.0,864.0,13032.0,3
+transit,Rancho Park,10987.0,2214.0,13201.0,4
+transit,Koreatown,7549.0,5670.0,13219.0,5
+transit,West LA / Sawtelle,9967.0,3366.0,13333.0,6
+transit,Mar Vista,9407.0,4032.0,13439.0,7
+transit,Brentwood,12026.0,2880.0,14906.0,8
