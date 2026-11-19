@@ -1,9 +1,7 @@
-unit_type,occupants,westwood_monthly,west_la_monthly,monthly_savings_west_la,extra_hours_per_month,breakeven_usd_per_hour
-1/2 unit,2,1809.0,1615.0,194.0,8.0,24.25
-studio 2 person,2,1615.0,1441.0,174.0,8.0,21.69
-1/3 unit,3,1206.0,1076.0,129.0,8.0,16.17
-1/3 unit (GH),3,1206.0,1076.0,129.0,8.0,16.17
-2/3 shared bedroom,3,1503.0,1342.0,160.0,8.0,20.04
-2/3S single bedroom,3,1503.0,1342.0,160.0,8.0,20.04
-2/4 apartment,4,1127.0,1007.0,120.0,8.0,15.03
-2/4 townhouse,4,1127.0,1007.0,120.0,8.0,15.03
+unit_type,neighborhood,monthly_rent_pp,monthly_savings_vs_westwood,breakeven_extra_min_one_way
+2/4 apartment,Koreatown,763.0,365.0,34.0
+2/4 apartment,Palms,857.0,271.0,25.0
+2/4 apartment,Mar Vista,950.0,177.0,17.0
+2/4 apartment,West LA / Sawtelle,1007.0,120.0,11.0
+2/4 apartment,Rancho Park,1110.0,17.0,2.0
+2/4 apartment,Brentwood,1215.0,-88.0,-8.0

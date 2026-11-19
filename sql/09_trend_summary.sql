@@ -1,36 +1,28 @@
--- 09. Rent trend summary by year (2018 onward, the window where every ZIP has data).
--- Annual average rent per ZIP, growth vs the previous year, and Westwood's premium over West LA.
+-- 09. Rent trend summary by year and neighborhood (2018 onward, the window where every ZIP has data).
 
 WITH yearly AS (
     SELECT
         zip,
-        YEAR(month)       AS year,
-        AVG(zori)         AS avg_rent,
-        COUNT(*)          AS months       -- 2026 has only 10 months so far; flag partial years
+        area,
+        YEAR(month)   AS year,
+        AVG(zori)     AS avg_rent,
+        COUNT(*)      AS months       -- 2026 has only 10 months so far; flag partial years
     FROM zori
     WHERE month >= DATE '2018-01-01'
-    GROUP BY zip, YEAR(month)
-),
-wide AS (
-    SELECT
-        year,
-        MAX(months)                                         AS months,
-        MAX(CASE WHEN zip = '90024' THEN avg_rent END)      AS westwood,
-        MAX(CASE WHEN zip = '90025' THEN avg_rent END)      AS west_la
-    FROM yearly
-    GROUP BY year
+    GROUP BY zip, area, YEAR(month)
 )
 SELECT
+    zip,
+    area,
     year,
     months,
-    ROUND(westwood)                                                         AS westwood_avg,
-    ROUND(west_la)                                                          AS west_la_avg,
-    -- LAG without a 12-row offset: one row per year, so the previous row is last year
-    ROUND(100 * (westwood / LAG(westwood) OVER (ORDER BY year) - 1), 1)     AS westwood_growth_pct,
-    ROUND(100 * (west_la  / LAG(west_la)  OVER (ORDER BY year) - 1), 1)     AS west_la_growth_pct,
-    ROUND(100 * (westwood / west_la - 1), 1)                                AS westwood_premium_pct,
-    -- Index: each ZIP's rent relative to its own 2018 average (2018 = 100)
-    ROUND(100 * westwood / FIRST_VALUE(westwood) OVER (ORDER BY year), 1)   AS westwood_index_2018,
-    ROUND(100 * west_la  / FIRST_VALUE(west_la)  OVER (ORDER BY year), 1)   AS west_la_index_2018
-FROM wide
-ORDER BY year;
+    ROUND(avg_rent)                                                                   AS avg_rent,
+    -- one row per ZIP per year, so the previous row within the ZIP is last year
+    ROUND(100 * (avg_rent / LAG(avg_rent) OVER (PARTITION BY zip ORDER BY year) - 1), 1) AS growth_pct,
+    -- index: each ZIP relative to its own 2018 average (2018 = 100)
+    ROUND(100 * avg_rent / FIRST_VALUE(avg_rent) OVER (PARTITION BY zip ORDER BY year), 1) AS index_2018,
+    -- Westwood's premium over this ZIP in the same year
+    ROUND(100 * (MAX(CASE WHEN zip = '90024' THEN avg_rent END) OVER (PARTITION BY year) / avg_rent - 1), 1)
+                                                                                      AS westwood_premium_pct
+FROM yearly
+ORDER BY zip, year;

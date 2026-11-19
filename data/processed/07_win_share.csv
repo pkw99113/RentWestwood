@@ -1,11 +1,10 @@
 summer_plan,winner,scenarios_won,share_pct,median_margin_usd
-away,UCLA,21,88.0,3412.0
-away,West LA,3,13.0,87.0
-stay_in_la,West LA,16,67.0,42.0
-stay_in_la,UCLA,8,33.0,1359.0
-sublet_50,UCLA,18,75.0,1839.0
-sublet_50,West LA,6,25.0,262.0
-sublet_70,UCLA,14,58.0,1487.0
-sublet_70,West LA,10,42.0,240.0
-sublet_90,West LA,14,58.0,108.0
-sublet_90,UCLA,10,42.0,1089.0
+away,Koreatown,19,79.0,1128.0
+away,UCLA,5,21.0,1843.0
+stay_in_la,Koreatown,24,100.0,1392.0
+sublet_50,Koreatown,21,88.0,1184.0
+sublet_50,UCLA,3,13.0,505.0
+sublet_70,Koreatown,23,96.0,1116.0
+sublet_70,UCLA,1,4.0,941.0
+sublet_90,Koreatown,23,96.0,1104.0
+sublet_90,UCLA,1,4.0,202.0

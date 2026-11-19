@@ -17,19 +17,20 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data" / "raw"
 OUT = ROOT / "data" / "processed"
 
-# Analysis scope: the two ZIPs next to campus.
+# Analysis scope: neighborhoods around campus that UCLA students commonly consider.
 STUDY_ZIPS = {
     "90024": ("Westwood", "adjacent"),
     "90025": ("West LA / Sawtelle", "near"),
-}
-# Wider set used only to check that ZORI and SAFMR agree (a correlation needs more than 2 points).
-VALIDATION_ZIPS = {
-    **STUDY_ZIPS,
     "90064": ("Rancho Park", "near"),
     "90049": ("Brentwood", "near"),
     "90034": ("Palms", "far"),
     "90066": ("Mar Vista", "far"),
-    "90005": ("Koreatown (90005)", "far"),
+    "90005": ("Koreatown", "far"),
+}
+# Validation set for the ZORI vs SAFMR cross-check. 90020 is kept here only: its ZORI is
+# 0.76x its SAFMR 1BR, far off the other ZIPs, so it is not used in the cost analysis.
+VALIDATION_ZIPS = {
+    **STUDY_ZIPS,
     "90020": ("Koreatown (90020)", "far"),
 }
 report = []

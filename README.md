@@ -2,6 +2,8 @@
 
 **Question**: For a UCLA student choosing where to live, which option costs less once rent, lease length, and commute are counted: UCLA University Apartments, Westwood (90024), or West LA / Sawtelle (90025)?
 
+> **🚧 In progress (2026-11-19):** scope is being expanded from 2 ZIPs to 7 neighborhoods around campus (Westwood, West LA/Sawtelle, Rancho Park, Brentwood, Palms, Mar Vista, Koreatown). The SQL in `sql/` already uses the 7 ZIPs; REPORT.md, charts, and findings below still describe the 2-ZIP version and will be updated.
+
 📄 **Full report (Korean): [REPORT.md](REPORT.md)**
 
 This is v2 of the project. v1 (a Zillow scraper + rent price model) was retired because its data could not be trusted. See [archive/v1](archive/v1/README.md) for what went wrong and why.

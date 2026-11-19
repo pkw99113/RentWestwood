@@ -1,361 +1,961 @@
 unit_type,rent_method,summer_plan,option,annual_cost,cost_rank
-1/2 unit,safmr,away,UCLA,15200.02,1
-1/2 unit,safmr,away,West LA,20640.0,2
-1/2 unit,safmr,away,Westwood,20700.0,3
-1/2 unit,safmr,stay_in_la,UCLA,20360.02,1
-1/2 unit,safmr,stay_in_la,West LA,20640.0,2
-1/2 unit,safmr,stay_in_la,Westwood,20700.0,3
-1/2 unit,safmr,sublet_50,UCLA,15200.02,1
-1/2 unit,safmr,sublet_50,West LA,18060.0,2
-1/2 unit,safmr,sublet_50,Westwood,18112.5,3
-1/2 unit,safmr,sublet_70,UCLA,15200.02,1
-1/2 unit,safmr,sublet_70,West LA,17028.0,2
-1/2 unit,safmr,sublet_70,Westwood,17077.5,3
-1/2 unit,safmr,sublet_90,UCLA,15200.02,1
-1/2 unit,safmr,sublet_90,West LA,15996.000000000002,2
-1/2 unit,safmr,sublet_90,Westwood,16042.500000000002,3
+1/2 unit,safmr,away,Koreatown,15060.0,1
+1/2 unit,safmr,away,UCLA,15200.02,2
+1/2 unit,safmr,away,Mar Vista,17040.0,3
+1/2 unit,safmr,away,Palms,17220.0,4
+1/2 unit,safmr,away,West LA / Sawtelle,20640.0,5
+1/2 unit,safmr,away,Westwood,20700.0,6
+1/2 unit,safmr,away,Brentwood,20940.0,7
+1/2 unit,safmr,away,Rancho Park,20940.0,7
+1/2 unit,safmr,stay_in_la,Koreatown,15060.0,1
+1/2 unit,safmr,stay_in_la,Mar Vista,17040.0,2
+1/2 unit,safmr,stay_in_la,Palms,17220.0,3
+1/2 unit,safmr,stay_in_la,UCLA,18965.02,4
+1/2 unit,safmr,stay_in_la,West LA / Sawtelle,20640.0,5
+1/2 unit,safmr,stay_in_la,Westwood,20700.0,6
+1/2 unit,safmr,stay_in_la,Rancho Park,20940.0,7
+1/2 unit,safmr,stay_in_la,Brentwood,20940.0,7
+1/2 unit,safmr,sublet_50,Koreatown,13177.5,1
+1/2 unit,safmr,sublet_50,Mar Vista,14910.0,2
+1/2 unit,safmr,sublet_50,Palms,15067.5,3
+1/2 unit,safmr,sublet_50,UCLA,15200.02,4
+1/2 unit,safmr,sublet_50,West LA / Sawtelle,18060.0,5
+1/2 unit,safmr,sublet_50,Westwood,18112.5,6
+1/2 unit,safmr,sublet_50,Rancho Park,18322.5,7
+1/2 unit,safmr,sublet_50,Brentwood,18322.5,7
+1/2 unit,safmr,sublet_70,Koreatown,12424.5,1
+1/2 unit,safmr,sublet_70,Mar Vista,14058.0,2
+1/2 unit,safmr,sublet_70,Palms,14206.5,3
+1/2 unit,safmr,sublet_70,UCLA,15200.02,4
+1/2 unit,safmr,sublet_70,West LA / Sawtelle,17028.0,5
+1/2 unit,safmr,sublet_70,Westwood,17077.5,6
+1/2 unit,safmr,sublet_70,Brentwood,17275.5,7
+1/2 unit,safmr,sublet_70,Rancho Park,17275.5,7
+1/2 unit,safmr,sublet_90,Koreatown,11671.5,1
+1/2 unit,safmr,sublet_90,Mar Vista,13206.000000000002,2
+1/2 unit,safmr,sublet_90,Palms,13345.500000000002,3
+1/2 unit,safmr,sublet_90,UCLA,15200.02,4
+1/2 unit,safmr,sublet_90,West LA / Sawtelle,15996.000000000002,5
+1/2 unit,safmr,sublet_90,Westwood,16042.500000000002,6
+1/2 unit,safmr,sublet_90,Rancho Park,16228.500000000002,7
+1/2 unit,safmr,sublet_90,Brentwood,16228.500000000002,7
 1/2 unit,safmr_110,away,UCLA,15200.02,1
-1/2 unit,safmr_110,away,West LA,22704.0,2
-1/2 unit,safmr_110,away,Westwood,22770.0,3
-1/2 unit,safmr_110,stay_in_la,UCLA,20876.02,1
-1/2 unit,safmr_110,stay_in_la,West LA,22704.0,2
-1/2 unit,safmr_110,stay_in_la,Westwood,22770.0,3
-1/2 unit,safmr_110,sublet_50,UCLA,15200.02,1
-1/2 unit,safmr_110,sublet_50,West LA,19866.0,2
-1/2 unit,safmr_110,sublet_50,Westwood,19923.75,3
-1/2 unit,safmr_110,sublet_70,UCLA,15200.02,1
-1/2 unit,safmr_110,sublet_70,West LA,18730.8,2
-1/2 unit,safmr_110,sublet_70,Westwood,18785.25,3
-1/2 unit,safmr_110,sublet_90,UCLA,15200.02,1
-1/2 unit,safmr_110,sublet_90,West LA,17595.600000000002,2
-1/2 unit,safmr_110,sublet_90,Westwood,17646.75,3
-1/2 unit,zori_adjusted,away,UCLA,15200.02,1
-1/2 unit,zori_adjusted,away,West LA,19374.0,2
-1/2 unit,zori_adjusted,away,Westwood,21702.0,3
-1/2 unit,zori_adjusted,stay_in_la,West LA,19374.0,1
-1/2 unit,zori_adjusted,stay_in_la,UCLA,20043.52,2
-1/2 unit,zori_adjusted,stay_in_la,Westwood,21702.0,3
-1/2 unit,zori_adjusted,sublet_50,UCLA,15200.02,1
-1/2 unit,zori_adjusted,sublet_50,West LA,16952.25,2
-1/2 unit,zori_adjusted,sublet_50,Westwood,18989.25,3
-1/2 unit,zori_adjusted,sublet_70,UCLA,15200.02,1
-1/2 unit,zori_adjusted,sublet_70,West LA,15983.550000000001,2
-1/2 unit,zori_adjusted,sublet_70,Westwood,17904.15,3
-1/2 unit,zori_adjusted,sublet_90,West LA,15014.85,1
-1/2 unit,zori_adjusted,sublet_90,UCLA,15200.02,2
-1/2 unit,zori_adjusted,sublet_90,Westwood,16819.050000000003,3
-1/3 unit,safmr,away,UCLA,10347.92,1
-1/3 unit,safmr,away,West LA,13760.0,2
-1/3 unit,safmr,away,Westwood,13800.0,3
-1/3 unit,safmr,stay_in_la,West LA,13760.0,1
-1/3 unit,safmr,stay_in_la,UCLA,13787.92,2
-1/3 unit,safmr,stay_in_la,Westwood,13800.0,3
-1/3 unit,safmr,sublet_50,UCLA,10347.92,1
-1/3 unit,safmr,sublet_50,West LA,12040.0,2
-1/3 unit,safmr,sublet_50,Westwood,12075.0,3
-1/3 unit,safmr,sublet_70,UCLA,10347.92,1
-1/3 unit,safmr,sublet_70,West LA,11352.000000000002,2
-1/3 unit,safmr,sublet_70,Westwood,11385.0,3
-1/3 unit,safmr,sublet_90,UCLA,10347.92,1
-1/3 unit,safmr,sublet_90,West LA,10664.000000000002,2
-1/3 unit,safmr,sublet_90,Westwood,10695.0,3
+1/2 unit,safmr_110,away,Koreatown,16566.0,2
+1/2 unit,safmr_110,away,Mar Vista,18744.0,3
+1/2 unit,safmr_110,away,Palms,18942.0,4
+1/2 unit,safmr_110,away,West LA / Sawtelle,22704.0,5
+1/2 unit,safmr_110,away,Westwood,22770.0,6
+1/2 unit,safmr_110,away,Rancho Park,23034.0,7
+1/2 unit,safmr_110,away,Brentwood,23034.0,7
+1/2 unit,safmr_110,stay_in_la,Koreatown,16566.0,1
+1/2 unit,safmr_110,stay_in_la,Mar Vista,18744.0,2
+1/2 unit,safmr_110,stay_in_la,Palms,18942.0,3
+1/2 unit,safmr_110,stay_in_la,UCLA,19341.52,4
+1/2 unit,safmr_110,stay_in_la,West LA / Sawtelle,22704.0,5
+1/2 unit,safmr_110,stay_in_la,Westwood,22770.0,6
+1/2 unit,safmr_110,stay_in_la,Brentwood,23034.0,7
+1/2 unit,safmr_110,stay_in_la,Rancho Park,23034.0,7
+1/2 unit,safmr_110,sublet_50,Koreatown,14495.25,1
+1/2 unit,safmr_110,sublet_50,UCLA,15200.02,2
+1/2 unit,safmr_110,sublet_50,Mar Vista,16401.0,3
+1/2 unit,safmr_110,sublet_50,Palms,16574.25,4
+1/2 unit,safmr_110,sublet_50,West LA / Sawtelle,19866.0,5
+1/2 unit,safmr_110,sublet_50,Westwood,19923.75,6
+1/2 unit,safmr_110,sublet_50,Brentwood,20154.75,7
+1/2 unit,safmr_110,sublet_50,Rancho Park,20154.75,7
+1/2 unit,safmr_110,sublet_70,Koreatown,13666.95,1
+1/2 unit,safmr_110,sublet_70,UCLA,15200.02,2
+1/2 unit,safmr_110,sublet_70,Mar Vista,15463.800000000001,3
+1/2 unit,safmr_110,sublet_70,Palms,15627.150000000001,4
+1/2 unit,safmr_110,sublet_70,West LA / Sawtelle,18730.8,5
+1/2 unit,safmr_110,sublet_70,Westwood,18785.25,6
+1/2 unit,safmr_110,sublet_70,Brentwood,19003.05,7
+1/2 unit,safmr_110,sublet_70,Rancho Park,19003.05,7
+1/2 unit,safmr_110,sublet_90,Koreatown,12838.650000000001,1
+1/2 unit,safmr_110,sublet_90,Mar Vista,14526.6,2
+1/2 unit,safmr_110,sublet_90,Palms,14680.050000000001,3
+1/2 unit,safmr_110,sublet_90,UCLA,15200.02,4
+1/2 unit,safmr_110,sublet_90,West LA / Sawtelle,17595.600000000002,5
+1/2 unit,safmr_110,sublet_90,Westwood,17646.75,6
+1/2 unit,safmr_110,sublet_90,Brentwood,17851.350000000002,7
+1/2 unit,safmr_110,sublet_90,Rancho Park,17851.350000000002,7
+1/2 unit,zori_adjusted,away,Koreatown,14676.0,1
+1/2 unit,zori_adjusted,away,UCLA,15200.02,2
+1/2 unit,zori_adjusted,away,Palms,16476.0,3
+1/2 unit,zori_adjusted,away,Mar Vista,18294.0,4
+1/2 unit,zori_adjusted,away,West LA / Sawtelle,19374.0,5
+1/2 unit,zori_adjusted,away,Rancho Park,21366.0,6
+1/2 unit,zori_adjusted,away,Westwood,21702.0,7
+1/2 unit,zori_adjusted,away,Brentwood,23388.0,8
+1/2 unit,zori_adjusted,stay_in_la,Koreatown,14676.0,1
+1/2 unit,zori_adjusted,stay_in_la,Palms,16476.0,2
+1/2 unit,zori_adjusted,stay_in_la,Mar Vista,18294.0,3
+1/2 unit,zori_adjusted,stay_in_la,UCLA,18869.02,4
+1/2 unit,zori_adjusted,stay_in_la,West LA / Sawtelle,19374.0,5
+1/2 unit,zori_adjusted,stay_in_la,Rancho Park,21366.0,6
+1/2 unit,zori_adjusted,stay_in_la,Westwood,21702.0,7
+1/2 unit,zori_adjusted,stay_in_la,Brentwood,23388.0,8
+1/2 unit,zori_adjusted,sublet_50,Koreatown,12841.5,1
+1/2 unit,zori_adjusted,sublet_50,Palms,14416.5,2
+1/2 unit,zori_adjusted,sublet_50,UCLA,15200.02,3
+1/2 unit,zori_adjusted,sublet_50,Mar Vista,16007.25,4
+1/2 unit,zori_adjusted,sublet_50,West LA / Sawtelle,16952.25,5
+1/2 unit,zori_adjusted,sublet_50,Rancho Park,18695.25,6
+1/2 unit,zori_adjusted,sublet_50,Westwood,18989.25,7
+1/2 unit,zori_adjusted,sublet_50,Brentwood,20464.5,8
+1/2 unit,zori_adjusted,sublet_70,Koreatown,12107.7,1
+1/2 unit,zori_adjusted,sublet_70,Palms,13592.7,2
+1/2 unit,zori_adjusted,sublet_70,Mar Vista,15092.550000000001,3
+1/2 unit,zori_adjusted,sublet_70,UCLA,15200.02,4
+1/2 unit,zori_adjusted,sublet_70,West LA / Sawtelle,15983.550000000001,5
+1/2 unit,zori_adjusted,sublet_70,Rancho Park,17626.95,6
+1/2 unit,zori_adjusted,sublet_70,Westwood,17904.15,7
+1/2 unit,zori_adjusted,sublet_70,Brentwood,19295.100000000002,8
+1/2 unit,zori_adjusted,sublet_90,Koreatown,11373.900000000001,1
+1/2 unit,zori_adjusted,sublet_90,Palms,12768.900000000001,2
+1/2 unit,zori_adjusted,sublet_90,Mar Vista,14177.85,3
+1/2 unit,zori_adjusted,sublet_90,West LA / Sawtelle,15014.85,4
+1/2 unit,zori_adjusted,sublet_90,UCLA,15200.02,5
+1/2 unit,zori_adjusted,sublet_90,Rancho Park,16558.65,6
+1/2 unit,zori_adjusted,sublet_90,Westwood,16819.050000000003,7
+1/2 unit,zori_adjusted,sublet_90,Brentwood,18125.7,8
+1/3 unit,safmr,away,Koreatown,10040.0,1
+1/3 unit,safmr,away,UCLA,10347.92,2
+1/3 unit,safmr,away,Mar Vista,11360.0,3
+1/3 unit,safmr,away,Palms,11480.0,4
+1/3 unit,safmr,away,West LA / Sawtelle,13760.0,5
+1/3 unit,safmr,away,Westwood,13800.0,6
+1/3 unit,safmr,away,Brentwood,13960.0,7
+1/3 unit,safmr,away,Rancho Park,13960.0,7
+1/3 unit,safmr,stay_in_la,Koreatown,10040.0,1
+1/3 unit,safmr,stay_in_la,Mar Vista,11360.0,2
+1/3 unit,safmr,stay_in_la,Palms,11480.0,3
+1/3 unit,safmr,stay_in_la,UCLA,12857.92,4
+1/3 unit,safmr,stay_in_la,West LA / Sawtelle,13760.0,5
+1/3 unit,safmr,stay_in_la,Westwood,13800.0,6
+1/3 unit,safmr,stay_in_la,Brentwood,13960.0,7
+1/3 unit,safmr,stay_in_la,Rancho Park,13960.0,7
+1/3 unit,safmr,sublet_50,Koreatown,8785.0,1
+1/3 unit,safmr,sublet_50,Mar Vista,9940.0,2
+1/3 unit,safmr,sublet_50,Palms,10045.0,3
+1/3 unit,safmr,sublet_50,UCLA,10347.92,4
+1/3 unit,safmr,sublet_50,West LA / Sawtelle,12040.0,5
+1/3 unit,safmr,sublet_50,Westwood,12075.0,6
+1/3 unit,safmr,sublet_50,Rancho Park,12215.0,7
+1/3 unit,safmr,sublet_50,Brentwood,12215.0,7
+1/3 unit,safmr,sublet_70,Koreatown,8283.0,1
+1/3 unit,safmr,sublet_70,Mar Vista,9372.0,2
+1/3 unit,safmr,sublet_70,Palms,9471.0,3
+1/3 unit,safmr,sublet_70,UCLA,10347.92,4
+1/3 unit,safmr,sublet_70,West LA / Sawtelle,11352.000000000002,5
+1/3 unit,safmr,sublet_70,Westwood,11385.0,6
+1/3 unit,safmr,sublet_70,Brentwood,11517.0,7
+1/3 unit,safmr,sublet_70,Rancho Park,11517.0,7
+1/3 unit,safmr,sublet_90,Koreatown,7781.0,1
+1/3 unit,safmr,sublet_90,Mar Vista,8804.0,2
+1/3 unit,safmr,sublet_90,Palms,8897.0,3
+1/3 unit,safmr,sublet_90,UCLA,10347.92,4
+1/3 unit,safmr,sublet_90,West LA / Sawtelle,10664.000000000002,5
+1/3 unit,safmr,sublet_90,Westwood,10695.0,6
+1/3 unit,safmr,sublet_90,Rancho Park,10819.0,7
+1/3 unit,safmr,sublet_90,Brentwood,10819.0,7
 1/3 unit,safmr_110,away,UCLA,10347.92,1
-1/3 unit,safmr_110,away,West LA,15136.0,2
-1/3 unit,safmr_110,away,Westwood,15180.0,3
-1/3 unit,safmr_110,stay_in_la,UCLA,14131.92,1
-1/3 unit,safmr_110,stay_in_la,West LA,15136.0,2
-1/3 unit,safmr_110,stay_in_la,Westwood,15180.0,3
-1/3 unit,safmr_110,sublet_50,UCLA,10347.92,1
-1/3 unit,safmr_110,sublet_50,West LA,13244.0,2
-1/3 unit,safmr_110,sublet_50,Westwood,13282.5,3
-1/3 unit,safmr_110,sublet_70,UCLA,10347.92,1
-1/3 unit,safmr_110,sublet_70,West LA,12487.199999999999,2
-1/3 unit,safmr_110,sublet_70,Westwood,12523.5,3
-1/3 unit,safmr_110,sublet_90,UCLA,10347.92,1
-1/3 unit,safmr_110,sublet_90,West LA,11730.4,2
-1/3 unit,safmr_110,sublet_90,Westwood,11764.5,3
-1/3 unit,zori_adjusted,away,UCLA,10347.92,1
-1/3 unit,zori_adjusted,away,West LA,12916.0,2
-1/3 unit,zori_adjusted,away,Westwood,14468.0,3
-1/3 unit,zori_adjusted,stay_in_la,West LA,12916.0,1
-1/3 unit,zori_adjusted,stay_in_la,UCLA,13576.92,2
-1/3 unit,zori_adjusted,stay_in_la,Westwood,14468.0,3
-1/3 unit,zori_adjusted,sublet_50,UCLA,10347.92,1
-1/3 unit,zori_adjusted,sublet_50,West LA,11301.5,2
-1/3 unit,zori_adjusted,sublet_50,Westwood,12659.5,3
-1/3 unit,zori_adjusted,sublet_70,UCLA,10347.92,1
-1/3 unit,zori_adjusted,sublet_70,West LA,10655.699999999999,2
-1/3 unit,zori_adjusted,sublet_70,Westwood,11936.1,3
-1/3 unit,zori_adjusted,sublet_90,West LA,10009.9,1
-1/3 unit,zori_adjusted,sublet_90,UCLA,10347.92,2
-1/3 unit,zori_adjusted,sublet_90,Westwood,11212.7,3
-1/3 unit (GH),safmr,away,UCLA,11102.96,1
-1/3 unit (GH),safmr,away,West LA,13760.0,2
-1/3 unit (GH),safmr,away,Westwood,13800.0,3
-1/3 unit (GH),safmr,stay_in_la,West LA,13760.0,1
-1/3 unit (GH),safmr,stay_in_la,Westwood,13800.0,2
-1/3 unit (GH),safmr,stay_in_la,UCLA,14542.96,3
-1/3 unit (GH),safmr,sublet_50,UCLA,11102.96,1
-1/3 unit (GH),safmr,sublet_50,West LA,12040.0,2
-1/3 unit (GH),safmr,sublet_50,Westwood,12075.0,3
-1/3 unit (GH),safmr,sublet_70,UCLA,11102.96,1
-1/3 unit (GH),safmr,sublet_70,West LA,11352.000000000002,2
-1/3 unit (GH),safmr,sublet_70,Westwood,11385.0,3
-1/3 unit (GH),safmr,sublet_90,West LA,10664.000000000002,1
-1/3 unit (GH),safmr,sublet_90,Westwood,10695.0,2
-1/3 unit (GH),safmr,sublet_90,UCLA,11102.96,3
-1/3 unit (GH),safmr_110,away,UCLA,11102.96,1
-1/3 unit (GH),safmr_110,away,West LA,15136.0,2
-1/3 unit (GH),safmr_110,away,Westwood,15180.0,3
-1/3 unit (GH),safmr_110,stay_in_la,UCLA,14886.96,1
-1/3 unit (GH),safmr_110,stay_in_la,West LA,15136.0,2
-1/3 unit (GH),safmr_110,stay_in_la,Westwood,15180.0,3
-1/3 unit (GH),safmr_110,sublet_50,UCLA,11102.96,1
-1/3 unit (GH),safmr_110,sublet_50,West LA,13244.0,2
-1/3 unit (GH),safmr_110,sublet_50,Westwood,13282.5,3
-1/3 unit (GH),safmr_110,sublet_70,UCLA,11102.96,1
-1/3 unit (GH),safmr_110,sublet_70,West LA,12487.199999999999,2
-1/3 unit (GH),safmr_110,sublet_70,Westwood,12523.5,3
-1/3 unit (GH),safmr_110,sublet_90,UCLA,11102.96,1
-1/3 unit (GH),safmr_110,sublet_90,West LA,11730.4,2
-1/3 unit (GH),safmr_110,sublet_90,Westwood,11764.5,3
-1/3 unit (GH),zori_adjusted,away,UCLA,11102.96,1
-1/3 unit (GH),zori_adjusted,away,West LA,12916.0,2
-1/3 unit (GH),zori_adjusted,away,Westwood,14468.0,3
-1/3 unit (GH),zori_adjusted,stay_in_la,West LA,12916.0,1
-1/3 unit (GH),zori_adjusted,stay_in_la,UCLA,14331.96,2
-1/3 unit (GH),zori_adjusted,stay_in_la,Westwood,14468.0,3
-1/3 unit (GH),zori_adjusted,sublet_50,UCLA,11102.96,1
-1/3 unit (GH),zori_adjusted,sublet_50,West LA,11301.5,2
-1/3 unit (GH),zori_adjusted,sublet_50,Westwood,12659.5,3
-1/3 unit (GH),zori_adjusted,sublet_70,West LA,10655.699999999999,1
-1/3 unit (GH),zori_adjusted,sublet_70,UCLA,11102.96,2
-1/3 unit (GH),zori_adjusted,sublet_70,Westwood,11936.1,3
-1/3 unit (GH),zori_adjusted,sublet_90,West LA,10009.9,1
-1/3 unit (GH),zori_adjusted,sublet_90,UCLA,11102.96,2
-1/3 unit (GH),zori_adjusted,sublet_90,Westwood,11212.7,3
-2/3 shared bedroom,safmr,away,UCLA,13982.76,1
-2/3 shared bedroom,safmr,away,West LA,17160.0,2
-2/3 shared bedroom,safmr,away,Westwood,17200.0,3
-2/3 shared bedroom,safmr,stay_in_la,West LA,17160.0,1
-2/3 shared bedroom,safmr,stay_in_la,Westwood,17200.0,2
-2/3 shared bedroom,safmr,stay_in_la,UCLA,18272.760000000002,3
-2/3 shared bedroom,safmr,sublet_50,UCLA,13982.76,1
-2/3 shared bedroom,safmr,sublet_50,West LA,15015.0,2
-2/3 shared bedroom,safmr,sublet_50,Westwood,15050.0,3
-2/3 shared bedroom,safmr,sublet_70,UCLA,13982.76,1
-2/3 shared bedroom,safmr,sublet_70,West LA,14157.0,2
-2/3 shared bedroom,safmr,sublet_70,Westwood,14190.0,3
-2/3 shared bedroom,safmr,sublet_90,West LA,13299.000000000002,1
-2/3 shared bedroom,safmr,sublet_90,Westwood,13330.0,2
-2/3 shared bedroom,safmr,sublet_90,UCLA,13982.76,3
-2/3 shared bedroom,safmr_110,away,UCLA,13982.76,1
-2/3 shared bedroom,safmr_110,away,West LA,18876.0,2
-2/3 shared bedroom,safmr_110,away,Westwood,18920.0,3
-2/3 shared bedroom,safmr_110,stay_in_la,UCLA,18701.760000000002,1
-2/3 shared bedroom,safmr_110,stay_in_la,West LA,18876.0,2
-2/3 shared bedroom,safmr_110,stay_in_la,Westwood,18920.0,3
-2/3 shared bedroom,safmr_110,sublet_50,UCLA,13982.76,1
-2/3 shared bedroom,safmr_110,sublet_50,West LA,16516.5,2
-2/3 shared bedroom,safmr_110,sublet_50,Westwood,16555.0,3
-2/3 shared bedroom,safmr_110,sublet_70,UCLA,13982.76,1
-2/3 shared bedroom,safmr_110,sublet_70,West LA,15572.7,2
-2/3 shared bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,3
-2/3 shared bedroom,safmr_110,sublet_90,UCLA,13982.76,1
-2/3 shared bedroom,safmr_110,sublet_90,West LA,14628.900000000001,2
-2/3 shared bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,3
-2/3 shared bedroom,zori_adjusted,away,UCLA,13982.76,1
-2/3 shared bedroom,zori_adjusted,away,West LA,16108.0,2
-2/3 shared bedroom,zori_adjusted,away,Westwood,18032.0,3
-2/3 shared bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1
-2/3 shared bedroom,zori_adjusted,stay_in_la,UCLA,18009.760000000002,2
-2/3 shared bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,3
-2/3 shared bedroom,zori_adjusted,sublet_50,UCLA,13982.76,1
-2/3 shared bedroom,zori_adjusted,sublet_50,West LA,14094.5,2
-2/3 shared bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3
-2/3 shared bedroom,zori_adjusted,sublet_70,West LA,13289.1,1
-2/3 shared bedroom,zori_adjusted,sublet_70,UCLA,13982.76,2
-2/3 shared bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,3
-2/3 shared bedroom,zori_adjusted,sublet_90,West LA,12483.7,1
-2/3 shared bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,2
-2/3 shared bedroom,zori_adjusted,sublet_90,UCLA,13982.76,3
-2/3S single bedroom,safmr,away,UCLA,14590.18,1
-2/3S single bedroom,safmr,away,West LA,17160.0,2
-2/3S single bedroom,safmr,away,Westwood,17200.0,3
-2/3S single bedroom,safmr,stay_in_la,West LA,17160.0,1
-2/3S single bedroom,safmr,stay_in_la,Westwood,17200.0,2
-2/3S single bedroom,safmr,stay_in_la,UCLA,18880.18,3
-2/3S single bedroom,safmr,sublet_50,UCLA,14590.18,1
-2/3S single bedroom,safmr,sublet_50,West LA,15015.0,2
-2/3S single bedroom,safmr,sublet_50,Westwood,15050.0,3
-2/3S single bedroom,safmr,sublet_70,West LA,14157.0,1
-2/3S single bedroom,safmr,sublet_70,Westwood,14190.0,2
-2/3S single bedroom,safmr,sublet_70,UCLA,14590.18,3
-2/3S single bedroom,safmr,sublet_90,West LA,13299.000000000002,1
-2/3S single bedroom,safmr,sublet_90,Westwood,13330.0,2
-2/3S single bedroom,safmr,sublet_90,UCLA,14590.18,3
-2/3S single bedroom,safmr_110,away,UCLA,14590.18,1
-2/3S single bedroom,safmr_110,away,West LA,18876.0,2
-2/3S single bedroom,safmr_110,away,Westwood,18920.0,3
-2/3S single bedroom,safmr_110,stay_in_la,West LA,18876.0,1
-2/3S single bedroom,safmr_110,stay_in_la,Westwood,18920.0,2
-2/3S single bedroom,safmr_110,stay_in_la,UCLA,19309.18,3
-2/3S single bedroom,safmr_110,sublet_50,UCLA,14590.18,1
-2/3S single bedroom,safmr_110,sublet_50,West LA,16516.5,2
-2/3S single bedroom,safmr_110,sublet_50,Westwood,16555.0,3
-2/3S single bedroom,safmr_110,sublet_70,UCLA,14590.18,1
-2/3S single bedroom,safmr_110,sublet_70,West LA,15572.7,2
-2/3S single bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,3
-2/3S single bedroom,safmr_110,sublet_90,UCLA,14590.18,1
-2/3S single bedroom,safmr_110,sublet_90,West LA,14628.900000000001,2
-2/3S single bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,3
-2/3S single bedroom,zori_adjusted,away,UCLA,14590.18,1
-2/3S single bedroom,zori_adjusted,away,West LA,16108.0,2
-2/3S single bedroom,zori_adjusted,away,Westwood,18032.0,3
-2/3S single bedroom,zori_adjusted,stay_in_la,West LA,16108.0,1
-2/3S single bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,2
-2/3S single bedroom,zori_adjusted,stay_in_la,UCLA,18617.18,3
-2/3S single bedroom,zori_adjusted,sublet_50,West LA,14094.5,1
-2/3S single bedroom,zori_adjusted,sublet_50,UCLA,14590.18,2
-2/3S single bedroom,zori_adjusted,sublet_50,Westwood,15778.0,3
-2/3S single bedroom,zori_adjusted,sublet_70,West LA,13289.1,1
-2/3S single bedroom,zori_adjusted,sublet_70,UCLA,14590.18,2
-2/3S single bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,3
-2/3S single bedroom,zori_adjusted,sublet_90,West LA,12483.7,1
-2/3S single bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,2
-2/3S single bedroom,zori_adjusted,sublet_90,UCLA,14590.18,3
-2/4 apartment,safmr,away,UCLA,12167.76,1
-2/4 apartment,safmr,away,West LA,12870.0,2
-2/4 apartment,safmr,away,Westwood,12900.0,3
-2/4 apartment,safmr,stay_in_la,West LA,12870.0,1
-2/4 apartment,safmr,stay_in_la,Westwood,12900.0,2
-2/4 apartment,safmr,stay_in_la,UCLA,15385.26,3
-2/4 apartment,safmr,sublet_50,West LA,11261.25,1
-2/4 apartment,safmr,sublet_50,Westwood,11287.5,2
-2/4 apartment,safmr,sublet_50,UCLA,12167.76,3
-2/4 apartment,safmr,sublet_70,West LA,10617.75,1
-2/4 apartment,safmr,sublet_70,Westwood,10642.5,2
-2/4 apartment,safmr,sublet_70,UCLA,12167.76,3
-2/4 apartment,safmr,sublet_90,West LA,9974.25,1
-2/4 apartment,safmr,sublet_90,Westwood,9997.5,2
-2/4 apartment,safmr,sublet_90,UCLA,12167.76,3
-2/4 apartment,safmr_110,away,UCLA,12167.76,1
-2/4 apartment,safmr_110,away,West LA,14157.0,2
-2/4 apartment,safmr_110,away,Westwood,14190.0,3
-2/4 apartment,safmr_110,stay_in_la,West LA,14157.0,1
-2/4 apartment,safmr_110,stay_in_la,Westwood,14190.0,2
-2/4 apartment,safmr_110,stay_in_la,UCLA,15707.01,3
-2/4 apartment,safmr_110,sublet_50,UCLA,12167.76,1
-2/4 apartment,safmr_110,sublet_50,West LA,12387.375,2
-2/4 apartment,safmr_110,sublet_50,Westwood,12416.25,3
-2/4 apartment,safmr_110,sublet_70,West LA,11679.525,1
-2/4 apartment,safmr_110,sublet_70,Westwood,11706.75,2
-2/4 apartment,safmr_110,sublet_70,UCLA,12167.76,3
-2/4 apartment,safmr_110,sublet_90,West LA,10971.675000000001,1
-2/4 apartment,safmr_110,sublet_90,Westwood,10997.25,2
-2/4 apartment,safmr_110,sublet_90,UCLA,12167.76,3
-2/4 apartment,zori_adjusted,away,West LA,12081.0,1
-2/4 apartment,zori_adjusted,away,UCLA,12167.76,2
-2/4 apartment,zori_adjusted,away,Westwood,13524.0,3
-2/4 apartment,zori_adjusted,stay_in_la,West LA,12081.0,1
-2/4 apartment,zori_adjusted,stay_in_la,Westwood,13524.0,2
-2/4 apartment,zori_adjusted,stay_in_la,UCLA,15188.01,3
-2/4 apartment,zori_adjusted,sublet_50,West LA,10570.875,1
-2/4 apartment,zori_adjusted,sublet_50,Westwood,11833.5,2
-2/4 apartment,zori_adjusted,sublet_50,UCLA,12167.76,3
-2/4 apartment,zori_adjusted,sublet_70,West LA,9966.825,1
-2/4 apartment,zori_adjusted,sublet_70,Westwood,11157.300000000001,2
-2/4 apartment,zori_adjusted,sublet_70,UCLA,12167.76,3
-2/4 apartment,zori_adjusted,sublet_90,West LA,9362.775000000001,1
-2/4 apartment,zori_adjusted,sublet_90,Westwood,10481.1,2
-2/4 apartment,zori_adjusted,sublet_90,UCLA,12167.76,3
-2/4 townhouse,safmr,away,West LA,12870.0,1
-2/4 townhouse,safmr,away,Westwood,12900.0,2
-2/4 townhouse,safmr,away,UCLA,13053.48,3
-2/4 townhouse,safmr,stay_in_la,West LA,12870.0,1
-2/4 townhouse,safmr,stay_in_la,Westwood,12900.0,2
-2/4 townhouse,safmr,stay_in_la,UCLA,16270.98,3
-2/4 townhouse,safmr,sublet_50,West LA,11261.25,1
-2/4 townhouse,safmr,sublet_50,Westwood,11287.5,2
-2/4 townhouse,safmr,sublet_50,UCLA,13053.48,3
-2/4 townhouse,safmr,sublet_70,West LA,10617.75,1
-2/4 townhouse,safmr,sublet_70,Westwood,10642.5,2
-2/4 townhouse,safmr,sublet_70,UCLA,13053.48,3
-2/4 townhouse,safmr,sublet_90,West LA,9974.25,1
-2/4 townhouse,safmr,sublet_90,Westwood,9997.5,2
-2/4 townhouse,safmr,sublet_90,UCLA,13053.48,3
-2/4 townhouse,safmr_110,away,UCLA,13053.48,1
-2/4 townhouse,safmr_110,away,West LA,14157.0,2
-2/4 townhouse,safmr_110,away,Westwood,14190.0,3
-2/4 townhouse,safmr_110,stay_in_la,West LA,14157.0,1
-2/4 townhouse,safmr_110,stay_in_la,Westwood,14190.0,2
-2/4 townhouse,safmr_110,stay_in_la,UCLA,16592.73,3
-2/4 townhouse,safmr_110,sublet_50,West LA,12387.375,1
-2/4 townhouse,safmr_110,sublet_50,Westwood,12416.25,2
-2/4 townhouse,safmr_110,sublet_50,UCLA,13053.48,3
-2/4 townhouse,safmr_110,sublet_70,West LA,11679.525,1
-2/4 townhouse,safmr_110,sublet_70,Westwood,11706.75,2
-2/4 townhouse,safmr_110,sublet_70,UCLA,13053.48,3
-2/4 townhouse,safmr_110,sublet_90,West LA,10971.675000000001,1
-2/4 townhouse,safmr_110,sublet_90,Westwood,10997.25,2
-2/4 townhouse,safmr_110,sublet_90,UCLA,13053.48,3
-2/4 townhouse,zori_adjusted,away,West LA,12081.0,1
-2/4 townhouse,zori_adjusted,away,UCLA,13053.48,2
-2/4 townhouse,zori_adjusted,away,Westwood,13524.0,3
-2/4 townhouse,zori_adjusted,stay_in_la,West LA,12081.0,1
-2/4 townhouse,zori_adjusted,stay_in_la,Westwood,13524.0,2
-2/4 townhouse,zori_adjusted,stay_in_la,UCLA,16073.73,3
-2/4 townhouse,zori_adjusted,sublet_50,West LA,10570.875,1
-2/4 townhouse,zori_adjusted,sublet_50,Westwood,11833.5,2
-2/4 townhouse,zori_adjusted,sublet_50,UCLA,13053.48,3
-2/4 townhouse,zori_adjusted,sublet_70,West LA,9966.825,1
-2/4 townhouse,zori_adjusted,sublet_70,Westwood,11157.300000000001,2
-2/4 townhouse,zori_adjusted,sublet_70,UCLA,13053.48,3
-2/4 townhouse,zori_adjusted,sublet_90,West LA,9362.775000000001,1
-2/4 townhouse,zori_adjusted,sublet_90,Westwood,10481.1,2
-2/4 townhouse,zori_adjusted,sublet_90,UCLA,13053.48,3
+1/3 unit,safmr_110,away,Koreatown,11044.0,2
+1/3 unit,safmr_110,away,Mar Vista,12496.0,3
+1/3 unit,safmr_110,away,Palms,12628.0,4
+1/3 unit,safmr_110,away,West LA / Sawtelle,15136.0,5
+1/3 unit,safmr_110,away,Westwood,15180.0,6
+1/3 unit,safmr_110,away,Rancho Park,15356.0,7
+1/3 unit,safmr_110,away,Brentwood,15356.0,7
+1/3 unit,safmr_110,stay_in_la,Koreatown,11044.0,1
+1/3 unit,safmr_110,stay_in_la,Mar Vista,12496.0,2
+1/3 unit,safmr_110,stay_in_la,Palms,12628.0,3
+1/3 unit,safmr_110,stay_in_la,UCLA,13108.92,4
+1/3 unit,safmr_110,stay_in_la,West LA / Sawtelle,15136.0,5
+1/3 unit,safmr_110,stay_in_la,Westwood,15180.0,6
+1/3 unit,safmr_110,stay_in_la,Rancho Park,15356.0,7
+1/3 unit,safmr_110,stay_in_la,Brentwood,15356.0,7
+1/3 unit,safmr_110,sublet_50,Koreatown,9663.5,1
+1/3 unit,safmr_110,sublet_50,UCLA,10347.92,2
+1/3 unit,safmr_110,sublet_50,Mar Vista,10934.0,3
+1/3 unit,safmr_110,sublet_50,Palms,11049.5,4
+1/3 unit,safmr_110,sublet_50,West LA / Sawtelle,13244.0,5
+1/3 unit,safmr_110,sublet_50,Westwood,13282.5,6
+1/3 unit,safmr_110,sublet_50,Rancho Park,13436.5,7
+1/3 unit,safmr_110,sublet_50,Brentwood,13436.5,7
+1/3 unit,safmr_110,sublet_70,Koreatown,9111.300000000001,1
+1/3 unit,safmr_110,sublet_70,Mar Vista,10309.199999999999,2
+1/3 unit,safmr_110,sublet_70,UCLA,10347.92,3
+1/3 unit,safmr_110,sublet_70,Palms,10418.1,4
+1/3 unit,safmr_110,sublet_70,West LA / Sawtelle,12487.199999999999,5
+1/3 unit,safmr_110,sublet_70,Westwood,12523.5,6
+1/3 unit,safmr_110,sublet_70,Brentwood,12668.7,7
+1/3 unit,safmr_110,sublet_70,Rancho Park,12668.7,7
+1/3 unit,safmr_110,sublet_90,Koreatown,8559.1,1
+1/3 unit,safmr_110,sublet_90,Mar Vista,9684.4,2
+1/3 unit,safmr_110,sublet_90,Palms,9786.7,3
+1/3 unit,safmr_110,sublet_90,UCLA,10347.92,4
+1/3 unit,safmr_110,sublet_90,West LA / Sawtelle,11730.4,5
+1/3 unit,safmr_110,sublet_90,Westwood,11764.5,6
+1/3 unit,safmr_110,sublet_90,Brentwood,11900.900000000001,7
+1/3 unit,safmr_110,sublet_90,Rancho Park,11900.900000000001,7
+1/3 unit,zori_adjusted,away,Koreatown,9784.0,1
+1/3 unit,zori_adjusted,away,UCLA,10347.92,2
+1/3 unit,zori_adjusted,away,Palms,10984.0,3
+1/3 unit,zori_adjusted,away,Mar Vista,12196.0,4
+1/3 unit,zori_adjusted,away,West LA / Sawtelle,12916.0,5
+1/3 unit,zori_adjusted,away,Rancho Park,14244.0,6
+1/3 unit,zori_adjusted,away,Westwood,14468.0,7
+1/3 unit,zori_adjusted,away,Brentwood,15592.0,8
+1/3 unit,zori_adjusted,stay_in_la,Koreatown,9784.0,1
+1/3 unit,zori_adjusted,stay_in_la,Palms,10984.0,2
+1/3 unit,zori_adjusted,stay_in_la,Mar Vista,12196.0,3
+1/3 unit,zori_adjusted,stay_in_la,UCLA,12793.92,4
+1/3 unit,zori_adjusted,stay_in_la,West LA / Sawtelle,12916.0,5
+1/3 unit,zori_adjusted,stay_in_la,Rancho Park,14244.0,6
+1/3 unit,zori_adjusted,stay_in_la,Westwood,14468.0,7
+1/3 unit,zori_adjusted,stay_in_la,Brentwood,15592.0,8
+1/3 unit,zori_adjusted,sublet_50,Koreatown,8561.0,1
+1/3 unit,zori_adjusted,sublet_50,Palms,9611.0,2
+1/3 unit,zori_adjusted,sublet_50,UCLA,10347.92,3
+1/3 unit,zori_adjusted,sublet_50,Mar Vista,10671.5,4
+1/3 unit,zori_adjusted,sublet_50,West LA / Sawtelle,11301.5,5
+1/3 unit,zori_adjusted,sublet_50,Rancho Park,12463.5,6
+1/3 unit,zori_adjusted,sublet_50,Westwood,12659.5,7
+1/3 unit,zori_adjusted,sublet_50,Brentwood,13643.0,8
+1/3 unit,zori_adjusted,sublet_70,Koreatown,8071.800000000001,1
+1/3 unit,zori_adjusted,sublet_70,Palms,9061.800000000001,2
+1/3 unit,zori_adjusted,sublet_70,Mar Vista,10061.7,3
+1/3 unit,zori_adjusted,sublet_70,UCLA,10347.92,4
+1/3 unit,zori_adjusted,sublet_70,West LA / Sawtelle,10655.699999999999,5
+1/3 unit,zori_adjusted,sublet_70,Rancho Park,11751.300000000001,6
+1/3 unit,zori_adjusted,sublet_70,Westwood,11936.1,7
+1/3 unit,zori_adjusted,sublet_70,Brentwood,12863.4,8
+1/3 unit,zori_adjusted,sublet_90,Koreatown,7582.600000000001,1
+1/3 unit,zori_adjusted,sublet_90,Palms,8512.6,2
+1/3 unit,zori_adjusted,sublet_90,Mar Vista,9451.900000000001,3
+1/3 unit,zori_adjusted,sublet_90,West LA / Sawtelle,10009.9,4
+1/3 unit,zori_adjusted,sublet_90,UCLA,10347.92,5
+1/3 unit,zori_adjusted,sublet_90,Rancho Park,11039.1,6
+1/3 unit,zori_adjusted,sublet_90,Westwood,11212.7,7
+1/3 unit,zori_adjusted,sublet_90,Brentwood,12083.800000000001,8
+1/3 unit (GH),safmr,away,Koreatown,10040.0,1
+1/3 unit (GH),safmr,away,UCLA,11102.96,2
+1/3 unit (GH),safmr,away,Mar Vista,11360.0,3
+1/3 unit (GH),safmr,away,Palms,11480.0,4
+1/3 unit (GH),safmr,away,West LA / Sawtelle,13760.0,5
+1/3 unit (GH),safmr,away,Westwood,13800.0,6
+1/3 unit (GH),safmr,away,Rancho Park,13960.0,7
+1/3 unit (GH),safmr,away,Brentwood,13960.0,7
+1/3 unit (GH),safmr,stay_in_la,Koreatown,10040.0,1
+1/3 unit (GH),safmr,stay_in_la,Mar Vista,11360.0,2
+1/3 unit (GH),safmr,stay_in_la,Palms,11480.0,3
+1/3 unit (GH),safmr,stay_in_la,UCLA,13612.96,4
+1/3 unit (GH),safmr,stay_in_la,West LA / Sawtelle,13760.0,5
+1/3 unit (GH),safmr,stay_in_la,Westwood,13800.0,6
+1/3 unit (GH),safmr,stay_in_la,Brentwood,13960.0,7
+1/3 unit (GH),safmr,stay_in_la,Rancho Park,13960.0,7
+1/3 unit (GH),safmr,sublet_50,Koreatown,8785.0,1
+1/3 unit (GH),safmr,sublet_50,Mar Vista,9940.0,2
+1/3 unit (GH),safmr,sublet_50,Palms,10045.0,3
+1/3 unit (GH),safmr,sublet_50,UCLA,11102.96,4
+1/3 unit (GH),safmr,sublet_50,West LA / Sawtelle,12040.0,5
+1/3 unit (GH),safmr,sublet_50,Westwood,12075.0,6
+1/3 unit (GH),safmr,sublet_50,Brentwood,12215.0,7
+1/3 unit (GH),safmr,sublet_50,Rancho Park,12215.0,7
+1/3 unit (GH),safmr,sublet_70,Koreatown,8283.0,1
+1/3 unit (GH),safmr,sublet_70,Mar Vista,9372.0,2
+1/3 unit (GH),safmr,sublet_70,Palms,9471.0,3
+1/3 unit (GH),safmr,sublet_70,UCLA,11102.96,4
+1/3 unit (GH),safmr,sublet_70,West LA / Sawtelle,11352.000000000002,5
+1/3 unit (GH),safmr,sublet_70,Westwood,11385.0,6
+1/3 unit (GH),safmr,sublet_70,Brentwood,11517.0,7
+1/3 unit (GH),safmr,sublet_70,Rancho Park,11517.0,7
+1/3 unit (GH),safmr,sublet_90,Koreatown,7781.0,1
+1/3 unit (GH),safmr,sublet_90,Mar Vista,8804.0,2
+1/3 unit (GH),safmr,sublet_90,Palms,8897.0,3
+1/3 unit (GH),safmr,sublet_90,West LA / Sawtelle,10664.000000000002,4
+1/3 unit (GH),safmr,sublet_90,Westwood,10695.0,5
+1/3 unit (GH),safmr,sublet_90,Brentwood,10819.0,6
+1/3 unit (GH),safmr,sublet_90,Rancho Park,10819.0,6
+1/3 unit (GH),safmr,sublet_90,UCLA,11102.96,8
+1/3 unit (GH),safmr_110,away,Koreatown,11044.0,1
+1/3 unit (GH),safmr_110,away,UCLA,11102.96,2
+1/3 unit (GH),safmr_110,away,Mar Vista,12496.0,3
+1/3 unit (GH),safmr_110,away,Palms,12628.0,4
+1/3 unit (GH),safmr_110,away,West LA / Sawtelle,15136.0,5
+1/3 unit (GH),safmr_110,away,Westwood,15180.0,6
+1/3 unit (GH),safmr_110,away,Brentwood,15356.0,7
+1/3 unit (GH),safmr_110,away,Rancho Park,15356.0,7
+1/3 unit (GH),safmr_110,stay_in_la,Koreatown,11044.0,1
+1/3 unit (GH),safmr_110,stay_in_la,Mar Vista,12496.0,2
+1/3 unit (GH),safmr_110,stay_in_la,Palms,12628.0,3
+1/3 unit (GH),safmr_110,stay_in_la,UCLA,13863.96,4
+1/3 unit (GH),safmr_110,stay_in_la,West LA / Sawtelle,15136.0,5
+1/3 unit (GH),safmr_110,stay_in_la,Westwood,15180.0,6
+1/3 unit (GH),safmr_110,stay_in_la,Brentwood,15356.0,7
+1/3 unit (GH),safmr_110,stay_in_la,Rancho Park,15356.0,7
+1/3 unit (GH),safmr_110,sublet_50,Koreatown,9663.5,1
+1/3 unit (GH),safmr_110,sublet_50,Mar Vista,10934.0,2
+1/3 unit (GH),safmr_110,sublet_50,Palms,11049.5,3
+1/3 unit (GH),safmr_110,sublet_50,UCLA,11102.96,4
+1/3 unit (GH),safmr_110,sublet_50,West LA / Sawtelle,13244.0,5
+1/3 unit (GH),safmr_110,sublet_50,Westwood,13282.5,6
+1/3 unit (GH),safmr_110,sublet_50,Rancho Park,13436.5,7
+1/3 unit (GH),safmr_110,sublet_50,Brentwood,13436.5,7
+1/3 unit (GH),safmr_110,sublet_70,Koreatown,9111.300000000001,1
+1/3 unit (GH),safmr_110,sublet_70,Mar Vista,10309.199999999999,2
+1/3 unit (GH),safmr_110,sublet_70,Palms,10418.1,3
+1/3 unit (GH),safmr_110,sublet_70,UCLA,11102.96,4
+1/3 unit (GH),safmr_110,sublet_70,West LA / Sawtelle,12487.199999999999,5
+1/3 unit (GH),safmr_110,sublet_70,Westwood,12523.5,6
+1/3 unit (GH),safmr_110,sublet_70,Rancho Park,12668.7,7
+1/3 unit (GH),safmr_110,sublet_70,Brentwood,12668.7,7
+1/3 unit (GH),safmr_110,sublet_90,Koreatown,8559.1,1
+1/3 unit (GH),safmr_110,sublet_90,Mar Vista,9684.4,2
+1/3 unit (GH),safmr_110,sublet_90,Palms,9786.7,3
+1/3 unit (GH),safmr_110,sublet_90,UCLA,11102.96,4
+1/3 unit (GH),safmr_110,sublet_90,West LA / Sawtelle,11730.4,5
+1/3 unit (GH),safmr_110,sublet_90,Westwood,11764.5,6
+1/3 unit (GH),safmr_110,sublet_90,Brentwood,11900.900000000001,7
+1/3 unit (GH),safmr_110,sublet_90,Rancho Park,11900.900000000001,7
+1/3 unit (GH),zori_adjusted,away,Koreatown,9784.0,1
+1/3 unit (GH),zori_adjusted,away,Palms,10984.0,2
+1/3 unit (GH),zori_adjusted,away,UCLA,11102.96,3
+1/3 unit (GH),zori_adjusted,away,Mar Vista,12196.0,4
+1/3 unit (GH),zori_adjusted,away,West LA / Sawtelle,12916.0,5
+1/3 unit (GH),zori_adjusted,away,Rancho Park,14244.0,6
+1/3 unit (GH),zori_adjusted,away,Westwood,14468.0,7
+1/3 unit (GH),zori_adjusted,away,Brentwood,15592.0,8
+1/3 unit (GH),zori_adjusted,stay_in_la,Koreatown,9784.0,1
+1/3 unit (GH),zori_adjusted,stay_in_la,Palms,10984.0,2
+1/3 unit (GH),zori_adjusted,stay_in_la,Mar Vista,12196.0,3
+1/3 unit (GH),zori_adjusted,stay_in_la,West LA / Sawtelle,12916.0,4
+1/3 unit (GH),zori_adjusted,stay_in_la,UCLA,13548.96,5
+1/3 unit (GH),zori_adjusted,stay_in_la,Rancho Park,14244.0,6
+1/3 unit (GH),zori_adjusted,stay_in_la,Westwood,14468.0,7
+1/3 unit (GH),zori_adjusted,stay_in_la,Brentwood,15592.0,8
+1/3 unit (GH),zori_adjusted,sublet_50,Koreatown,8561.0,1
+1/3 unit (GH),zori_adjusted,sublet_50,Palms,9611.0,2
+1/3 unit (GH),zori_adjusted,sublet_50,Mar Vista,10671.5,3
+1/3 unit (GH),zori_adjusted,sublet_50,UCLA,11102.96,4
+1/3 unit (GH),zori_adjusted,sublet_50,West LA / Sawtelle,11301.5,5
+1/3 unit (GH),zori_adjusted,sublet_50,Rancho Park,12463.5,6
+1/3 unit (GH),zori_adjusted,sublet_50,Westwood,12659.5,7
+1/3 unit (GH),zori_adjusted,sublet_50,Brentwood,13643.0,8
+1/3 unit (GH),zori_adjusted,sublet_70,Koreatown,8071.800000000001,1
+1/3 unit (GH),zori_adjusted,sublet_70,Palms,9061.800000000001,2
+1/3 unit (GH),zori_adjusted,sublet_70,Mar Vista,10061.7,3
+1/3 unit (GH),zori_adjusted,sublet_70,West LA / Sawtelle,10655.699999999999,4
+1/3 unit (GH),zori_adjusted,sublet_70,UCLA,11102.96,5
+1/3 unit (GH),zori_adjusted,sublet_70,Rancho Park,11751.300000000001,6
+1/3 unit (GH),zori_adjusted,sublet_70,Westwood,11936.1,7
+1/3 unit (GH),zori_adjusted,sublet_70,Brentwood,12863.4,8
+1/3 unit (GH),zori_adjusted,sublet_90,Koreatown,7582.600000000001,1
+1/3 unit (GH),zori_adjusted,sublet_90,Palms,8512.6,2
+1/3 unit (GH),zori_adjusted,sublet_90,Mar Vista,9451.900000000001,3
+1/3 unit (GH),zori_adjusted,sublet_90,West LA / Sawtelle,10009.9,4
+1/3 unit (GH),zori_adjusted,sublet_90,Rancho Park,11039.1,5
+1/3 unit (GH),zori_adjusted,sublet_90,UCLA,11102.96,6
+1/3 unit (GH),zori_adjusted,sublet_90,Westwood,11212.7,7
+1/3 unit (GH),zori_adjusted,sublet_90,Brentwood,12083.800000000001,8
+2/3 shared bedroom,safmr,away,Koreatown,12520.0,1
+2/3 shared bedroom,safmr,away,UCLA,13982.76,2
+2/3 shared bedroom,safmr,away,Mar Vista,14160.0,3
+2/3 shared bedroom,safmr,away,Palms,14320.0,4
+2/3 shared bedroom,safmr,away,West LA / Sawtelle,17160.0,5
+2/3 shared bedroom,safmr,away,Westwood,17200.0,6
+2/3 shared bedroom,safmr,away,Brentwood,17400.0,7
+2/3 shared bedroom,safmr,away,Rancho Park,17400.0,7
+2/3 shared bedroom,safmr,stay_in_la,Koreatown,12520.0,1
+2/3 shared bedroom,safmr,stay_in_la,Mar Vista,14160.0,2
+2/3 shared bedroom,safmr,stay_in_la,Palms,14320.0,3
+2/3 shared bedroom,safmr,stay_in_la,UCLA,17112.760000000002,4
+2/3 shared bedroom,safmr,stay_in_la,West LA / Sawtelle,17160.0,5
+2/3 shared bedroom,safmr,stay_in_la,Westwood,17200.0,6
+2/3 shared bedroom,safmr,stay_in_la,Brentwood,17400.0,7
+2/3 shared bedroom,safmr,stay_in_la,Rancho Park,17400.0,7
+2/3 shared bedroom,safmr,sublet_50,Koreatown,10955.0,1
+2/3 shared bedroom,safmr,sublet_50,Mar Vista,12390.0,2
+2/3 shared bedroom,safmr,sublet_50,Palms,12530.0,3
+2/3 shared bedroom,safmr,sublet_50,UCLA,13982.76,4
+2/3 shared bedroom,safmr,sublet_50,West LA / Sawtelle,15015.0,5
+2/3 shared bedroom,safmr,sublet_50,Westwood,15050.0,6
+2/3 shared bedroom,safmr,sublet_50,Brentwood,15225.0,7
+2/3 shared bedroom,safmr,sublet_50,Rancho Park,15225.0,7
+2/3 shared bedroom,safmr,sublet_70,Koreatown,10329.0,1
+2/3 shared bedroom,safmr,sublet_70,Mar Vista,11682.0,2
+2/3 shared bedroom,safmr,sublet_70,Palms,11814.0,3
+2/3 shared bedroom,safmr,sublet_70,UCLA,13982.76,4
+2/3 shared bedroom,safmr,sublet_70,West LA / Sawtelle,14157.0,5
+2/3 shared bedroom,safmr,sublet_70,Westwood,14190.0,6
+2/3 shared bedroom,safmr,sublet_70,Rancho Park,14355.0,7
+2/3 shared bedroom,safmr,sublet_70,Brentwood,14355.0,7
+2/3 shared bedroom,safmr,sublet_90,Koreatown,9703.0,1
+2/3 shared bedroom,safmr,sublet_90,Mar Vista,10974.0,2
+2/3 shared bedroom,safmr,sublet_90,Palms,11098.0,3
+2/3 shared bedroom,safmr,sublet_90,West LA / Sawtelle,13299.000000000002,4
+2/3 shared bedroom,safmr,sublet_90,Westwood,13330.0,5
+2/3 shared bedroom,safmr,sublet_90,Rancho Park,13485.000000000002,6
+2/3 shared bedroom,safmr,sublet_90,Brentwood,13485.000000000002,6
+2/3 shared bedroom,safmr,sublet_90,UCLA,13982.76,8
+2/3 shared bedroom,safmr_110,away,Koreatown,13772.0,1
+2/3 shared bedroom,safmr_110,away,UCLA,13982.76,2
+2/3 shared bedroom,safmr_110,away,Mar Vista,15576.0,3
+2/3 shared bedroom,safmr_110,away,Palms,15752.0,4
+2/3 shared bedroom,safmr_110,away,West LA / Sawtelle,18876.0,5
+2/3 shared bedroom,safmr_110,away,Westwood,18920.0,6
+2/3 shared bedroom,safmr_110,away,Brentwood,19140.0,7
+2/3 shared bedroom,safmr_110,away,Rancho Park,19140.0,7
+2/3 shared bedroom,safmr_110,stay_in_la,Koreatown,13772.0,1
+2/3 shared bedroom,safmr_110,stay_in_la,Mar Vista,15576.0,2
+2/3 shared bedroom,safmr_110,stay_in_la,Palms,15752.0,3
+2/3 shared bedroom,safmr_110,stay_in_la,UCLA,17425.760000000002,4
+2/3 shared bedroom,safmr_110,stay_in_la,West LA / Sawtelle,18876.0,5
+2/3 shared bedroom,safmr_110,stay_in_la,Westwood,18920.0,6
+2/3 shared bedroom,safmr_110,stay_in_la,Brentwood,19140.0,7
+2/3 shared bedroom,safmr_110,stay_in_la,Rancho Park,19140.0,7
+2/3 shared bedroom,safmr_110,sublet_50,Koreatown,12050.5,1
+2/3 shared bedroom,safmr_110,sublet_50,Mar Vista,13629.0,2
+2/3 shared bedroom,safmr_110,sublet_50,Palms,13783.0,3
+2/3 shared bedroom,safmr_110,sublet_50,UCLA,13982.76,4
+2/3 shared bedroom,safmr_110,sublet_50,West LA / Sawtelle,16516.5,5
+2/3 shared bedroom,safmr_110,sublet_50,Westwood,16555.0,6
+2/3 shared bedroom,safmr_110,sublet_50,Brentwood,16747.5,7
+2/3 shared bedroom,safmr_110,sublet_50,Rancho Park,16747.5,7
+2/3 shared bedroom,safmr_110,sublet_70,Koreatown,11361.900000000001,1
+2/3 shared bedroom,safmr_110,sublet_70,Mar Vista,12850.2,2
+2/3 shared bedroom,safmr_110,sublet_70,Palms,12995.400000000001,3
+2/3 shared bedroom,safmr_110,sublet_70,UCLA,13982.76,4
+2/3 shared bedroom,safmr_110,sublet_70,West LA / Sawtelle,15572.7,5
+2/3 shared bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,6
+2/3 shared bedroom,safmr_110,sublet_70,Brentwood,15790.5,7
+2/3 shared bedroom,safmr_110,sublet_70,Rancho Park,15790.5,7
+2/3 shared bedroom,safmr_110,sublet_90,Koreatown,10673.300000000001,1
+2/3 shared bedroom,safmr_110,sublet_90,Mar Vista,12071.400000000001,2
+2/3 shared bedroom,safmr_110,sublet_90,Palms,12207.800000000001,3
+2/3 shared bedroom,safmr_110,sublet_90,UCLA,13982.76,4
+2/3 shared bedroom,safmr_110,sublet_90,West LA / Sawtelle,14628.900000000001,5
+2/3 shared bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,6
+2/3 shared bedroom,safmr_110,sublet_90,Brentwood,14833.500000000002,7
+2/3 shared bedroom,safmr_110,sublet_90,Rancho Park,14833.500000000002,7
+2/3 shared bedroom,zori_adjusted,away,Koreatown,12200.0,1
+2/3 shared bedroom,zori_adjusted,away,Palms,13704.0,2
+2/3 shared bedroom,zori_adjusted,away,UCLA,13982.76,3
+2/3 shared bedroom,zori_adjusted,away,Mar Vista,15204.0,4
+2/3 shared bedroom,zori_adjusted,away,West LA / Sawtelle,16108.0,5
+2/3 shared bedroom,zori_adjusted,away,Rancho Park,17756.0,6
+2/3 shared bedroom,zori_adjusted,away,Westwood,18032.0,7
+2/3 shared bedroom,zori_adjusted,away,Brentwood,19436.0,8
+2/3 shared bedroom,zori_adjusted,stay_in_la,Koreatown,12200.0,1
+2/3 shared bedroom,zori_adjusted,stay_in_la,Palms,13704.0,2
+2/3 shared bedroom,zori_adjusted,stay_in_la,Mar Vista,15204.0,3
+2/3 shared bedroom,zori_adjusted,stay_in_la,West LA / Sawtelle,16108.0,4
+2/3 shared bedroom,zori_adjusted,stay_in_la,UCLA,17032.760000000002,5
+2/3 shared bedroom,zori_adjusted,stay_in_la,Rancho Park,17756.0,6
+2/3 shared bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,7
+2/3 shared bedroom,zori_adjusted,stay_in_la,Brentwood,19436.0,8
+2/3 shared bedroom,zori_adjusted,sublet_50,Koreatown,10675.0,1
+2/3 shared bedroom,zori_adjusted,sublet_50,Palms,11991.0,2
+2/3 shared bedroom,zori_adjusted,sublet_50,Mar Vista,13303.5,3
+2/3 shared bedroom,zori_adjusted,sublet_50,UCLA,13982.76,4
+2/3 shared bedroom,zori_adjusted,sublet_50,West LA / Sawtelle,14094.5,5
+2/3 shared bedroom,zori_adjusted,sublet_50,Rancho Park,15536.5,6
+2/3 shared bedroom,zori_adjusted,sublet_50,Westwood,15778.0,7
+2/3 shared bedroom,zori_adjusted,sublet_50,Brentwood,17006.5,8
+2/3 shared bedroom,zori_adjusted,sublet_70,Koreatown,10065.0,1
+2/3 shared bedroom,zori_adjusted,sublet_70,Palms,11305.800000000001,2
+2/3 shared bedroom,zori_adjusted,sublet_70,Mar Vista,12543.300000000001,3
+2/3 shared bedroom,zori_adjusted,sublet_70,West LA / Sawtelle,13289.1,4
+2/3 shared bedroom,zori_adjusted,sublet_70,UCLA,13982.76,5
+2/3 shared bedroom,zori_adjusted,sublet_70,Rancho Park,14648.7,6
+2/3 shared bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,7
+2/3 shared bedroom,zori_adjusted,sublet_70,Brentwood,16034.7,8
+2/3 shared bedroom,zori_adjusted,sublet_90,Koreatown,9455.0,1
+2/3 shared bedroom,zori_adjusted,sublet_90,Palms,10620.6,2
+2/3 shared bedroom,zori_adjusted,sublet_90,Mar Vista,11783.1,3
+2/3 shared bedroom,zori_adjusted,sublet_90,West LA / Sawtelle,12483.7,4
+2/3 shared bedroom,zori_adjusted,sublet_90,Rancho Park,13760.900000000001,5
+2/3 shared bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,6
+2/3 shared bedroom,zori_adjusted,sublet_90,UCLA,13982.76,7
+2/3 shared bedroom,zori_adjusted,sublet_90,Brentwood,15062.900000000001,8
+2/3S single bedroom,safmr,away,Koreatown,12520.0,1
+2/3S single bedroom,safmr,away,Mar Vista,14160.0,2
+2/3S single bedroom,safmr,away,Palms,14320.0,3
+2/3S single bedroom,safmr,away,UCLA,14590.18,4
+2/3S single bedroom,safmr,away,West LA / Sawtelle,17160.0,5
+2/3S single bedroom,safmr,away,Westwood,17200.0,6
+2/3S single bedroom,safmr,away,Brentwood,17400.0,7
+2/3S single bedroom,safmr,away,Rancho Park,17400.0,7
+2/3S single bedroom,safmr,stay_in_la,Koreatown,12520.0,1
+2/3S single bedroom,safmr,stay_in_la,Mar Vista,14160.0,2
+2/3S single bedroom,safmr,stay_in_la,Palms,14320.0,3
+2/3S single bedroom,safmr,stay_in_la,West LA / Sawtelle,17160.0,4
+2/3S single bedroom,safmr,stay_in_la,Westwood,17200.0,5
+2/3S single bedroom,safmr,stay_in_la,Rancho Park,17400.0,6
+2/3S single bedroom,safmr,stay_in_la,Brentwood,17400.0,6
+2/3S single bedroom,safmr,stay_in_la,UCLA,17720.18,8
+2/3S single bedroom,safmr,sublet_50,Koreatown,10955.0,1
+2/3S single bedroom,safmr,sublet_50,Mar Vista,12390.0,2
+2/3S single bedroom,safmr,sublet_50,Palms,12530.0,3
+2/3S single bedroom,safmr,sublet_50,UCLA,14590.18,4
+2/3S single bedroom,safmr,sublet_50,West LA / Sawtelle,15015.0,5
+2/3S single bedroom,safmr,sublet_50,Westwood,15050.0,6
+2/3S single bedroom,safmr,sublet_50,Rancho Park,15225.0,7
+2/3S single bedroom,safmr,sublet_50,Brentwood,15225.0,7
+2/3S single bedroom,safmr,sublet_70,Koreatown,10329.0,1
+2/3S single bedroom,safmr,sublet_70,Mar Vista,11682.0,2
+2/3S single bedroom,safmr,sublet_70,Palms,11814.0,3
+2/3S single bedroom,safmr,sublet_70,West LA / Sawtelle,14157.0,4
+2/3S single bedroom,safmr,sublet_70,Westwood,14190.0,5
+2/3S single bedroom,safmr,sublet_70,Rancho Park,14355.0,6
+2/3S single bedroom,safmr,sublet_70,Brentwood,14355.0,6
+2/3S single bedroom,safmr,sublet_70,UCLA,14590.18,8
+2/3S single bedroom,safmr,sublet_90,Koreatown,9703.0,1
+2/3S single bedroom,safmr,sublet_90,Mar Vista,10974.0,2
+2/3S single bedroom,safmr,sublet_90,Palms,11098.0,3
+2/3S single bedroom,safmr,sublet_90,West LA / Sawtelle,13299.000000000002,4
+2/3S single bedroom,safmr,sublet_90,Westwood,13330.0,5
+2/3S single bedroom,safmr,sublet_90,Brentwood,13485.000000000002,6
+2/3S single bedroom,safmr,sublet_90,Rancho Park,13485.000000000002,6
+2/3S single bedroom,safmr,sublet_90,UCLA,14590.18,8
+2/3S single bedroom,safmr_110,away,Koreatown,13772.0,1
+2/3S single bedroom,safmr_110,away,UCLA,14590.18,2
+2/3S single bedroom,safmr_110,away,Mar Vista,15576.0,3
+2/3S single bedroom,safmr_110,away,Palms,15752.0,4
+2/3S single bedroom,safmr_110,away,West LA / Sawtelle,18876.0,5
+2/3S single bedroom,safmr_110,away,Westwood,18920.0,6
+2/3S single bedroom,safmr_110,away,Rancho Park,19140.0,7
+2/3S single bedroom,safmr_110,away,Brentwood,19140.0,7
+2/3S single bedroom,safmr_110,stay_in_la,Koreatown,13772.0,1
+2/3S single bedroom,safmr_110,stay_in_la,Mar Vista,15576.0,2
+2/3S single bedroom,safmr_110,stay_in_la,Palms,15752.0,3
+2/3S single bedroom,safmr_110,stay_in_la,UCLA,18033.18,4
+2/3S single bedroom,safmr_110,stay_in_la,West LA / Sawtelle,18876.0,5
+2/3S single bedroom,safmr_110,stay_in_la,Westwood,18920.0,6
+2/3S single bedroom,safmr_110,stay_in_la,Brentwood,19140.0,7
+2/3S single bedroom,safmr_110,stay_in_la,Rancho Park,19140.0,7
+2/3S single bedroom,safmr_110,sublet_50,Koreatown,12050.5,1
+2/3S single bedroom,safmr_110,sublet_50,Mar Vista,13629.0,2
+2/3S single bedroom,safmr_110,sublet_50,Palms,13783.0,3
+2/3S single bedroom,safmr_110,sublet_50,UCLA,14590.18,4
+2/3S single bedroom,safmr_110,sublet_50,West LA / Sawtelle,16516.5,5
+2/3S single bedroom,safmr_110,sublet_50,Westwood,16555.0,6
+2/3S single bedroom,safmr_110,sublet_50,Rancho Park,16747.5,7
+2/3S single bedroom,safmr_110,sublet_50,Brentwood,16747.5,7
+2/3S single bedroom,safmr_110,sublet_70,Koreatown,11361.900000000001,1
+2/3S single bedroom,safmr_110,sublet_70,Mar Vista,12850.2,2
+2/3S single bedroom,safmr_110,sublet_70,Palms,12995.400000000001,3
+2/3S single bedroom,safmr_110,sublet_70,UCLA,14590.18,4
+2/3S single bedroom,safmr_110,sublet_70,West LA / Sawtelle,15572.7,5
+2/3S single bedroom,safmr_110,sublet_70,Westwood,15609.000000000002,6
+2/3S single bedroom,safmr_110,sublet_70,Brentwood,15790.5,7
+2/3S single bedroom,safmr_110,sublet_70,Rancho Park,15790.5,7
+2/3S single bedroom,safmr_110,sublet_90,Koreatown,10673.300000000001,1
+2/3S single bedroom,safmr_110,sublet_90,Mar Vista,12071.400000000001,2
+2/3S single bedroom,safmr_110,sublet_90,Palms,12207.800000000001,3
+2/3S single bedroom,safmr_110,sublet_90,UCLA,14590.18,4
+2/3S single bedroom,safmr_110,sublet_90,West LA / Sawtelle,14628.900000000001,5
+2/3S single bedroom,safmr_110,sublet_90,Westwood,14663.000000000002,6
+2/3S single bedroom,safmr_110,sublet_90,Brentwood,14833.500000000002,7
+2/3S single bedroom,safmr_110,sublet_90,Rancho Park,14833.500000000002,7
+2/3S single bedroom,zori_adjusted,away,Koreatown,12200.0,1
+2/3S single bedroom,zori_adjusted,away,Palms,13704.0,2
+2/3S single bedroom,zori_adjusted,away,UCLA,14590.18,3
+2/3S single bedroom,zori_adjusted,away,Mar Vista,15204.0,4
+2/3S single bedroom,zori_adjusted,away,West LA / Sawtelle,16108.0,5
+2/3S single bedroom,zori_adjusted,away,Rancho Park,17756.0,6
+2/3S single bedroom,zori_adjusted,away,Westwood,18032.0,7
+2/3S single bedroom,zori_adjusted,away,Brentwood,19436.0,8
+2/3S single bedroom,zori_adjusted,stay_in_la,Koreatown,12200.0,1
+2/3S single bedroom,zori_adjusted,stay_in_la,Palms,13704.0,2
+2/3S single bedroom,zori_adjusted,stay_in_la,Mar Vista,15204.0,3
+2/3S single bedroom,zori_adjusted,stay_in_la,West LA / Sawtelle,16108.0,4
+2/3S single bedroom,zori_adjusted,stay_in_la,UCLA,17640.18,5
+2/3S single bedroom,zori_adjusted,stay_in_la,Rancho Park,17756.0,6
+2/3S single bedroom,zori_adjusted,stay_in_la,Westwood,18032.0,7
+2/3S single bedroom,zori_adjusted,stay_in_la,Brentwood,19436.0,8
+2/3S single bedroom,zori_adjusted,sublet_50,Koreatown,10675.0,1
+2/3S single bedroom,zori_adjusted,sublet_50,Palms,11991.0,2
+2/3S single bedroom,zori_adjusted,sublet_50,Mar Vista,13303.5,3
+2/3S single bedroom,zori_adjusted,sublet_50,West LA / Sawtelle,14094.5,4
+2/3S single bedroom,zori_adjusted,sublet_50,UCLA,14590.18,5
+2/3S single bedroom,zori_adjusted,sublet_50,Rancho Park,15536.5,6
+2/3S single bedroom,zori_adjusted,sublet_50,Westwood,15778.0,7
+2/3S single bedroom,zori_adjusted,sublet_50,Brentwood,17006.5,8
+2/3S single bedroom,zori_adjusted,sublet_70,Koreatown,10065.0,1
+2/3S single bedroom,zori_adjusted,sublet_70,Palms,11305.800000000001,2
+2/3S single bedroom,zori_adjusted,sublet_70,Mar Vista,12543.300000000001,3
+2/3S single bedroom,zori_adjusted,sublet_70,West LA / Sawtelle,13289.1,4
+2/3S single bedroom,zori_adjusted,sublet_70,UCLA,14590.18,5
+2/3S single bedroom,zori_adjusted,sublet_70,Rancho Park,14648.7,6
+2/3S single bedroom,zori_adjusted,sublet_70,Westwood,14876.400000000001,7
+2/3S single bedroom,zori_adjusted,sublet_70,Brentwood,16034.7,8
+2/3S single bedroom,zori_adjusted,sublet_90,Koreatown,9455.0,1
+2/3S single bedroom,zori_adjusted,sublet_90,Palms,10620.6,2
+2/3S single bedroom,zori_adjusted,sublet_90,Mar Vista,11783.1,3
+2/3S single bedroom,zori_adjusted,sublet_90,West LA / Sawtelle,12483.7,4
+2/3S single bedroom,zori_adjusted,sublet_90,Rancho Park,13760.900000000001,5
+2/3S single bedroom,zori_adjusted,sublet_90,Westwood,13974.800000000001,6
+2/3S single bedroom,zori_adjusted,sublet_90,UCLA,14590.18,7
+2/3S single bedroom,zori_adjusted,sublet_90,Brentwood,15062.900000000001,8
+2/4 apartment,safmr,away,Koreatown,9390.0,1
+2/4 apartment,safmr,away,Mar Vista,10620.0,2
+2/4 apartment,safmr,away,Palms,10740.0,3
+2/4 apartment,safmr,away,UCLA,12167.76,4
+2/4 apartment,safmr,away,West LA / Sawtelle,12870.0,5
+2/4 apartment,safmr,away,Westwood,12900.0,6
+2/4 apartment,safmr,away,Rancho Park,13050.0,7
+2/4 apartment,safmr,away,Brentwood,13050.0,7
+2/4 apartment,safmr,stay_in_la,Koreatown,9390.0,1
+2/4 apartment,safmr,stay_in_la,Mar Vista,10620.0,2
+2/4 apartment,safmr,stay_in_la,Palms,10740.0,3
+2/4 apartment,safmr,stay_in_la,West LA / Sawtelle,12870.0,4
+2/4 apartment,safmr,stay_in_la,Westwood,12900.0,5
+2/4 apartment,safmr,stay_in_la,Rancho Park,13050.0,6
+2/4 apartment,safmr,stay_in_la,Brentwood,13050.0,6
+2/4 apartment,safmr,stay_in_la,UCLA,14515.26,8
+2/4 apartment,safmr,sublet_50,Koreatown,8216.25,1
+2/4 apartment,safmr,sublet_50,Mar Vista,9292.5,2
+2/4 apartment,safmr,sublet_50,Palms,9397.5,3
+2/4 apartment,safmr,sublet_50,West LA / Sawtelle,11261.25,4
+2/4 apartment,safmr,sublet_50,Westwood,11287.5,5
+2/4 apartment,safmr,sublet_50,Brentwood,11418.75,6
+2/4 apartment,safmr,sublet_50,Rancho Park,11418.75,6
+2/4 apartment,safmr,sublet_50,UCLA,12167.76,8
+2/4 apartment,safmr,sublet_70,Koreatown,7746.75,1
+2/4 apartment,safmr,sublet_70,Mar Vista,8761.5,2
+2/4 apartment,safmr,sublet_70,Palms,8860.5,3
+2/4 apartment,safmr,sublet_70,West LA / Sawtelle,10617.75,4
+2/4 apartment,safmr,sublet_70,Westwood,10642.5,5
+2/4 apartment,safmr,sublet_70,Rancho Park,10766.25,6
+2/4 apartment,safmr,sublet_70,Brentwood,10766.25,6
+2/4 apartment,safmr,sublet_70,UCLA,12167.76,8
+2/4 apartment,safmr,sublet_90,Koreatown,7277.250000000001,1
+2/4 apartment,safmr,sublet_90,Mar Vista,8230.5,2
+2/4 apartment,safmr,sublet_90,Palms,8323.5,3
+2/4 apartment,safmr,sublet_90,West LA / Sawtelle,9974.25,4
+2/4 apartment,safmr,sublet_90,Westwood,9997.5,5
+2/4 apartment,safmr,sublet_90,Brentwood,10113.75,6
+2/4 apartment,safmr,sublet_90,Rancho Park,10113.75,6
+2/4 apartment,safmr,sublet_90,UCLA,12167.76,8
+2/4 apartment,safmr_110,away,Koreatown,10329.0,1
+2/4 apartment,safmr_110,away,Mar Vista,11682.0,2
+2/4 apartment,safmr_110,away,Palms,11814.0,3
+2/4 apartment,safmr_110,away,UCLA,12167.76,4
+2/4 apartment,safmr_110,away,West LA / Sawtelle,14157.0,5
+2/4 apartment,safmr_110,away,Westwood,14190.0,6
+2/4 apartment,safmr_110,away,Rancho Park,14355.0,7
+2/4 apartment,safmr_110,away,Brentwood,14355.0,7
+2/4 apartment,safmr_110,stay_in_la,Koreatown,10329.0,1
+2/4 apartment,safmr_110,stay_in_la,Mar Vista,11682.0,2
+2/4 apartment,safmr_110,stay_in_la,Palms,11814.0,3
+2/4 apartment,safmr_110,stay_in_la,West LA / Sawtelle,14157.0,4
+2/4 apartment,safmr_110,stay_in_la,Westwood,14190.0,5
+2/4 apartment,safmr_110,stay_in_la,Brentwood,14355.0,6
+2/4 apartment,safmr_110,stay_in_la,Rancho Park,14355.0,6
+2/4 apartment,safmr_110,stay_in_la,UCLA,14750.01,8
+2/4 apartment,safmr_110,sublet_50,Koreatown,9037.875,1
+2/4 apartment,safmr_110,sublet_50,Mar Vista,10221.75,2
+2/4 apartment,safmr_110,sublet_50,Palms,10337.25,3
+2/4 apartment,safmr_110,sublet_50,UCLA,12167.76,4
+2/4 apartment,safmr_110,sublet_50,West LA / Sawtelle,12387.375,5
+2/4 apartment,safmr_110,sublet_50,Westwood,12416.25,6
+2/4 apartment,safmr_110,sublet_50,Rancho Park,12560.625,7
+2/4 apartment,safmr_110,sublet_50,Brentwood,12560.625,7
+2/4 apartment,safmr_110,sublet_70,Koreatown,8521.425000000001,1
+2/4 apartment,safmr_110,sublet_70,Mar Vista,9637.65,2
+2/4 apartment,safmr_110,sublet_70,Palms,9746.550000000001,3
+2/4 apartment,safmr_110,sublet_70,West LA / Sawtelle,11679.525,4
+2/4 apartment,safmr_110,sublet_70,Westwood,11706.75,5
+2/4 apartment,safmr_110,sublet_70,Brentwood,11842.875,6
+2/4 apartment,safmr_110,sublet_70,Rancho Park,11842.875,6
+2/4 apartment,safmr_110,sublet_70,UCLA,12167.76,8
+2/4 apartment,safmr_110,sublet_90,Koreatown,8004.975,1
+2/4 apartment,safmr_110,sublet_90,Mar Vista,9053.550000000001,2
+2/4 apartment,safmr_110,sublet_90,Palms,9155.85,3
+2/4 apartment,safmr_110,sublet_90,West LA / Sawtelle,10971.675000000001,4
+2/4 apartment,safmr_110,sublet_90,Westwood,10997.25,5
+2/4 apartment,safmr_110,sublet_90,Brentwood,11125.125,6
+2/4 apartment,safmr_110,sublet_90,Rancho Park,11125.125,6
+2/4 apartment,safmr_110,sublet_90,UCLA,12167.76,8
+2/4 apartment,zori_adjusted,away,Koreatown,9150.0,1
+2/4 apartment,zori_adjusted,away,Palms,10278.0,2
+2/4 apartment,zori_adjusted,away,Mar Vista,11403.0,3
+2/4 apartment,zori_adjusted,away,West LA / Sawtelle,12081.0,4
+2/4 apartment,zori_adjusted,away,UCLA,12167.76,5
+2/4 apartment,zori_adjusted,away,Rancho Park,13317.0,6
+2/4 apartment,zori_adjusted,away,Westwood,13524.0,7
+2/4 apartment,zori_adjusted,away,Brentwood,14577.0,8
+2/4 apartment,zori_adjusted,stay_in_la,Koreatown,9150.0,1
+2/4 apartment,zori_adjusted,stay_in_la,Palms,10278.0,2
+2/4 apartment,zori_adjusted,stay_in_la,Mar Vista,11403.0,3
+2/4 apartment,zori_adjusted,stay_in_la,West LA / Sawtelle,12081.0,4
+2/4 apartment,zori_adjusted,stay_in_la,Rancho Park,13317.0,5
+2/4 apartment,zori_adjusted,stay_in_la,Westwood,13524.0,6
+2/4 apartment,zori_adjusted,stay_in_la,UCLA,14455.26,7
+2/4 apartment,zori_adjusted,stay_in_la,Brentwood,14577.0,8
+2/4 apartment,zori_adjusted,sublet_50,Koreatown,8006.25,1
+2/4 apartment,zori_adjusted,sublet_50,Palms,8993.25,2
+2/4 apartment,zori_adjusted,sublet_50,Mar Vista,9977.625,3
+2/4 apartment,zori_adjusted,sublet_50,West LA / Sawtelle,10570.875,4
+2/4 apartment,zori_adjusted,sublet_50,Rancho Park,11652.375,5
+2/4 apartment,zori_adjusted,sublet_50,Westwood,11833.5,6
+2/4 apartment,zori_adjusted,sublet_50,UCLA,12167.76,7
+2/4 apartment,zori_adjusted,sublet_50,Brentwood,12754.875,8
+2/4 apartment,zori_adjusted,sublet_70,Koreatown,7548.75,1
+2/4 apartment,zori_adjusted,sublet_70,Palms,8479.35,2
+2/4 apartment,zori_adjusted,sublet_70,Mar Vista,9407.475,3
+2/4 apartment,zori_adjusted,sublet_70,West LA / Sawtelle,9966.825,4
+2/4 apartment,zori_adjusted,sublet_70,Rancho Park,10986.525,5
+2/4 apartment,zori_adjusted,sublet_70,Westwood,11157.300000000001,6
+2/4 apartment,zori_adjusted,sublet_70,Brentwood,12026.025,7
+2/4 apartment,zori_adjusted,sublet_70,UCLA,12167.76,8
+2/4 apartment,zori_adjusted,sublet_90,Koreatown,7091.250000000001,1
+2/4 apartment,zori_adjusted,sublet_90,Palms,7965.450000000001,2
+2/4 apartment,zori_adjusted,sublet_90,Mar Vista,8837.325,3
+2/4 apartment,zori_adjusted,sublet_90,West LA / Sawtelle,9362.775000000001,4
+2/4 apartment,zori_adjusted,sublet_90,Rancho Park,10320.675000000001,5
+2/4 apartment,zori_adjusted,sublet_90,Westwood,10481.1,6
+2/4 apartment,zori_adjusted,sublet_90,Brentwood,11297.175000000001,7
+2/4 apartment,zori_adjusted,sublet_90,UCLA,12167.76,8
+2/4 townhouse,safmr,away,Koreatown,9390.0,1
+2/4 townhouse,safmr,away,Mar Vista,10620.0,2
+2/4 townhouse,safmr,away,Palms,10740.0,3
+2/4 townhouse,safmr,away,West LA / Sawtelle,12870.0,4
+2/4 townhouse,safmr,away,Westwood,12900.0,5
+2/4 townhouse,safmr,away,Brentwood,13050.0,6
+2/4 townhouse,safmr,away,Rancho Park,13050.0,6
+2/4 townhouse,safmr,away,UCLA,13053.48,8
+2/4 townhouse,safmr,stay_in_la,Koreatown,9390.0,1
+2/4 townhouse,safmr,stay_in_la,Mar Vista,10620.0,2
+2/4 townhouse,safmr,stay_in_la,Palms,10740.0,3
+2/4 townhouse,safmr,stay_in_la,West LA / Sawtelle,12870.0,4
+2/4 townhouse,safmr,stay_in_la,Westwood,12900.0,5
+2/4 townhouse,safmr,stay_in_la,Brentwood,13050.0,6
+2/4 townhouse,safmr,stay_in_la,Rancho Park,13050.0,6
+2/4 townhouse,safmr,stay_in_la,UCLA,15400.98,8
+2/4 townhouse,safmr,sublet_50,Koreatown,8216.25,1
+2/4 townhouse,safmr,sublet_50,Mar Vista,9292.5,2
+2/4 townhouse,safmr,sublet_50,Palms,9397.5,3
+2/4 townhouse,safmr,sublet_50,West LA / Sawtelle,11261.25,4
+2/4 townhouse,safmr,sublet_50,Westwood,11287.5,5
+2/4 townhouse,safmr,sublet_50,Rancho Park,11418.75,6
+2/4 townhouse,safmr,sublet_50,Brentwood,11418.75,6
+2/4 townhouse,safmr,sublet_50,UCLA,13053.48,8
+2/4 townhouse,safmr,sublet_70,Koreatown,7746.75,1
+2/4 townhouse,safmr,sublet_70,Mar Vista,8761.5,2
+2/4 townhouse,safmr,sublet_70,Palms,8860.5,3
+2/4 townhouse,safmr,sublet_70,West LA / Sawtelle,10617.75,4
+2/4 townhouse,safmr,sublet_70,Westwood,10642.5,5
+2/4 townhouse,safmr,sublet_70,Brentwood,10766.25,6
+2/4 townhouse,safmr,sublet_70,Rancho Park,10766.25,6
+2/4 townhouse,safmr,sublet_70,UCLA,13053.48,8
+2/4 townhouse,safmr,sublet_90,Koreatown,7277.250000000001,1
+2/4 townhouse,safmr,sublet_90,Mar Vista,8230.5,2
+2/4 townhouse,safmr,sublet_90,Palms,8323.5,3
+2/4 townhouse,safmr,sublet_90,West LA / Sawtelle,9974.25,4
+2/4 townhouse,safmr,sublet_90,Westwood,9997.5,5
+2/4 townhouse,safmr,sublet_90,Rancho Park,10113.75,6
+2/4 townhouse,safmr,sublet_90,Brentwood,10113.75,6
+2/4 townhouse,safmr,sublet_90,UCLA,13053.48,8
+2/4 townhouse,safmr_110,away,Koreatown,10329.0,1
+2/4 townhouse,safmr_110,away,Mar Vista,11682.0,2
+2/4 townhouse,safmr_110,away,Palms,11814.0,3
+2/4 townhouse,safmr_110,away,UCLA,13053.48,4
+2/4 townhouse,safmr_110,away,West LA / Sawtelle,14157.0,5
+2/4 townhouse,safmr_110,away,Westwood,14190.0,6
+2/4 townhouse,safmr_110,away,Rancho Park,14355.0,7
+2/4 townhouse,safmr_110,away,Brentwood,14355.0,7
+2/4 townhouse,safmr_110,stay_in_la,Koreatown,10329.0,1
+2/4 townhouse,safmr_110,stay_in_la,Mar Vista,11682.0,2
+2/4 townhouse,safmr_110,stay_in_la,Palms,11814.0,3
+2/4 townhouse,safmr_110,stay_in_la,West LA / Sawtelle,14157.0,4
+2/4 townhouse,safmr_110,stay_in_la,Westwood,14190.0,5
+2/4 townhouse,safmr_110,stay_in_la,Brentwood,14355.0,6
+2/4 townhouse,safmr_110,stay_in_la,Rancho Park,14355.0,6
+2/4 townhouse,safmr_110,stay_in_la,UCLA,15635.73,8
+2/4 townhouse,safmr_110,sublet_50,Koreatown,9037.875,1
+2/4 townhouse,safmr_110,sublet_50,Mar Vista,10221.75,2
+2/4 townhouse,safmr_110,sublet_50,Palms,10337.25,3
+2/4 townhouse,safmr_110,sublet_50,West LA / Sawtelle,12387.375,4
+2/4 townhouse,safmr_110,sublet_50,Westwood,12416.25,5
+2/4 townhouse,safmr_110,sublet_50,Brentwood,12560.625,6
+2/4 townhouse,safmr_110,sublet_50,Rancho Park,12560.625,6
+2/4 townhouse,safmr_110,sublet_50,UCLA,13053.48,8
+2/4 townhouse,safmr_110,sublet_70,Koreatown,8521.425000000001,1
+2/4 townhouse,safmr_110,sublet_70,Mar Vista,9637.65,2
+2/4 townhouse,safmr_110,sublet_70,Palms,9746.550000000001,3
+2/4 townhouse,safmr_110,sublet_70,West LA / Sawtelle,11679.525,4
+2/4 townhouse,safmr_110,sublet_70,Westwood,11706.75,5
+2/4 townhouse,safmr_110,sublet_70,Rancho Park,11842.875,6
+2/4 townhouse,safmr_110,sublet_70,Brentwood,11842.875,6
+2/4 townhouse,safmr_110,sublet_70,UCLA,13053.48,8
+2/4 townhouse,safmr_110,sublet_90,Koreatown,8004.975,1
+2/4 townhouse,safmr_110,sublet_90,Mar Vista,9053.550000000001,2
+2/4 townhouse,safmr_110,sublet_90,Palms,9155.85,3
+2/4 townhouse,safmr_110,sublet_90,West LA / Sawtelle,10971.675000000001,4
+2/4 townhouse,safmr_110,sublet_90,Westwood,10997.25,5
+2/4 townhouse,safmr_110,sublet_90,Rancho Park,11125.125,6
+2/4 townhouse,safmr_110,sublet_90,Brentwood,11125.125,6
+2/4 townhouse,safmr_110,sublet_90,UCLA,13053.48,8
+2/4 townhouse,zori_adjusted,away,Koreatown,9150.0,1
+2/4 townhouse,zori_adjusted,away,Palms,10278.0,2
+2/4 townhouse,zori_adjusted,away,Mar Vista,11403.0,3
+2/4 townhouse,zori_adjusted,away,West LA / Sawtelle,12081.0,4
+2/4 townhouse,zori_adjusted,away,UCLA,13053.48,5
+2/4 townhouse,zori_adjusted,away,Rancho Park,13317.0,6
+2/4 townhouse,zori_adjusted,away,Westwood,13524.0,7
+2/4 townhouse,zori_adjusted,away,Brentwood,14577.0,8
+2/4 townhouse,zori_adjusted,stay_in_la,Koreatown,9150.0,1
+2/4 townhouse,zori_adjusted,stay_in_la,Palms,10278.0,2
+2/4 townhouse,zori_adjusted,stay_in_la,Mar Vista,11403.0,3
+2/4 townhouse,zori_adjusted,stay_in_la,West LA / Sawtelle,12081.0,4
+2/4 townhouse,zori_adjusted,stay_in_la,Rancho Park,13317.0,5
+2/4 townhouse,zori_adjusted,stay_in_la,Westwood,13524.0,6
+2/4 townhouse,zori_adjusted,stay_in_la,Brentwood,14577.0,7
+2/4 townhouse,zori_adjusted,stay_in_la,UCLA,15340.98,8
+2/4 townhouse,zori_adjusted,sublet_50,Koreatown,8006.25,1
+2/4 townhouse,zori_adjusted,sublet_50,Palms,8993.25,2
+2/4 townhouse,zori_adjusted,sublet_50,Mar Vista,9977.625,3
+2/4 townhouse,zori_adjusted,sublet_50,West LA / Sawtelle,10570.875,4
+2/4 townhouse,zori_adjusted,sublet_50,Rancho Park,11652.375,5
+2/4 townhouse,zori_adjusted,sublet_50,Westwood,11833.5,6
+2/4 townhouse,zori_adjusted,sublet_50,Brentwood,12754.875,7
+2/4 townhouse,zori_adjusted,sublet_50,UCLA,13053.48,8
+2/4 townhouse,zori_adjusted,sublet_70,Koreatown,7548.75,1
+2/4 townhouse,zori_adjusted,sublet_70,Palms,8479.35,2
+2/4 townhouse,zori_adjusted,sublet_70,Mar Vista,9407.475,3
+2/4 townhouse,zori_adjusted,sublet_70,West LA / Sawtelle,9966.825,4
+2/4 townhouse,zori_adjusted,sublet_70,Rancho Park,10986.525,5
+2/4 townhouse,zori_adjusted,sublet_70,Westwood,11157.300000000001,6
+2/4 townhouse,zori_adjusted,sublet_70,Brentwood,12026.025,7
+2/4 townhouse,zori_adjusted,sublet_70,UCLA,13053.48,8
+2/4 townhouse,zori_adjusted,sublet_90,Koreatown,7091.250000000001,1
+2/4 townhouse,zori_adjusted,sublet_90,Palms,7965.450000000001,2
+2/4 townhouse,zori_adjusted,sublet_90,Mar Vista,8837.325,3
+2/4 townhouse,zori_adjusted,sublet_90,West LA / Sawtelle,9362.775000000001,4
+2/4 townhouse,zori_adjusted,sublet_90,Rancho Park,10320.675000000001,5
+2/4 townhouse,zori_adjusted,sublet_90,Westwood,10481.1,6
+2/4 townhouse,zori_adjusted,sublet_90,Brentwood,11297.175000000001,7
+2/4 townhouse,zori_adjusted,sublet_90,UCLA,13053.48,8
 studio 2 person,safmr,away,UCLA,11255.42,1
-studio 2 person,safmr,away,West LA,18420.0,2
-studio 2 person,safmr,away,Westwood,18480.0,3
-studio 2 person,safmr,stay_in_la,UCLA,15860.42,1
-studio 2 person,safmr,stay_in_la,West LA,18420.0,2
-studio 2 person,safmr,stay_in_la,Westwood,18480.0,3
+studio 2 person,safmr,away,Koreatown,13440.0,2
+studio 2 person,safmr,away,Mar Vista,15240.0,3
+studio 2 person,safmr,away,Palms,15360.0,4
+studio 2 person,safmr,away,West LA / Sawtelle,18420.0,5
+studio 2 person,safmr,away,Westwood,18480.0,6
+studio 2 person,safmr,away,Rancho Park,18720.0,7
+studio 2 person,safmr,away,Brentwood,18720.0,7
+studio 2 person,safmr,stay_in_la,Koreatown,13440.0,1
+studio 2 person,safmr,stay_in_la,UCLA,14615.42,2
+studio 2 person,safmr,stay_in_la,Mar Vista,15240.0,3
+studio 2 person,safmr,stay_in_la,Palms,15360.0,4
+studio 2 person,safmr,stay_in_la,West LA / Sawtelle,18420.0,5
+studio 2 person,safmr,stay_in_la,Westwood,18480.0,6
+studio 2 person,safmr,stay_in_la,Rancho Park,18720.0,7
+studio 2 person,safmr,stay_in_la,Brentwood,18720.0,7
 studio 2 person,safmr,sublet_50,UCLA,11255.42,1
-studio 2 person,safmr,sublet_50,West LA,16117.5,2
-studio 2 person,safmr,sublet_50,Westwood,16170.0,3
-studio 2 person,safmr,sublet_70,UCLA,11255.42,1
-studio 2 person,safmr,sublet_70,West LA,15196.5,2
-studio 2 person,safmr,sublet_70,Westwood,15246.0,3
-studio 2 person,safmr,sublet_90,UCLA,11255.42,1
-studio 2 person,safmr,sublet_90,West LA,14275.500000000002,2
-studio 2 person,safmr,sublet_90,Westwood,14322.000000000002,3
+studio 2 person,safmr,sublet_50,Koreatown,11760.0,2
+studio 2 person,safmr,sublet_50,Mar Vista,13335.0,3
+studio 2 person,safmr,sublet_50,Palms,13440.0,4
+studio 2 person,safmr,sublet_50,West LA / Sawtelle,16117.5,5
+studio 2 person,safmr,sublet_50,Westwood,16170.0,6
+studio 2 person,safmr,sublet_50,Rancho Park,16380.0,7
+studio 2 person,safmr,sublet_50,Brentwood,16380.0,7
+studio 2 person,safmr,sublet_70,Koreatown,11088.0,1
+studio 2 person,safmr,sublet_70,UCLA,11255.42,2
+studio 2 person,safmr,sublet_70,Mar Vista,12573.0,3
+studio 2 person,safmr,sublet_70,Palms,12672.0,4
+studio 2 person,safmr,sublet_70,West LA / Sawtelle,15196.5,5
+studio 2 person,safmr,sublet_70,Westwood,15246.0,6
+studio 2 person,safmr,sublet_70,Brentwood,15444.0,7
+studio 2 person,safmr,sublet_70,Rancho Park,15444.0,7
+studio 2 person,safmr,sublet_90,Koreatown,10416.0,1
+studio 2 person,safmr,sublet_90,UCLA,11255.42,2
+studio 2 person,safmr,sublet_90,Mar Vista,11811.0,3
+studio 2 person,safmr,sublet_90,Palms,11904.0,4
+studio 2 person,safmr,sublet_90,West LA / Sawtelle,14275.500000000002,5
+studio 2 person,safmr,sublet_90,Westwood,14322.000000000002,6
+studio 2 person,safmr,sublet_90,Brentwood,14508.000000000002,7
+studio 2 person,safmr,sublet_90,Rancho Park,14508.000000000002,7
 studio 2 person,safmr_110,away,UCLA,11255.42,1
-studio 2 person,safmr_110,away,West LA,20262.0,2
-studio 2 person,safmr_110,away,Westwood,20328.0,3
-studio 2 person,safmr_110,stay_in_la,UCLA,16320.92,1
-studio 2 person,safmr_110,stay_in_la,West LA,20262.0,2
-studio 2 person,safmr_110,stay_in_la,Westwood,20328.0,3
+studio 2 person,safmr_110,away,Koreatown,14784.0,2
+studio 2 person,safmr_110,away,Mar Vista,16764.0,3
+studio 2 person,safmr_110,away,Palms,16896.0,4
+studio 2 person,safmr_110,away,West LA / Sawtelle,20262.0,5
+studio 2 person,safmr_110,away,Westwood,20328.0,6
+studio 2 person,safmr_110,away,Rancho Park,20592.0,7
+studio 2 person,safmr_110,away,Brentwood,20592.0,7
+studio 2 person,safmr_110,stay_in_la,Koreatown,14784.0,1
+studio 2 person,safmr_110,stay_in_la,UCLA,14951.42,2
+studio 2 person,safmr_110,stay_in_la,Mar Vista,16764.0,3
+studio 2 person,safmr_110,stay_in_la,Palms,16896.0,4
+studio 2 person,safmr_110,stay_in_la,West LA / Sawtelle,20262.0,5
+studio 2 person,safmr_110,stay_in_la,Westwood,20328.0,6
+studio 2 person,safmr_110,stay_in_la,Rancho Park,20592.0,7
+studio 2 person,safmr_110,stay_in_la,Brentwood,20592.0,7
 studio 2 person,safmr_110,sublet_50,UCLA,11255.42,1
-studio 2 person,safmr_110,sublet_50,West LA,17729.25,2
-studio 2 person,safmr_110,sublet_50,Westwood,17787.0,3
+studio 2 person,safmr_110,sublet_50,Koreatown,12936.0,2
+studio 2 person,safmr_110,sublet_50,Mar Vista,14668.5,3
+studio 2 person,safmr_110,sublet_50,Palms,14784.0,4
+studio 2 person,safmr_110,sublet_50,West LA / Sawtelle,17729.25,5
+studio 2 person,safmr_110,sublet_50,Westwood,17787.0,6
+studio 2 person,safmr_110,sublet_50,Brentwood,18018.0,7
+studio 2 person,safmr_110,sublet_50,Rancho Park,18018.0,7
 studio 2 person,safmr_110,sublet_70,UCLA,11255.42,1
-studio 2 person,safmr_110,sublet_70,West LA,16716.15,2
-studio 2 person,safmr_110,sublet_70,Westwood,16770.600000000002,3
+studio 2 person,safmr_110,sublet_70,Koreatown,12196.800000000001,2
+studio 2 person,safmr_110,sublet_70,Mar Vista,13830.300000000001,3
+studio 2 person,safmr_110,sublet_70,Palms,13939.2,4
+studio 2 person,safmr_110,sublet_70,West LA / Sawtelle,16716.15,5
+studio 2 person,safmr_110,sublet_70,Westwood,16770.600000000002,6
+studio 2 person,safmr_110,sublet_70,Brentwood,16988.4,7
+studio 2 person,safmr_110,sublet_70,Rancho Park,16988.4,7
 studio 2 person,safmr_110,sublet_90,UCLA,11255.42,1
-studio 2 person,safmr_110,sublet_90,West LA,15703.050000000001,2
-studio 2 person,safmr_110,sublet_90,Westwood,15754.2,3
+studio 2 person,safmr_110,sublet_90,Koreatown,11457.6,2
+studio 2 person,safmr_110,sublet_90,Mar Vista,12992.1,3
+studio 2 person,safmr_110,sublet_90,Palms,13094.400000000001,4
+studio 2 person,safmr_110,sublet_90,West LA / Sawtelle,15703.050000000001,5
+studio 2 person,safmr_110,sublet_90,Westwood,15754.2,6
+studio 2 person,safmr_110,sublet_90,Rancho Park,15958.800000000001,7
+studio 2 person,safmr_110,sublet_90,Brentwood,15958.800000000001,7
 studio 2 person,zori_adjusted,away,UCLA,11255.42,1
-studio 2 person,zori_adjusted,away,West LA,17292.0,2
-studio 2 person,zori_adjusted,away,Westwood,19374.0,3
-studio 2 person,zori_adjusted,stay_in_la,UCLA,15578.42,1
-studio 2 person,zori_adjusted,stay_in_la,West LA,17292.0,2
-studio 2 person,zori_adjusted,stay_in_la,Westwood,19374.0,3
+studio 2 person,zori_adjusted,away,Koreatown,13098.0,2
+studio 2 person,zori_adjusted,away,Palms,14700.0,3
+studio 2 person,zori_adjusted,away,Mar Vista,16362.0,4
+studio 2 person,zori_adjusted,away,West LA / Sawtelle,17292.0,5
+studio 2 person,zori_adjusted,away,Rancho Park,19104.0,6
+studio 2 person,zori_adjusted,away,Westwood,19374.0,7
+studio 2 person,zori_adjusted,away,Brentwood,20910.0,8
+studio 2 person,zori_adjusted,stay_in_la,Koreatown,13098.0,1
+studio 2 person,zori_adjusted,stay_in_la,UCLA,14529.92,2
+studio 2 person,zori_adjusted,stay_in_la,Palms,14700.0,3
+studio 2 person,zori_adjusted,stay_in_la,Mar Vista,16362.0,4
+studio 2 person,zori_adjusted,stay_in_la,West LA / Sawtelle,17292.0,5
+studio 2 person,zori_adjusted,stay_in_la,Rancho Park,19104.0,6
+studio 2 person,zori_adjusted,stay_in_la,Westwood,19374.0,7
+studio 2 person,zori_adjusted,stay_in_la,Brentwood,20910.0,8
 studio 2 person,zori_adjusted,sublet_50,UCLA,11255.42,1
-studio 2 person,zori_adjusted,sublet_50,West LA,15130.5,2
-studio 2 person,zori_adjusted,sublet_50,Westwood,16952.25,3
-studio 2 person,zori_adjusted,sublet_70,UCLA,11255.42,1
-studio 2 person,zori_adjusted,sublet_70,West LA,14265.9,2
-studio 2 person,zori_adjusted,sublet_70,Westwood,15983.550000000001,3
-studio 2 person,zori_adjusted,sublet_90,UCLA,11255.42,1
-studio 2 person,zori_adjusted,sublet_90,West LA,13401.300000000001,2
-studio 2 person,zori_adjusted,sublet_90,Westwood,15014.85,3
+studio 2 person,zori_adjusted,sublet_50,Koreatown,11460.75,2
+studio 2 person,zori_adjusted,sublet_50,Palms,12862.5,3
+studio 2 person,zori_adjusted,sublet_50,Mar Vista,14316.75,4
+studio 2 person,zori_adjusted,sublet_50,West LA / Sawtelle,15130.5,5
+studio 2 person,zori_adjusted,sublet_50,Rancho Park,16716.0,6
+studio 2 person,zori_adjusted,sublet_50,Westwood,16952.25,7
+studio 2 person,zori_adjusted,sublet_50,Brentwood,18296.25,8
+studio 2 person,zori_adjusted,sublet_70,Koreatown,10805.85,1
+studio 2 person,zori_adjusted,sublet_70,UCLA,11255.42,2
+studio 2 person,zori_adjusted,sublet_70,Palms,12127.5,3
+studio 2 person,zori_adjusted,sublet_70,Mar Vista,13498.65,4
+studio 2 person,zori_adjusted,sublet_70,West LA / Sawtelle,14265.9,5
+studio 2 person,zori_adjusted,sublet_70,Rancho Park,15760.800000000001,6
+studio 2 person,zori_adjusted,sublet_70,Westwood,15983.550000000001,7
+studio 2 person,zori_adjusted,sublet_70,Brentwood,17250.75,8
+studio 2 person,zori_adjusted,sublet_90,Koreatown,10150.95,1
+studio 2 person,zori_adjusted,sublet_90,UCLA,11255.42,2
+studio 2 person,zori_adjusted,sublet_90,Palms,11392.5,3
+studio 2 person,zori_adjusted,sublet_90,Mar Vista,12680.550000000001,4
+studio 2 person,zori_adjusted,sublet_90,West LA / Sawtelle,13401.300000000001,5
+studio 2 person,zori_adjusted,sublet_90,Rancho Park,14805.6,6
+studio 2 person,zori_adjusted,sublet_90,Westwood,15014.85,7
+studio 2 person,zori_adjusted,sublet_90,Brentwood,16205.250000000002,8

@@ -1,33 +1,25 @@
--- 02. How have rents moved in each ZIP, and is Westwood's premium over West LA growing?
--- Output: one row per month since 2018: rent in each ZIP, year-over-year change, and the premium.
+-- 02. How have rents moved in each neighborhood, and how does each compare with Westwood?
+-- Output (long format): one row per ZIP × month since 2018.
 
-WITH yoy AS (
+WITH base AS (
     SELECT
         zip,
+        area,
         month,
         zori,
-        -- LAG looks back 12 rows within the same ZIP (rows ordered by month) = same month last year
-        LAG(zori, 12) OVER (PARTITION BY zip ORDER BY month) AS zori_last_year
+        -- 12 rows back within the same ZIP (rows ordered by month) = same month last year
+        LAG(zori, 12) OVER (PARTITION BY zip ORDER BY month) AS zori_last_year,
+        -- Westwood's rent in the same month, attached to every ZIP's row
+        MAX(CASE WHEN zip = '90024' THEN zori END) OVER (PARTITION BY month) AS westwood_same_month
     FROM zori
-),
-wide AS (
-    -- Turn two rows per month (one per ZIP) into one row per month with a column per ZIP
-    SELECT
-        month,
-        MAX(CASE WHEN zip = '90024' THEN zori END)           AS westwood,
-        MAX(CASE WHEN zip = '90025' THEN zori END)           AS west_la,
-        MAX(CASE WHEN zip = '90024' THEN zori_last_year END) AS westwood_ly,
-        MAX(CASE WHEN zip = '90025' THEN zori_last_year END) AS west_la_ly
-    FROM yoy
-    GROUP BY month
 )
 SELECT
+    zip,
+    area,
     month,
-    ROUND(westwood)                                   AS westwood_rent,
-    ROUND(west_la)                                    AS west_la_rent,
-    ROUND(100 * (westwood / westwood_ly - 1), 1)      AS westwood_yoy_pct,
-    ROUND(100 * (west_la / west_la_ly - 1), 1)        AS west_la_yoy_pct,
-    ROUND(100 * (westwood / west_la - 1), 1)          AS westwood_premium_pct
-FROM wide
-WHERE month >= DATE '2018-01-01'
-ORDER BY month;
+    ROUND(zori)                                            AS rent,
+    ROUND(100 * (zori / zori_last_year - 1), 1)            AS yoy_pct,
+    ROUND(100 * (zori / westwood_same_month - 1), 1)       AS pct_vs_westwood
+FROM base
+WHERE month >= DATE '2018-01-01'   -- filter AFTER the LAG, so 2018 rows still see their 2017 values
+ORDER BY zip, month;

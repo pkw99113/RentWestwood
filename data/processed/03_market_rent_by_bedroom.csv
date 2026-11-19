@@ -1,9 +1,29 @@
-zip,bedrooms,safmr,ratio_to_1br,est_market_rent
-90024,0,3080,0.893,3229.0
-90025,0,3070,0.892,2882.0
-90024,1,3450,1.0,3617.0
-90025,1,3440,1.0,3229.0
-90024,2,4300,1.246,4508.0
-90025,2,4290,1.247,4027.0
-90024,3,5450,1.58,5714.0
-90025,3,5440,1.581,5107.0
+zip,area,distance_group,bedrooms,safmr,ratio_to_1br,est_market_rent
+90049,Brentwood,near,0,3120,0.894,3485.0
+90024,Westwood,adjacent,0,3080,0.893,3229.0
+90064,Rancho Park,near,0,3120,0.894,3184.0
+90025,West LA / Sawtelle,near,0,3070,0.892,2882.0
+90066,Mar Vista,far,0,2540,0.894,2727.0
+90034,Palms,far,0,2560,0.892,2450.0
+90005,Koreatown,far,0,2240,0.892,2183.0
+90049,Brentwood,near,1,3490,1.0,3898.0
+90024,Westwood,adjacent,1,3450,1.0,3617.0
+90064,Rancho Park,near,1,3490,1.0,3561.0
+90025,West LA / Sawtelle,near,1,3440,1.0,3229.0
+90066,Mar Vista,far,1,2840,1.0,3049.0
+90034,Palms,far,1,2870,1.0,2746.0
+90005,Koreatown,far,1,2510,1.0,2446.0
+90049,Brentwood,near,2,4350,1.246,4859.0
+90024,Westwood,adjacent,2,4300,1.246,4508.0
+90064,Rancho Park,near,2,4350,1.246,4439.0
+90025,West LA / Sawtelle,near,2,4290,1.247,4027.0
+90066,Mar Vista,far,2,3540,1.246,3801.0
+90034,Palms,far,2,3580,1.247,3426.0
+90005,Koreatown,far,2,3130,1.247,3050.0
+90049,Brentwood,near,3,5520,1.582,6166.0
+90024,Westwood,adjacent,3,5450,1.58,5714.0
+90064,Rancho Park,near,3,5520,1.582,5633.0
+90025,West LA / Sawtelle,near,3,5440,1.581,5107.0
+90066,Mar Vista,far,3,4490,1.581,4821.0
+90034,Palms,far,3,4540,1.582,4344.0
+90005,Koreatown,far,3,3970,1.582,3869.0

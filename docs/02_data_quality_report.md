@@ -5,18 +5,23 @@
 ## ZORI (Zillow Observed Rent Index)
 - Raw file: 8,355 ZIPs, 142 months (2015-01-31 to 2026-10-31)
 - Duplicate ZIP rows: 0
-- Study ZIPs found: 2 of 2
+- Study ZIPs found: 7 of 7
 - Months with data per ZIP (missing months are blank in the source, i.e. not enough listings):
 
 | ZIP | Area | First month | Last month | Months with data | Missing |
 | --- | --- | --- | --- | --- | --- |
+| 90005 | Koreatown | 2017-04 | 2026-10 | 115 | 27 |
 | 90024 | Westwood | 2015-01 | 2026-10 | 142 | 0 |
 | 90025 | West LA / Sawtelle | 2015-01 | 2026-10 | 142 | 0 |
+| 90034 | Palms | 2015-01 | 2026-10 | 142 | 0 |
+| 90049 | Brentwood | 2015-01 | 2026-10 | 142 | 0 |
+| 90064 | Rancho Park | 2017-01 | 2026-10 | 118 | 24 |
+| 90066 | Mar Vista | 2015-01 | 2026-10 | 142 | 0 |
 
 ## HUD Small Area Fair Market Rents, FY2026 (revised)
 - Raw file: 51,895 rows, 38,601 unique ZIPs
 - ZIPs listed in more than one HUD area: 10,106 (a ZIP can cross metro boundaries)
-- Study ZIPs found: 2 of 2, rows: 2
+- Study ZIPs found: 7 of 7, rows: 7
 - HUD areas for study ZIPs: Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area
 - Missing SAFMR values: 0
 
@@ -32,7 +37,7 @@ If ZORI sits between the 1BR and 2BR SAFMR, the two sources are telling a consis
 | 90049 | Brentwood | $3,898 | $3,490 | $4,350 | 1.12 |
 | 90034 | Palms | $2,746 | $2,870 | $3,580 | 0.96 |
 | 90066 | Mar Vista | $3,049 | $2,840 | $3,540 | 1.07 |
-| 90005 | Koreatown (90005) | $2,446 | $2,510 | $3,130 | 0.97 |
+| 90005 | Koreatown | $2,446 | $2,510 | $3,130 | 0.97 |
 | 90020 | Koreatown (90020) | $1,878 | $2,460 | $3,070 | 0.76 |
 
 - Correlation between ZORI and SAFMR 1BR across the validation ZIPs: 0.93
